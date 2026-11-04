@@ -1,0 +1,226 @@
+{
+ "InviteCard": {
+  "js": "h('div',{className:'eq-stage eq-phone'},h(E.InviteCard,null))",
+  "height": 160
+ },
+ "SearchBar": {
+  "js": "h('div',{className:'eq-stage eq-phone'},h(E.SearchBar,{placeholder:'Search for names'}))",
+  "height": 90
+ },
+ "ThinkingText": {
+  "js": "h('div',{className:'eq-stage'},h(E.ThinkingText,null,'Thinking...'),h(E.ThinkingText,null,'Putting it together...'))",
+  "height": 70
+ },
+ "OnboardingHeader": {
+  "js": "h('div',{className:'eq-stage col eq-phone'},h(E.OnboardingHeader,{title:'Enter phone number',subtitle:'Assistant will handle calls for this number'}),h(E.OnboardingHeader,{title:'Set Name & Gender',subtitle:'Your AI will address you accordingly'}))",
+  "height": 150
+ },
+ "ChatList": {
+  "js": "h('div',{className:'eq-stage eq-phone'},h(E.ChatList,{items:[\n {name:'Amit Nanda',message:'Amit called to remind you about the meeting',time:'3:15 PM',unread:1,initials:'AN',contact:true,actions:[{label:'Call back',glyph:'📞'},{label:'Add to Calendar',glyph:'🗓️'}]},\n {name:'HDFC Bank',message:'Home loan offer especially for you',time:'3:02 PM',unread:1,avatarSrc:E.assets.bank,tint:'finance',actions:[{label:'Mute',glyph:'🔕'},{label:'Add to DND',glyph:'🛑'}]},\n {name:'Santosh Anna',message:'Order left with security',time:'3:02 PM',avatarSrc:E.assets.security,tint:'peach',actions:[{label:'Update address',glyph:'✏️'},{label:'Mute',glyph:'🔕'}]}]}))",
+  "height": 420
+ },
+ "PaymentProcessing": {
+  "js": "h('div',{className:'eq-stage eq-wide',style:{padding:0}},h(E.PaymentProcessing,{step:1}))",
+  "height": 330
+ },
+ "ChatBubble": {
+  "js": "h('div',{className:'eq-stage col eq-phone',style:{background:'#e8e8e8'}},h('div',{className:'eq-bubbles'},\n h(E.ChatBubble,{from:'user'},'Make a call'),\n h(E.ChatBubble,{from:'assistant',withAvatar:true},'You’ve used all 30 AI calls on your Gold plan this month.'),\n h(E.ChatBubble,{from:'assistant',label:false,action:'Get more calls'},'Upgrade to Gold Plus for unlimited calls, or wait till 1 Nov for your Gold calls to reset.')))",
+  "height": 330
+ },
+ "FAQItem": {
+  "js": "h('div',{className:'eq-stage col eq-phone'},h(E.FAQ,{firstOpen:true,items:[{q:'Is Equal AI free on iPhone?',a:'Equal AI offers a 1-week free trial for new users. After the trial ends, you’ll need an active subscription to continue using the assistant.'},{q:'How does the free trial work?',a:'Your assistant handles calls for 7 days with every Gold feature unlocked.'},{q:'Will I keep access if I cancel during the free trial?',a:'Yes, until the trial ends.'}]}),h('span',{className:'eq-help',style:{alignSelf:'center'}},h(E.Icon,{name:'support',size:20}),'Still have questions?'))",
+  "height": 300
+ },
+ "EqualSheet": {
+  "js": "h('div',{className:'eq-stage eq-wide',style:{padding:0}},h(E.EqualSheet,{name:'Keshav'}))",
+  "height": 520
+ },
+ "AppStoreSheet": {
+  "js": "h('div',{className:'eq-stage eq-wide'},h(E.AppStoreSheet,null))",
+  "height": 480
+ },
+ "RecapCard": {
+  "js": "h('div',{className:'eq-stage eq-phone'},h(E.RecapCard,null))",
+  "height": 140
+ },
+ "UpiStep": {
+  "js": "h('div',{className:'eq-stage'},h(E.UpiStep,{n:1},'Open your UPI app, via notifications or directly'),h(E.UpiStep,{n:2},'Review and approve the autopay request'))",
+  "height": 110
+ },
+ "SettingsRow": {
+  "js": "h('div',{className:'eq-stage eq-phone'},h(E.SettingsGroup,null,\n h(E.SettingsRow,{icon:'doc',title:'Instructions',badge:'New',subtitle:'4 active instructions'}),\n h(E.SettingsRow,{icon:'phone',title:'Call Handling',subtitle:'Saved contacts + Unknown numbers'}),\n h(E.SettingsRow,{icon:'bell-slash',title:'Silent Mode',subtitle:'Mute all promotional calls'}),\n h(E.SettingsRow,{icon:'mic',title:'Voice & Language',subtitle:'Calm & Friendly · Hindi, English, Telugu'})))",
+  "height": 330
+ },
+ "StickyPlanSheet": {
+  "js": "h('div',{className:'eq-stage eq-wide',style:{padding:'24px 0 0'}},h(E.StickyPlanSheet,null))",
+  "height": 380
+ },
+ "FeatureCard": {
+  "js": "h('div',{className:'eq-stage',style:{flexWrap:'nowrap',overflowX:'auto'}},h(E.FeatureCard,null),h(E.FeatureCard,{exclusive:false,title:'Call Screening',subtitle:'Spam, sales or someone who actually needs you. Your assistant finds out first.',art:E.assets.mascot}))",
+  "height": 340
+ },
+ "Composer": {
+  "js": "h('div',{className:'eq-stage col eq-phone'},h(E.Composer,null),h(E.Composer,{typing:true,label:'Speak to Equal'}))",
+  "height": 140
+ },
+ "Chip": {
+  "js": "h('div',{className:'eq-stage'},h(E.Chip,{variant:'suggested',glyph:'📞'},'Call back'),h(E.Chip,{variant:'suggested',glyph:'🗓️'},'Add to Calendar'),h(E.Chip,{variant:'neutral',glyph:'✏️'},'Update address'),h(E.Chip,{variant:'neutral',glyph:'🔕'},'Mute'),h(E.Chip,{variant:'suggested',tall:true,chevron:false,avatar:h(E.Avatar,{initials:'AN',size:18})},'Amit Nanda'),h(E.Chip,{variant:'suggested',tall:true,chevron:false,icon:'plus'},'Other'))",
+  "height": 150
+ },
+ "PageDots": {
+  "js": "h('div',{className:'eq-stage'},h(E.PageDots,{count:5,active:0}),h(E.PageDots,{count:3,active:1}))",
+  "height": 64
+ },
+ "StatRow": {
+  "js": "h('div',{className:'eq-stage col eq-phone',style:{background:'#0b1215'}},h(E.StatRow,{icon:'phone',label:'Calls handled',value:18}),h(E.StatRow,{icon:'shield',label:'Spam and sales stopped',value:7}))",
+  "height": 160
+ },
+ "AppHeader": {
+  "js": "h('div',{className:'eq-stage col eq-wide',style:{padding:0,gap:8}},h(E.AppHeader,{plan:'GOLD'}),h(E.AppHeader,{plan:'GOLD',right:'trial',trialText:'1 Day Left'}),h(E.AppHeader,{right:'avatar'}))",
+  "height": 210
+ },
+ "AssistantToggleCard": {
+  "js": "h('div',{className:'eq-stage eq-phone'},h(E.AssistantToggleCard,null))",
+  "height": 100
+ },
+ "Checkbox": {
+  "js": "h('div',{className:'eq-stage'},h(E.Checkbox,{defaultChecked:true},'I want to receive updates on Whatsapp'),h(E.Checkbox,null,'Unchecked'))",
+  "height": 70
+ },
+ "TextField": {
+  "js": "h('div',{className:'eq-stage col eq-phone'},h(E.TextField,{prefix:'phone',placeholder:'Enter mobile number',focused:true}),h(E.TextField,{align:'center',defaultValue:'Keshav',focused:true}),h('div',{className:'eq-helper'},'Your AI will call you ‘Keshav’'))",
+  "height": 160
+ },
+ "TabBar": {
+  "js": "h('div',{className:'eq-stage',style:{background:'var(--gradient-fade-bottom)'}},h(E.TabBar,{active:'chats',badge:2}))",
+  "height": 120
+ },
+ "TrialPill": {
+  "js": "h('div',{className:'eq-stage'},h(E.TrialPill,null,'1 Day Left'),h(E.TrialPill,null,'3 Days Left'))",
+  "height": 70
+ },
+ "ProgressBar": {
+  "js": "h('div',{className:'eq-stage col eq-phone'},h(E.ProgressBar,{value:40}),h('div',{style:{background:'#0b1215',padding:12,borderRadius:8}},h(E.ProgressBar,{value:45,tone:'gold'})))",
+  "height": 80
+ },
+ "AvailabilityPill": {
+  "js": "h('div',{className:'eq-stage'},h(E.AvailabilityPill,null),h(E.AvailabilityPill,{available:false}))",
+  "height": 70
+ },
+ "PermissionSheet": {
+  "js": "h('div',{className:'eq-stage eq-wide',style:{padding:0,background:'var(--bg-overlay)'}},h(E.PermissionSheet,null))",
+  "height": 450
+ },
+ "QuickActionTile": {
+  "js": "h('div',{className:'eq-stage'},h(E.QuickActionTile,{icon:'message',label:'Message'}),h(E.QuickActionTile,{icon:'compass',label:'Discover'}),h(E.QuickActionTile,{icon:'phone',label:'Call'}),h(E.QuickActionTile,{icon:'mic',label:'Tell Equal'}),h(E.QuickActionTile,{square:true,mark:true,label:'Talk to Equal'}),h(E.QuickActionTile,{square:true,icon:'wand',label:'Set Instruction'}))",
+  "height": 170
+ },
+ "GenderCard": {
+  "js": "h('div',{className:'eq-stage'},h(E.GenderCard,{label:'Male',selected:true}),h(E.GenderCard,{label:'Female'}))",
+  "height": 140
+ },
+ "CrownLoader": {
+  "js": "h('div',{className:'eq-stage'},h(E.CrownLoader,{size:80}))",
+  "height": 110
+ },
+ "ChatListItem": {
+  "js": "h('div',{className:'eq-stage col eq-phone'},\n h(E.ChatListItem,{name:'Amit Nanda',message:'Amit called to remind you about the meeting',time:'3:15 PM',unread:1,initials:'AN',contact:true,actions:[{label:'Call back',glyph:'📞'},{label:'Add to Calendar',glyph:'🗓️'}]}),\n h('div',{className:'eq-divider'}),\n h(E.ChatListItem,{name:'Shankar Rapido',message:'Driver has come to location',time:'3:02 PM',avatarSrc:E.assets.rider,tint:'ride',actions:[{label:'Update address',glyph:'✏️'},{label:'Mute',glyph:'🔕'}]}))",
+  "height": 300
+ },
+ "Toggle": {
+  "js": "h('div',{className:'eq-stage'},h(E.Toggle,{label:'On',defaultChecked:true}),h(E.Toggle,{label:'Off',defaultChecked:false}))",
+  "height": 70
+ },
+ "LiveCallCard": {
+  "js": "h('div',{className:'eq-stage eq-phone'},h(E.LiveCallCard,null))",
+  "height": 230
+ },
+ "SheetHeader": {
+  "js": "h('div',{className:'eq-stage eq-wide',style:{padding:0}},h('div',{style:{width:'100%'}},h(E.SheetHeader,{title:'Make a call'})))",
+  "height": 110
+ },
+ "EmptyState": {
+  "js": "h('div',{className:'eq-stage eq-phone'},h(E.EmptyState,null))",
+  "height": 280
+ },
+ "PlanCard": {
+  "js": "h('div',{className:'eq-stage eq-phone',style:{paddingTop:28}},h('div',{className:'eq-plans'},h(E.PlanCard,{name:'Gold',price:'₹249'}),h(E.PlanCard,{name:'Gold Plus',price:'₹499',selected:true,best:true})))",
+  "height": 130
+ },
+ "Button": {
+  "js": "h('div',{className:'eq-stage col eq-phone'},\n h(E.Button,{variant:'primary',block:true},'Next'),\n h(E.Button,{variant:'primary',block:true,disabled:true},'Send OTP'),\n h(E.Button,{variant:'gold',block:true},'Get Gold Plus for ₹499/month'),\n h('div',{style:{display:'flex',gap:12,alignItems:'center'}},h(E.Button,{variant:'goldpill',size:'sm'},'Subscribe'),h(E.Button,{variant:'primary',size:'md',icon:'share'},'Share now'),h(E.Button,{variant:'link'},'Continue anyway')))",
+  "height": 230
+ },
+ "CouponRow": {
+  "js": "h('div',{className:'eq-stage eq-phone'},h(E.CouponRow,{code:'EQUAL25',offer:'FLAT 25% OFF'}))",
+  "height": 90
+ },
+ "UnreadCount": {
+  "js": "h('div',{className:'eq-stage'},h(E.UnreadCount,{count:1}),h(E.UnreadCount,{count:2}),h(E.UnreadCount,{count:12}),h(E.UnreadCount,{dot:true}))",
+  "height": 70
+ },
+ "Avatar": {
+  "js": "h('div',{className:'eq-stage'},h(E.Avatar,{initials:'AN',tint:'mint',contact:true}),h(E.Avatar,{src:E.assets.bank,tint:'finance'}),h(E.Avatar,{src:E.assets.rider,tint:'ride'}),h(E.Avatar,{src:E.assets.security,tint:'peach'}),h(E.Avatar,{src:E.assets.others,tint:'others'}),h(E.Avatar,{equal:true}),h(E.Avatar,{initials:'AN',size:18}))",
+  "height": 100
+ },
+ "SuccessState": {
+  "js": "h('div',{className:'eq-stage',style:{flexWrap:'nowrap'}},h(E.SuccessState,null),h(E.SuccessState,{trial:true}))",
+  "height": 330
+ },
+ "IconButton": {
+  "js": "h('div',{className:'eq-stage'},h(E.IconButton,{variant:'solid',icon:'close',label:'Close'}),h(E.IconButton,{variant:'glass',icon:'more',label:'More',iconSize:24}),h(E.IconButton,{variant:'frost',icon:'close',label:'Close paywall'}),h(E.IconButton,{variant:'tile',icon:'keyboard',label:'Type instead'}))",
+  "height": 96
+ },
+ "SectionLabel": {
+  "js": "h('div',{className:'eq-stage col eq-phone'},h(E.SectionLabel,null,'Compare plans'),h(E.SectionLabel,{tone:'gold'},'What you get'),h(E.SectionLabel,{group:true},'Your assistant'))",
+  "height": 130
+ },
+ "MembershipCard": {
+  "js": "h('div',{className:'eq-stage col eq-phone'},h(E.MembershipCard,{status:'active'}),h(E.MembershipCard,{status:'trial'}),h(E.MembershipCard,{status:'active',price:'₹249/month',subtitle:'Renews 16th May, 2026'}),h(E.MembershipCard,{status:'expired'}))",
+  "height": 330
+ },
+ "Icon": {
+  "js": "h('div',{className:'eq-stage',style:{color:'var(--text-primary)'}},['chevron-right','chevron-down','close','search','check','plus','phone','mic','keyboard','bell','bell-slash','doc','globe','shield','message','bolt','person','more','wand','gear','share','support','face','calendar','pencil','chat','compass'].map(function(n){return h('span',{key:n,title:n,style:{width:40,height:40,display:'inline-flex',alignItems:'center',justifyContent:'center',borderRadius:8,background:'var(--bg-surface)'}},h(E.Icon,{name:n,size:22}))}))",
+  "height": 120
+ },
+ "PaywallHero": {
+  "js": "h('div',{className:'eq-stage eq-wide',style:{padding:0}},h(E.PaywallHero,null))",
+  "height": 320
+ },
+ "KeyValueRow": {
+  "js": "h('div',{className:'eq-stage eq-phone'},h('dl',{style:{margin:0,width:'100%',background:'#fff',padding:'0 16px',borderRadius:14}},h(E.KeyValueRow,{label:'Price',value:'₹499.00 per month'}),h(E.KeyValueRow,{label:'Starts',value:'Today'}),h(E.KeyValueRow,{label:'Account',value:'Apple Account'})))",
+  "height": 140
+ },
+ "PromoCard": {
+  "js": "h('div',{className:'eq-stage col eq-phone'},h(E.PromoCard,{kind:'trial'}),h(E.PromoCard,{kind:'gold',days:7}),h(E.PromoCard,{kind:'permissions'}),h(E.PromoCard,{kind:'assistant'}))",
+  "height": 600
+ },
+ "CompareCheck": {
+  "js": "h('div',{className:'eq-stage'},h(E.CompareCheck))",
+  "height": 70
+ },
+ "ValueRecapStory": {
+  "js": "h('div',{className:'eq-stage eq-wide',style:{padding:0}},h(E.ValueRecapStory,null))",
+  "height": 660
+ },
+ "PushBanner": {
+  "js": "h('div',{className:'eq-stage eq-phone',style:{background:'#cfd8cf'}},h(E.PushBanner,{title:'Only 1 day left'},'Your trial ends tomorrow. Subscribe to Gold before your assistant goes off duty.'))",
+  "height": 110
+ },
+ "ProfileHeader": {
+  "js": "h('div',{className:'eq-stage eq-wide',style:{padding:0}},h(E.ProfileHeader,{back:true}))",
+  "height": 220
+ },
+ "Tag": {
+  "js": "h('div',{className:'eq-stage'},h(E.Tag,{kind:'gold'},'GOLD'),h(E.Tag,{kind:'gold'},'GOLD PLUS'),h(E.Tag,{kind:'status'},'Active'),h(E.Tag,{kind:'status'},'Free Trial'),h(E.Tag,{kind:'expired'},'Expired'),h(E.Tag,{kind:'best'},'Best value'),h(E.Tag,{kind:'exclusive'},'Only in Gold Plus'),h(E.Tag,{kind:'both'},'Both plans'),h(E.Tag,{kind:'new'},'New'),h(E.Tag,{kind:'deal'},'Limited time deal'),h(E.Tag,{kind:'category'},'Promotional'))",
+  "height": 110
+ },
+ "PlanRadio": {
+  "js": "h('div',{className:'eq-stage'},h(E.PlanRadio,{checked:false}),h(E.PlanRadio,{checked:true}))",
+  "height": 70
+ },
+ "ComparePlansTable": {
+  "js": "h('div',{className:'eq-stage eq-phone'},h(E.ComparePlansTable,null))",
+  "height": 420
+ }
+}

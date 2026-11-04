@@ -1,0 +1,2297 @@
+[
+  {
+    "file": "images/ios-wallpaper-blue.jpg",
+    "nodeId": "20365:34553",
+    "nodeIds": [
+      "20365:34553"
+    ],
+    "layerName": "Wallpaper",
+    "layerNames": [
+      "Wallpaper"
+    ],
+    "width": 302,
+    "height": 758,
+    "pixelWidth": 1206,
+    "pixelHeight": 2622,
+    "kind": "image",
+    "description": "Blue abstract iOS lock-screen wallpaper (phone mockup backdrop)",
+    "usedIn": "5/Intro_2"
+  },
+  {
+    "file": "images/rotary-phone-red.png",
+    "nodeId": "20365:34589",
+    "nodeIds": [
+      "20365:34589",
+      "20365:43758"
+    ],
+    "layerName": "image 353",
+    "layerNames": [
+      "image 353",
+      "image 355"
+    ],
+    "width": 64,
+    "height": 48,
+    "pixelWidth": 1272,
+    "pixelHeight": 1272,
+    "kind": "image",
+    "description": "3D red rotary telephone (call category/illustration)",
+    "usedIn": "5/Intro_2; Call Logs with Pending Actions"
+  },
+  {
+    "file": "images/graduation-cap.png",
+    "nodeId": "20365:34630",
+    "nodeIds": [
+      "20365:34630"
+    ],
+    "layerName": "image 312",
+    "layerNames": [
+      "image 312"
+    ],
+    "width": 35,
+    "height": 21,
+    "pixelWidth": 1024,
+    "pixelHeight": 1024,
+    "kind": "image",
+    "description": "3D graduation cap (education/student call category)",
+    "usedIn": "5/Intro_2"
+  },
+  {
+    "file": "images/delivery-rider-orange.png",
+    "nodeId": "20365:34702",
+    "nodeIds": [
+      "20365:34702"
+    ],
+    "layerName": "image 244",
+    "layerNames": [
+      "image 244"
+    ],
+    "width": 26,
+    "height": 26,
+    "pixelWidth": 1024,
+    "pixelHeight": 1024,
+    "kind": "image",
+    "description": "3D delivery rider on orange scooter",
+    "usedIn": "5/Intro_2"
+  },
+  {
+    "file": "images/auto-rickshaw-driver.png",
+    "nodeId": "20365:34715",
+    "nodeIds": [
+      "20365:34715"
+    ],
+    "layerName": "image 251",
+    "layerNames": [
+      "image 251"
+    ],
+    "width": 23,
+    "height": 23,
+    "pixelWidth": 1024,
+    "pixelHeight": 1024,
+    "kind": "image",
+    "description": "3D auto-rickshaw with driver (ride call category)",
+    "usedIn": "5/Intro_2"
+  },
+  {
+    "file": "images/paper-bag.png",
+    "nodeId": "20365:34722",
+    "nodeIds": [
+      "20365:34722"
+    ],
+    "layerName": "ChatGPT Image Sep 12, 2025 at 10_25_15 AM 1",
+    "layerNames": [
+      "ChatGPT Image Sep 12, 2025 at 10_25_15 AM 1"
+    ],
+    "width": 21,
+    "height": 22,
+    "pixelWidth": 1024,
+    "pixelHeight": 1024,
+    "kind": "image",
+    "description": "3D brown paper shopping bag (shopping/delivery)",
+    "usedIn": "5/Intro_2"
+  },
+  {
+    "file": "images/rotary-phone-green.png",
+    "nodeId": "20365:34762",
+    "nodeIds": [
+      "20365:34762"
+    ],
+    "layerName": "image 397",
+    "layerNames": [
+      "image 397"
+    ],
+    "width": 46,
+    "height": 34,
+    "pixelWidth": 1024,
+    "pixelHeight": 1024,
+    "kind": "image",
+    "description": "3D green rotary telephone",
+    "usedIn": "5/Intro_2"
+  },
+  {
+    "file": "images/laptop.png",
+    "nodeId": "20365:34801",
+    "nodeIds": [
+      "20365:34801"
+    ],
+    "layerName": "laptop",
+    "layerNames": [
+      "laptop"
+    ],
+    "width": 24,
+    "height": 24,
+    "pixelWidth": 736,
+    "pixelHeight": 736,
+    "kind": "image",
+    "description": "3D laptop with blue screen (work/tech category)",
+    "usedIn": "Call Logs with Pending Actions"
+  },
+  {
+    "file": "images/wave-hand.gif",
+    "nodeId": "20365:34821",
+    "nodeIds": [
+      "20365:34821"
+    ],
+    "layerName": "wave 2",
+    "layerNames": [
+      "wave 2"
+    ],
+    "width": 180,
+    "height": 180,
+    "pixelWidth": 783,
+    "pixelHeight": 831,
+    "kind": "image",
+    "description": "Animated waving hand GIF (greeting / intro)",
+    "usedIn": "Call Logs with Pending Actions"
+  },
+  {
+    "file": "images/flag-india.png",
+    "nodeId": "20365:35135",
+    "nodeIds": [
+      "20365:35135"
+    ],
+    "layerName": "image 404",
+    "layerNames": [
+      "image 404"
+    ],
+    "width": 28,
+    "height": 28,
+    "pixelWidth": 334,
+    "pixelHeight": 334,
+    "kind": "image",
+    "description": "Round 3D India flag badge (country code picker)",
+    "usedIn": "1/MobileNumberEntered"
+  },
+  {
+    "file": "images/avatar-man.png",
+    "nodeId": "20365:35235",
+    "nodeIds": [
+      "20365:35235"
+    ],
+    "layerName": "image 395",
+    "layerNames": [
+      "image 395"
+    ],
+    "width": 51,
+    "height": 68,
+    "pixelWidth": 842,
+    "pixelHeight": 1133,
+    "kind": "image",
+    "description": "3D male avatar bust (gender selection: male)",
+    "usedIn": "3/SelectName&Gender"
+  },
+  {
+    "file": "images/avatar-woman.png",
+    "nodeId": "20365:35243",
+    "nodeIds": [
+      "20365:35243"
+    ],
+    "layerName": "image 391",
+    "layerNames": [
+      "image 391"
+    ],
+    "width": 51,
+    "height": 68,
+    "pixelWidth": 848,
+    "pixelHeight": 1141,
+    "kind": "image",
+    "description": "3D female avatar bust (gender selection: female)",
+    "usedIn": "3/SelectName&Gender"
+  },
+  {
+    "file": "images/couple-cricket-fans.png",
+    "nodeId": "20365:35393",
+    "nodeIds": [
+      "20365:35393"
+    ],
+    "layerName": "image 372",
+    "layerNames": [
+      "image 372"
+    ],
+    "width": 58,
+    "height": 58,
+    "pixelWidth": 1408,
+    "pixelHeight": 1408,
+    "kind": "image",
+    "description": "3D couple in India cricket jerseys (onboarding)",
+    "usedIn": "1/MobileNumberKeyboardUp"
+  },
+  {
+    "file": "images/star-gold.png",
+    "nodeId": "20365:35398",
+    "nodeIds": [
+      "20365:35398"
+    ],
+    "layerName": "image 313",
+    "layerNames": [
+      "image 313"
+    ],
+    "width": 60,
+    "height": 60,
+    "pixelWidth": 1024,
+    "pixelHeight": 1024,
+    "kind": "image",
+    "description": "3D glossy gold star (rating/reward)",
+    "usedIn": "1/MobileNumberKeyboardUp"
+  },
+  {
+    "file": "images/phone-handset-green.png",
+    "nodeId": "20365:35403",
+    "nodeIds": [
+      "20365:35403"
+    ],
+    "layerName": "image 371",
+    "layerNames": [
+      "image 371"
+    ],
+    "width": 55,
+    "height": 55,
+    "pixelWidth": 1024,
+    "pixelHeight": 1024,
+    "kind": "image",
+    "description": "3D dark-green phone handset (call)",
+    "usedIn": "1/MobileNumberKeyboardUp"
+  },
+  {
+    "file": "images/iphone-17-pro-max-mockup.png",
+    "nodeId": "20365:41753",
+    "nodeIds": [
+      "20365:41753"
+    ],
+    "layerName": "iPhone 17 Pro Max - Deep Blue - Portrait",
+    "layerNames": [
+      "iPhone 17 Pro Max - Deep Blue - Portrait"
+    ],
+    "width": 305,
+    "height": 452,
+    "pixelWidth": 1470,
+    "pixelHeight": 3000,
+    "kind": "image",
+    "description": "iPhone 17 Pro Max Deep Blue frame mockup (transparent screen)",
+    "usedIn": "Call Logs with Pending Actions"
+  },
+  {
+    "file": "images/screenshot-ios-app-permission.jpg",
+    "nodeId": "20365:41846",
+    "nodeIds": [
+      "20365:41846"
+    ],
+    "layerName": "WhatsApp Image 2026-01-20 at 18.59.10-2",
+    "layerNames": [
+      "WhatsApp Image 2026-01-20 at 18.59.10-2"
+    ],
+    "width": 300,
+    "height": 202,
+    "pixelWidth": 738,
+    "pixelHeight": 1600,
+    "kind": "image",
+    "description": "Screenshot: iOS app info + allow-notifications permission prompt",
+    "usedIn": "Call Logs with Pending Actions › Frame 2085664221"
+  },
+  {
+    "file": "images/bell-gold.png",
+    "nodeId": "20365:41947",
+    "nodeIds": [
+      "20365:41947"
+    ],
+    "layerName": "image 326",
+    "layerNames": [
+      "image 326"
+    ],
+    "width": 76,
+    "height": 83,
+    "pixelWidth": 1024,
+    "pixelHeight": 1024,
+    "kind": "image",
+    "description": "3D gold notification bell",
+    "usedIn": "Call Logs with Pending Actions › Frame 2085664286"
+  },
+  {
+    "file": "images/gear-silver.png",
+    "nodeId": "20365:42065",
+    "nodeIds": [
+      "20365:42065"
+    ],
+    "layerName": "image 399",
+    "layerNames": [
+      "image 399"
+    ],
+    "width": 179,
+    "height": 179,
+    "pixelWidth": 1024,
+    "pixelHeight": 1024,
+    "kind": "image",
+    "description": "3D silver settings gear",
+    "usedIn": "Call Logs with Pending Actions › Frame 2085664286"
+  },
+  {
+    "file": "images/screenshot-permission-needed.jpg",
+    "nodeId": "20365:42146",
+    "nodeIds": [
+      "20365:42146"
+    ],
+    "layerName": "WhatsApp Image 2026-01-20 at 18.59.10",
+    "layerNames": [
+      "WhatsApp Image 2026-01-20 at 18.59.10"
+    ],
+    "width": 299,
+    "height": 263,
+    "pixelWidth": 738,
+    "pixelHeight": 1600,
+    "kind": "image",
+    "description": "Screenshot: Permission Needed contacts/notifications screen",
+    "usedIn": "Call Logs with Pending Actions › Frame 2085664221"
+  },
+  {
+    "file": "images/screenshot-ios-permission-dark.png",
+    "nodeId": "20365:42210",
+    "nodeIds": [
+      "20365:42210"
+    ],
+    "layerName": "image 420",
+    "layerNames": [
+      "image 420"
+    ],
+    "width": 291,
+    "height": 328,
+    "pixelWidth": 498,
+    "pixelHeight": 1081,
+    "kind": "image",
+    "description": "Screenshot: dark iOS system permission alert",
+    "usedIn": "Call Logs with Pending Actions › Frame 2085664221"
+  },
+  {
+    "file": "images/contacts-book.png",
+    "nodeId": "20365:42314",
+    "nodeIds": [
+      "20365:42314",
+      "21093:39991"
+    ],
+    "layerName": "image 404",
+    "layerNames": [
+      "image 404",
+      "image 407"
+    ],
+    "width": 146,
+    "height": 146,
+    "pixelWidth": 2048,
+    "pixelHeight": 2048,
+    "kind": "image",
+    "description": "3D orange contacts address book",
+    "usedIn": "Call Logs with Pending Actions; Soft paywall"
+  },
+  {
+    "file": "images/screenshot-share-contacts.jpg",
+    "nodeId": "20365:42569",
+    "nodeIds": [
+      "20365:42569"
+    ],
+    "layerName": "WhatsApp Image 2026-01-20 at 18.59.09",
+    "layerNames": [
+      "WhatsApp Image 2026-01-20 at 18.59.09"
+    ],
+    "width": 393,
+    "height": 852,
+    "pixelWidth": 738,
+    "pixelHeight": 1600,
+    "kind": "image",
+    "description": "Screenshot: iOS share contacts picker sheet",
+    "usedIn": "7/Permission2Confirmation2"
+  },
+  {
+    "file": "images/warning-triangle.png",
+    "nodeId": "20365:43497",
+    "nodeIds": [
+      "20365:43497"
+    ],
+    "layerName": "ChatGPT Image Nov 20, 2025 at 03_32_30 PM 1",
+    "layerNames": [
+      "ChatGPT Image Nov 20, 2025 at 03_32_30 PM 1"
+    ],
+    "width": 88,
+    "height": 93,
+    "pixelWidth": 1024,
+    "pixelHeight": 1536,
+    "kind": "image",
+    "description": "3D yellow warning triangle (alert/spam)",
+    "usedIn": "Call Logs with Pending Actions › Frame 2085664286"
+  },
+  {
+    "file": "images/mascot-phone-voice.png",
+    "nodeId": "20365:43567",
+    "nodeIds": [
+      "20365:43567"
+    ],
+    "layerName": "image 372",
+    "layerNames": [
+      "image 372"
+    ],
+    "width": 177,
+    "height": 177,
+    "pixelWidth": 1024,
+    "pixelHeight": 1024,
+    "kind": "image",
+    "description": "Green robot mascot on phone with voice bubble",
+    "usedIn": "Call Logs with Pending Actions"
+  },
+  {
+    "file": "images/bell-muted-incoming-call.png",
+    "nodeId": "20365:43585",
+    "nodeIds": [
+      "20365:43585"
+    ],
+    "layerName": "ChatGPT Image Mar 6, 2026 at 10_52_03 AM 1",
+    "layerNames": [
+      "ChatGPT Image Mar 6, 2026 at 10_52_03 AM 1"
+    ],
+    "width": 116,
+    "height": 107,
+    "pixelWidth": 1024,
+    "pixelHeight": 1024,
+    "kind": "image",
+    "description": "3D muted bell over phone incoming call (silence calls)",
+    "usedIn": "Call Logs with Pending Actions"
+  },
+  {
+    "file": "images/sparkle-gold.png",
+    "nodeId": "20365:43706",
+    "nodeIds": [
+      "20365:43706"
+    ],
+    "layerName": "ChatGPT Image Aug 28, 2025 at 03_28_39 PM 3",
+    "layerNames": [
+      "ChatGPT Image Aug 28, 2025 at 03_28_39 PM 3"
+    ],
+    "width": 23,
+    "height": 22,
+    "pixelWidth": 1024,
+    "pixelHeight": 1024,
+    "kind": "image",
+    "description": "3D gold four-point sparkle (AI/premium accent)",
+    "usedIn": "Call Logs with Pending Actions"
+  },
+  {
+    "file": "images/auto-rickshaw.png",
+    "nodeId": "20365:43735",
+    "nodeIds": [
+      "20365:43735"
+    ],
+    "layerName": "image 291 3",
+    "layerNames": [
+      "image 291 3"
+    ],
+    "width": 31,
+    "height": 28,
+    "pixelWidth": 1408,
+    "pixelHeight": 1408,
+    "kind": "image",
+    "description": "3D empty yellow-green auto-rickshaw (ride category)",
+    "usedIn": "Call Logs with Pending Actions"
+  },
+  {
+    "file": "images/rupee-green.png",
+    "nodeId": "20365:43739",
+    "nodeIds": [
+      "20365:43739"
+    ],
+    "layerName": "image 302",
+    "layerNames": [
+      "image 302"
+    ],
+    "width": 43,
+    "height": 43,
+    "pixelWidth": 1024,
+    "pixelHeight": 1024,
+    "kind": "image",
+    "description": "3D green rupee symbol (financial category)",
+    "usedIn": "Call Logs with Pending Actions"
+  },
+  {
+    "file": "images/building-apartment.png",
+    "nodeId": "20365:43741",
+    "nodeIds": [
+      "20365:43741"
+    ],
+    "layerName": "imagebuilding 1",
+    "layerNames": [
+      "imagebuilding 1"
+    ],
+    "width": 29,
+    "height": 33,
+    "pixelWidth": 1408,
+    "pixelHeight": 1408,
+    "kind": "image",
+    "description": "3D apartment building (real-estate category)",
+    "usedIn": "Call Logs with Pending Actions"
+  },
+  {
+    "file": "images/security-guard.png",
+    "nodeId": "20365:43743",
+    "nodeIds": [
+      "20365:43743"
+    ],
+    "layerName": "Background",
+    "layerNames": [
+      "Background"
+    ],
+    "width": 48,
+    "height": 48,
+    "pixelWidth": 1024,
+    "pixelHeight": 1024,
+    "kind": "image",
+    "description": "3D security guard bust (gate alert category)",
+    "usedIn": "Call Logs with Pending Actions"
+  },
+  {
+    "file": "images/briefcase.png",
+    "nodeId": "20365:43749",
+    "nodeIds": [
+      "20365:43749"
+    ],
+    "layerName": "image 313",
+    "layerNames": [
+      "image 313"
+    ],
+    "width": 27,
+    "height": 26,
+    "pixelWidth": 1024,
+    "pixelHeight": 1024,
+    "kind": "image",
+    "description": "3D brown briefcase (career category)",
+    "usedIn": "Call Logs with Pending Actions"
+  },
+  {
+    "file": "images/delivery-rider-red.png",
+    "nodeId": "20365:44249",
+    "nodeIds": [
+      "20365:44249"
+    ],
+    "layerName": "image 327 up 2",
+    "layerNames": [
+      "image 327 up 2"
+    ],
+    "width": 51,
+    "height": 51,
+    "pixelWidth": 1024,
+    "pixelHeight": 1024,
+    "kind": "image",
+    "description": "3D delivery rider on red scooter (delivery category)",
+    "usedIn": "Chats + Permission Card"
+  },
+  {
+    "file": "images/crown-gold.png",
+    "nodeId": "20552:61168",
+    "nodeIds": [
+      "20552:61168",
+      "26242:23298"
+    ],
+    "layerName": "crown1 1",
+    "layerNames": [
+      "crown1 1",
+      "Crown"
+    ],
+    "width": 95,
+    "height": 95,
+    "pixelWidth": 1312,
+    "pixelHeight": 1199,
+    "kind": "image",
+    "description": "3D gold crown, front view (Gold plan / premium)",
+    "usedIn": "Free trial → Gold · Default flow › 03 · Paywall · Hero + sticky plans; iPhone 14 & 15 Pro - 1"
+  },
+  {
+    "file": "images/mascot-crown.png",
+    "nodeId": "20796:48303",
+    "nodeIds": [
+      "20796:48303"
+    ],
+    "layerName": "mascot",
+    "layerNames": [
+      "mascot"
+    ],
+    "width": 160,
+    "height": 160,
+    "pixelWidth": 1024,
+    "pixelHeight": 1024,
+    "kind": "image",
+    "description": "Green robot mascot wearing gold crown (Gold)",
+    "usedIn": "iPhone 14 & 15 Pro - 1"
+  },
+  {
+    "file": "images/mascot-spam-blocked.png",
+    "nodeId": "21402:65856",
+    "nodeIds": [
+      "21402:65856"
+    ],
+    "layerName": "image 460",
+    "layerNames": [
+      "image 460"
+    ],
+    "width": 1254,
+    "height": 1254,
+    "pixelWidth": 1254,
+    "pixelHeight": 1254,
+    "kind": "image",
+    "description": "Robot mascot on phone, blocked-heart bubble (spam blocked)",
+    "usedIn": "standalone frame on page"
+  },
+  {
+    "file": "images/iphone-lockscreen-mockup.png",
+    "nodeId": "21168:119082",
+    "nodeIds": [
+      "21168:119082"
+    ],
+    "layerName": "Rectangle",
+    "layerNames": [
+      "Rectangle"
+    ],
+    "width": 177,
+    "height": 371,
+    "pixelWidth": 3840,
+    "pixelHeight": 2160,
+    "kind": "image",
+    "description": "iPhone lock screen mockup on large transparent canvas",
+    "usedIn": "Soft paywall › Call Logs with Pending Actions"
+  },
+  {
+    "file": "images/house.png",
+    "nodeId": "21168:119164",
+    "nodeIds": [
+      "21168:119164"
+    ],
+    "layerName": "ChatGPT Image Aug 28, 2025 at 03_39_24 PM 3",
+    "layerNames": [
+      "ChatGPT Image Aug 28, 2025 at 03_39_24 PM 3"
+    ],
+    "width": 12,
+    "height": 11,
+    "pixelWidth": 1024,
+    "pixelHeight": 1024,
+    "kind": "image",
+    "description": "3D house with red roof (home category)",
+    "usedIn": "Soft paywall › Call Logs with Pending Actions"
+  },
+  {
+    "file": "images/person-photo-equal-tshirt.png",
+    "nodeId": "21168:119177",
+    "nodeIds": [
+      "21168:119177"
+    ],
+    "layerName": "image",
+    "layerNames": [
+      "image"
+    ],
+    "width": 12,
+    "height": 20,
+    "pixelWidth": 1024,
+    "pixelHeight": 1024,
+    "kind": "image",
+    "description": "Photo of smiling man in Equal t-shirt (testimonial)",
+    "usedIn": "Soft paywall › Call Logs with Pending Actions"
+  },
+  {
+    "file": "images/avatar-boy-illustrated.png",
+    "nodeId": "21168:119184",
+    "nodeIds": [
+      "21168:119184"
+    ],
+    "layerName": "image",
+    "layerNames": [
+      "image"
+    ],
+    "width": 13,
+    "height": 13,
+    "pixelWidth": 1024,
+    "pixelHeight": 1024,
+    "kind": "image",
+    "description": "Illustrated boy avatar on orange background",
+    "usedIn": "Soft paywall › Call Logs with Pending Actions"
+  },
+  {
+    "file": "images/lottie-preview-green-swoosh.gif",
+    "nodeId": "21168:119217",
+    "nodeIds": [
+      "21168:119217"
+    ],
+    "layerName": "lottie preview",
+    "layerNames": [
+      "lottie preview"
+    ],
+    "width": 204,
+    "height": 113,
+    "pixelWidth": 500,
+    "pixelHeight": 277,
+    "kind": "image",
+    "description": "Animated GIF green/lime swoosh (Lottie preview)",
+    "usedIn": "Soft paywall › Call Logs with Pending Actions"
+  },
+  {
+    "file": "images/sound-waves-green.png",
+    "nodeId": "21093:40038",
+    "nodeIds": [
+      "21093:40038"
+    ],
+    "layerName": "image 406",
+    "layerNames": [
+      "image 406"
+    ],
+    "width": 60,
+    "height": 61,
+    "pixelWidth": 1024,
+    "pixelHeight": 1024,
+    "kind": "image",
+    "description": "Green sound-wave arcs (calling animation accent)",
+    "usedIn": "Soft paywall › Call Logs with Pending Actions"
+  },
+  {
+    "file": "images/mascot-reading-book.png",
+    "nodeId": "21210:121688",
+    "nodeIds": [
+      "21210:121688"
+    ],
+    "layerName": "image 459",
+    "layerNames": [
+      "image 459"
+    ],
+    "width": 154,
+    "height": 154,
+    "pixelWidth": 1024,
+    "pixelHeight": 1024,
+    "kind": "image",
+    "description": "Robot mascot reading an open book (learning/summary)",
+    "usedIn": "Soft paywall › Call Logs with Pending Actions"
+  },
+  {
+    "file": "images/mascot-map.png",
+    "nodeId": "21093:39745",
+    "nodeIds": [
+      "21093:39745"
+    ],
+    "layerName": "image 457",
+    "layerNames": [
+      "image 457"
+    ],
+    "width": 167,
+    "height": 167,
+    "pixelWidth": 1024,
+    "pixelHeight": 1024,
+    "kind": "image",
+    "description": "Robot mascot with folded map and pin (directions)",
+    "usedIn": "Soft paywall › Call Logs with Pending Actions"
+  },
+  {
+    "file": "images/rotary-phone-red-front.png",
+    "nodeId": "21210:124174",
+    "nodeIds": [
+      "21210:124174"
+    ],
+    "layerName": "image 397",
+    "layerNames": [
+      "image 397"
+    ],
+    "width": 12,
+    "height": 10,
+    "pixelWidth": 2792,
+    "pixelHeight": 2261,
+    "kind": "image",
+    "description": "3D red rotary phone, front angle, large",
+    "usedIn": "Soft paywall › Call Logs with Pending Actions"
+  },
+  {
+    "file": "images/whatsapp-logo-green.png",
+    "nodeId": "21210:124269",
+    "nodeIds": [
+      "21210:124269"
+    ],
+    "layerName": "image 408",
+    "layerNames": [
+      "image 408"
+    ],
+    "width": 8,
+    "height": 8,
+    "pixelWidth": 350,
+    "pixelHeight": 350,
+    "kind": "image",
+    "description": "WhatsApp green logo (share/connect)",
+    "usedIn": "Soft paywall › Call Logs with Pending Actions"
+  },
+  {
+    "file": "images/iphone-black.png",
+    "nodeId": "21093:39997",
+    "nodeIds": [
+      "21093:39997"
+    ],
+    "layerName": "image 409",
+    "layerNames": [
+      "image 409"
+    ],
+    "width": 37,
+    "height": 37,
+    "pixelWidth": 1024,
+    "pixelHeight": 1024,
+    "kind": "image",
+    "description": "3D black iPhone, angled (device)",
+    "usedIn": "Soft paywall"
+  },
+  {
+    "file": "images/check-green-3d.png",
+    "nodeId": "21093:39998",
+    "nodeIds": [
+      "21093:39998"
+    ],
+    "layerName": "image 302",
+    "layerNames": [
+      "image 302"
+    ],
+    "width": 16,
+    "height": 16,
+    "pixelWidth": 1024,
+    "pixelHeight": 1024,
+    "kind": "image",
+    "description": "3D green checkmark (success / feature tick)",
+    "usedIn": "Soft paywall"
+  },
+  {
+    "file": "images/letter-a-english.png",
+    "nodeId": "21093:40004",
+    "nodeIds": [
+      "21093:40004"
+    ],
+    "layerName": "image 407",
+    "layerNames": [
+      "image 407"
+    ],
+    "width": 21,
+    "height": 21,
+    "pixelWidth": 1024,
+    "pixelHeight": 1024,
+    "kind": "image",
+    "description": "3D green letter A (English language option)",
+    "usedIn": "Soft paywall"
+  },
+  {
+    "file": "images/letter-a-hindi.png",
+    "nodeId": "21093:40005",
+    "nodeIds": [
+      "21093:40005"
+    ],
+    "layerName": "image 410",
+    "layerNames": [
+      "image 410"
+    ],
+    "width": 21,
+    "height": 21,
+    "pixelWidth": 1024,
+    "pixelHeight": 1024,
+    "kind": "image",
+    "description": "3D green Hindi letter अ (Hindi language option)",
+    "usedIn": "Soft paywall"
+  },
+  {
+    "file": "images/letter-a-telugu.png",
+    "nodeId": "21093:40006",
+    "nodeIds": [
+      "21093:40006"
+    ],
+    "layerName": "image 411",
+    "layerNames": [
+      "image 411"
+    ],
+    "width": 13,
+    "height": 13,
+    "pixelWidth": 1024,
+    "pixelHeight": 1024,
+    "kind": "image",
+    "description": "3D green Telugu letter అ (Telugu language option)",
+    "usedIn": "Soft paywall"
+  },
+  {
+    "file": "images/microphone-retro.png",
+    "nodeId": "21093:40012",
+    "nodeIds": [
+      "21093:40012"
+    ],
+    "layerName": "image 409",
+    "layerNames": [
+      "image 409"
+    ],
+    "width": 37,
+    "height": 37,
+    "pixelWidth": 1024,
+    "pixelHeight": 1024,
+    "kind": "image",
+    "description": "Retro studio microphone with green waves (voice)",
+    "usedIn": "Soft paywall"
+  },
+  {
+    "file": "images/mascot-face-laugh.png",
+    "nodeId": "21402:64174",
+    "nodeIds": [
+      "21402:64174"
+    ],
+    "layerName": "image 372",
+    "layerNames": [
+      "image 372"
+    ],
+    "width": 178,
+    "height": 178,
+    "pixelWidth": 1024,
+    "pixelHeight": 1024,
+    "kind": "image",
+    "description": "Robot mascot head, laughing (avatar / empty state)",
+    "usedIn": "Soft paywall › Empty State"
+  },
+  {
+    "file": "images/crown-gold-tilted.png",
+    "nodeId": "21402:67826",
+    "nodeIds": [
+      "21402:67826"
+    ],
+    "layerName": "crown2 1",
+    "layerNames": [
+      "crown2 1"
+    ],
+    "width": 129,
+    "height": 129,
+    "pixelWidth": 1024,
+    "pixelHeight": 1024,
+    "kind": "image",
+    "description": "3D gold crown tilted (Gold badge accent)",
+    "usedIn": "Soft paywall › Empty State"
+  },
+  {
+    "file": "images/cross-red-circle.png",
+    "nodeId": "21402:67828",
+    "nodeIds": [
+      "21402:67828"
+    ],
+    "layerName": "image 307",
+    "layerNames": [
+      "image 307"
+    ],
+    "width": 73,
+    "height": 73,
+    "pixelWidth": 1024,
+    "pixelHeight": 1024,
+    "kind": "image",
+    "description": "3D red circle with white X (error/blocked)",
+    "usedIn": "Soft paywall › Empty State"
+  },
+  {
+    "file": "images/discount-badge-gold.png",
+    "nodeId": "21402:70728",
+    "nodeIds": [
+      "21402:70728"
+    ],
+    "layerName": "image 458",
+    "layerNames": [
+      "image 458"
+    ],
+    "width": 48,
+    "height": 48,
+    "pixelWidth": 1024,
+    "pixelHeight": 1024,
+    "kind": "image",
+    "description": "3D gold percent badge (discount/offer)",
+    "usedIn": "Soft paywall › Call Logs with Pending Actions"
+  },
+  {
+    "file": "images/screenshot-autopay-request.png",
+    "nodeId": "24673:42896",
+    "nodeIds": [
+      "24673:42896"
+    ],
+    "layerName": "image 461",
+    "layerNames": [
+      "image 461"
+    ],
+    "width": 361,
+    "height": 783,
+    "pixelWidth": 1440,
+    "pixelHeight": 3120,
+    "kind": "image",
+    "description": "Screenshot: UPI app AutoPay request popup",
+    "usedIn": "standalone frame on page"
+  },
+  {
+    "file": "images/screenshot-autopay-settings.png",
+    "nodeId": "24673:42917",
+    "nodeIds": [
+      "24673:42917"
+    ],
+    "layerName": "image 462",
+    "layerNames": [
+      "image 462"
+    ],
+    "width": 359,
+    "height": 778,
+    "pixelWidth": 1440,
+    "pixelHeight": 3120,
+    "kind": "image",
+    "description": "Screenshot: UPI AutoPay settings / approve screen",
+    "usedIn": "standalone frame on page"
+  },
+  {
+    "file": "images/upi-autopay-steps.png",
+    "nodeId": "24688:42929",
+    "nodeIds": [
+      "24688:42929"
+    ],
+    "layerName": "image 463",
+    "layerNames": [
+      "image 463"
+    ],
+    "width": 1136,
+    "height": 960,
+    "pixelWidth": 1136,
+    "pixelHeight": 960,
+    "kind": "image",
+    "description": "4-step UPI AutoPay setup illustration, light + dark",
+    "usedIn": "standalone frame on page"
+  },
+  {
+    "file": "images/ripple-bottom-shine.gif",
+    "nodeId": "24539:7859",
+    "nodeIds": [
+      "24539:7859"
+    ],
+    "layerName": "ripple_Bottom Shine",
+    "layerNames": [
+      "ripple_Bottom Shine"
+    ],
+    "width": 392,
+    "height": 392,
+    "pixelWidth": 1200,
+    "pixelHeight": 1200,
+    "kind": "image",
+    "description": "Animated GIF concentric ripple rings with gold glow",
+    "usedIn": "Loading state education › Call Logs with Pending Actions"
+  },
+  {
+    "file": "images/globe.png",
+    "nodeId": "20365:36016",
+    "nodeIds": [
+      "20365:36016"
+    ],
+    "layerName": "image 321",
+    "layerNames": [
+      "image 321"
+    ],
+    "width": 53,
+    "height": 53,
+    "pixelWidth": 1024,
+    "pixelHeight": 1024,
+    "kind": "image",
+    "description": "3D earth globe (international/other category)",
+    "usedIn": "Free trial → Gold · Default flow › Call Logs with Pending Actions"
+  },
+  {
+    "file": "images/phone-handset-teal.png",
+    "nodeId": "20365:36036",
+    "nodeIds": [
+      "20365:36036"
+    ],
+    "layerName": "image 371",
+    "layerNames": [
+      "image 371"
+    ],
+    "width": 43,
+    "height": 43,
+    "pixelWidth": 1024,
+    "pixelHeight": 1024,
+    "kind": "image",
+    "description": "3D teal phone handset (call)",
+    "usedIn": "Free trial → Gold · Default flow › Call Logs with Pending Actions"
+  },
+  {
+    "file": "images/question-red-circle.png",
+    "nodeId": "20365:36037",
+    "nodeIds": [
+      "20365:36037"
+    ],
+    "layerName": "image 374",
+    "layerNames": [
+      "image 374"
+    ],
+    "width": 23,
+    "height": 23,
+    "pixelWidth": 1024,
+    "pixelHeight": 1024,
+    "kind": "image",
+    "description": "3D red circle question mark (unknown caller)",
+    "usedIn": "Free trial → Gold · Default flow › Call Logs with Pending Actions"
+  },
+  {
+    "file": "images/contact-card-blue.png",
+    "nodeId": "20365:36083",
+    "nodeIds": [
+      "20365:36083"
+    ],
+    "layerName": "image 327",
+    "layerNames": [
+      "image 327"
+    ],
+    "width": 92,
+    "height": 81,
+    "pixelWidth": 1024,
+    "pixelHeight": 1024,
+    "kind": "image",
+    "description": "3D blue contact/profile card icon",
+    "usedIn": "Free trial → Gold · Default flow › Frame 2085664597"
+  },
+  {
+    "file": "images/mascot-face-smile.png",
+    "nodeId": "26242:89420",
+    "nodeIds": [
+      "26242:89420"
+    ],
+    "layerName": "image 372",
+    "layerNames": [
+      "image 372"
+    ],
+    "width": 48,
+    "height": 48,
+    "pixelWidth": 1024,
+    "pixelHeight": 1024,
+    "kind": "image",
+    "description": "Robot mascot head, gentle smile (avatar)",
+    "usedIn": "Settings page › Call Logs with Pending Actions"
+  },
+  {
+    "file": "images/mascot-features-cards.png",
+    "nodeId": "26242:90431",
+    "nodeIds": [
+      "26242:90431"
+    ],
+    "layerName": "image 429",
+    "layerNames": [
+      "image 429"
+    ],
+    "width": 228,
+    "height": 228,
+    "pixelWidth": 1254,
+    "pixelHeight": 1254,
+    "kind": "image",
+    "description": "Robot mascot with floating feature cards (settings hero)",
+    "usedIn": "Settings page › Call Logs with Pending Actions"
+  },
+  {
+    "file": "images/high-five.png",
+    "nodeId": "26242:90519",
+    "nodeIds": [
+      "26242:90519"
+    ],
+    "layerName": "ChatGPT Image Feb 10, 2026 at 04_49_50 PM 1",
+    "layerNames": [
+      "ChatGPT Image Feb 10, 2026 at 04_49_50 PM 1"
+    ],
+    "width": 122,
+    "height": 121,
+    "pixelWidth": 1024,
+    "pixelHeight": 1024,
+    "kind": "image",
+    "description": "3D high-five hands (success / celebration)",
+    "usedIn": "Settings page › Call Logs with Pending Actions"
+  },
+  {
+    "file": "images/equal-gold-crown-gradient.png",
+    "nodeId": "24379:21825",
+    "nodeIds": [
+      "24379:21825"
+    ],
+    "layerName": "Equal Gold",
+    "layerNames": [
+      "Equal Gold"
+    ],
+    "width": 1024,
+    "height": 1024,
+    "pixelWidth": 2048,
+    "pixelHeight": 2048,
+    "kind": "image",
+    "description": "Equal Gold app icon: crown on gold-brown gradient (PNG @2x render)",
+    "usedIn": "App icon frames (standalone)"
+  },
+  {
+    "file": "images/equal-gold-crown-dark.png",
+    "nodeId": "24379:21833",
+    "nodeIds": [
+      "24379:21833"
+    ],
+    "layerName": "Equal Gold",
+    "layerNames": [
+      "Equal Gold"
+    ],
+    "width": 1024,
+    "height": 1024,
+    "pixelWidth": 2048,
+    "pixelHeight": 2048,
+    "kind": "image",
+    "description": "Equal Gold app icon: crown on black (PNG @2x render)",
+    "usedIn": "App icon frames (standalone)"
+  },
+  {
+    "file": "images/equal-gold-mascot-gradient.png",
+    "nodeId": "24379:21828",
+    "nodeIds": [
+      "24379:21828"
+    ],
+    "layerName": "Equal Gold",
+    "layerNames": [
+      "Equal Gold"
+    ],
+    "width": 1024,
+    "height": 1024,
+    "pixelWidth": 2048,
+    "pixelHeight": 2048,
+    "kind": "image",
+    "description": "Equal Gold app icon: crowned mascot on gold gradient (PNG @2x render)",
+    "usedIn": "App icon frames (standalone)"
+  },
+  {
+    "file": "images/equal-gold-mascot-dark.png",
+    "nodeId": "24379:21836",
+    "nodeIds": [
+      "24379:21836"
+    ],
+    "layerName": "Equal Gold",
+    "layerNames": [
+      "Equal Gold"
+    ],
+    "width": 1024,
+    "height": 1024,
+    "pixelWidth": 2048,
+    "pixelHeight": 2048,
+    "kind": "image",
+    "description": "Equal Gold app icon: crowned mascot on black (PNG @2x render)",
+    "usedIn": "App icon frames (standalone)"
+  },
+  {
+    "file": "images/equal-gold-logo-crown-dark.png",
+    "nodeId": "24379:21838",
+    "nodeIds": [
+      "24379:21838"
+    ],
+    "layerName": "Equal Gold",
+    "layerNames": [
+      "Equal Gold"
+    ],
+    "width": 1024,
+    "height": 1024,
+    "pixelWidth": 2048,
+    "pixelHeight": 2048,
+    "kind": "image",
+    "description": "Equal Gold app icon: Equal logo with crown on black (PNG @2x render)",
+    "usedIn": "App icon frames (standalone)"
+  },
+  {
+    "file": "images/app-icon-equal-green.png",
+    "nodeId": "26242:23235",
+    "nodeIds": [
+      "26242:23235"
+    ],
+    "layerName": "_Custom Icon",
+    "layerNames": [
+      "_Custom Icon"
+    ],
+    "width": 38,
+    "height": 38,
+    "pixelWidth": 398,
+    "pixelHeight": 398,
+    "kind": "image",
+    "description": "Equal app icon: white six-dot logo on green",
+    "usedIn": "Free trial → Gold · Default flow › 01 · Home · Last day push"
+  },
+  {
+    "file": "icons/speaker-wave.svg",
+    "nodeId": "20365:34538",
+    "nodeIds": [
+      "20365:34538"
+    ],
+    "layerName": "speaker.wave.2",
+    "width": 24.0,
+    "height": 24.0,
+    "kind": "icon",
+    "description": "Speaker with sound waves (audio on), outline",
+    "usedIn": "5/Intro_2"
+  },
+  {
+    "file": "icons/call.svg",
+    "nodeId": "20365:34562",
+    "nodeIds": [
+      "20365:34562"
+    ],
+    "layerName": "call",
+    "width": 26.03,
+    "height": 26.03,
+    "kind": "icon",
+    "description": "Phone handset outline, Material style (white)",
+    "usedIn": "5/Intro_2"
+  },
+  {
+    "file": "icons/call-end.svg",
+    "nodeId": "20365:34565",
+    "nodeIds": [
+      "20365:34565"
+    ],
+    "layerName": "call_end",
+    "width": 25.33,
+    "height": 25.33,
+    "kind": "icon",
+    "description": "Hang-up / end call handset (white)",
+    "usedIn": "5/Intro_2"
+  },
+  {
+    "file": "icons/whatsapp.svg",
+    "nodeId": "20365:34669",
+    "nodeIds": [
+      "20365:34669"
+    ],
+    "layerName": "Symbol.svg",
+    "width": 8.93,
+    "height": 8.98,
+    "kind": "icon",
+    "description": "WhatsApp logo outline glyph",
+    "usedIn": "5/Intro_2"
+  },
+  {
+    "file": "icons/bell-ringing.svg",
+    "nodeId": "20365:34675",
+    "nodeIds": [
+      "20365:34675"
+    ],
+    "layerName": "notifications_active",
+    "width": 8.91,
+    "height": 8.91,
+    "kind": "icon",
+    "description": "Ringing notification bell, filled",
+    "usedIn": "5/Intro_2"
+  },
+  {
+    "file": "icons/multiply.svg",
+    "nodeId": "20365:34689",
+    "nodeIds": [
+      "20365:34689"
+    ],
+    "layerName": "u:multiply",
+    "width": 24.0,
+    "height": 24.0,
+    "kind": "icon",
+    "description": "Thin X / close glyph (Unicons multiply)",
+    "usedIn": "5/Intro_2"
+  },
+  {
+    "file": "icons/ellipsis-vertical.svg",
+    "nodeId": "20365:34731",
+    "nodeIds": [
+      "20365:34731"
+    ],
+    "layerName": "system/ellipsis-vertical",
+    "width": 24.0,
+    "height": 24.0,
+    "kind": "icon",
+    "description": "Vertical three-dot overflow menu",
+    "usedIn": "5/Intro_2"
+  },
+  {
+    "file": "icons/audio-bars.svg",
+    "nodeId": "20365:34764",
+    "nodeIds": [
+      "20365:34764"
+    ],
+    "layerName": "Motion / Signal icon",
+    "width": 12.0,
+    "height": 14.0,
+    "kind": "icon",
+    "description": "Three green vertical bars (live voice signal)",
+    "usedIn": "5/Intro_2"
+  },
+  {
+    "file": "icons/phone-filled.svg",
+    "nodeId": "20365:34779",
+    "nodeIds": [
+      "20365:34779"
+    ],
+    "layerName": "phone_enabled",
+    "width": 13.0,
+    "height": 13.0,
+    "kind": "icon",
+    "description": "Filled phone handset, Material (dark)",
+    "usedIn": "5/Intro_2"
+  },
+  {
+    "file": "icons/chevron-forward.svg",
+    "nodeId": "20365:34807",
+    "nodeIds": [
+      "20365:34807"
+    ],
+    "layerName": "system/arrows/chevron-forward",
+    "width": 24.0,
+    "height": 24.0,
+    "kind": "icon",
+    "description": "Rounded chevron right (list row disclosure)",
+    "usedIn": "Call Logs with Pending Actions"
+  },
+  {
+    "file": "icons/edit.svg",
+    "nodeId": "20365:35087",
+    "nodeIds": [
+      "20365:35087"
+    ],
+    "layerName": "edit",
+    "width": 18.0,
+    "height": 18.0,
+    "kind": "icon",
+    "description": "Pencil edit icon (edit phone number)",
+    "usedIn": "2/OTPEntered"
+  },
+  {
+    "file": "icons/loader.svg",
+    "nodeId": "20365:35101",
+    "nodeIds": [
+      "20365:35101"
+    ],
+    "layerName": "loader",
+    "width": 29.0,
+    "height": 29.0,
+    "kind": "icon",
+    "description": "Circular progress spinner (OTP verifying)",
+    "usedIn": "2/OTPVerifying"
+  },
+  {
+    "file": "icons/checkbox-checked.svg",
+    "nodeId": "20365:35141",
+    "nodeIds": [
+      "20365:35141"
+    ],
+    "layerName": "check_box",
+    "width": 18.0,
+    "height": 18.0,
+    "kind": "icon",
+    "description": "Green checked checkbox",
+    "usedIn": "1/MobileNumberEntered"
+  },
+  {
+    "file": "icons/arrow-up-right-bold.svg",
+    "nodeId": "20365:35240",
+    "nodeIds": [
+      "20365:35240"
+    ],
+    "layerName": "Vector 113",
+    "width": 37.0,
+    "height": 37.0,
+    "kind": "icon",
+    "description": "Heavy black diagonal up-right arrow",
+    "usedIn": "3/SelectName&Gender"
+  },
+  {
+    "file": "icons/radio-checked.svg",
+    "nodeId": "20365:36020",
+    "nodeIds": [
+      "20365:36020"
+    ],
+    "layerName": "radio_button_checked",
+    "width": 24.0,
+    "height": 24.0,
+    "kind": "icon",
+    "description": "Green radio button, selected",
+    "usedIn": "Free trial → Gold · Default flow › Call Logs with Pending Actions"
+  },
+  {
+    "file": "icons/equal-app-tile.svg",
+    "nodeId": "20365:41797",
+    "nodeIds": [
+      "20365:41797"
+    ],
+    "layerName": "Frame 2085664632",
+    "width": 33.0,
+    "height": 33.0,
+    "kind": "icon",
+    "description": "Green rounded tile with white Equal logo",
+    "usedIn": "Call Logs with Pending Actions"
+  },
+  {
+    "file": "icons/settings-gear.svg",
+    "nodeId": "20365:41957",
+    "nodeIds": [
+      "20365:41957"
+    ],
+    "layerName": "gear",
+    "width": 20.0,
+    "height": 20.0,
+    "kind": "icon",
+    "description": "Settings gear outline (white)",
+    "usedIn": "Call Logs with Pending Actions › Frame 2085664286"
+  },
+  {
+    "file": "icons/close-bold.svg",
+    "nodeId": "20365:41962",
+    "nodeIds": [
+      "20365:41962"
+    ],
+    "layerName": "close",
+    "width": 18.0,
+    "height": 18.0,
+    "kind": "icon",
+    "description": "Bold rounded X close (gray)",
+    "usedIn": "Call Logs with Pending Actions › Frame 2085664286"
+  },
+  {
+    "file": "icons/equal-ai-logo.svg",
+    "nodeId": "20365:43529",
+    "nodeIds": [
+      "20365:43529"
+    ],
+    "layerName": "EQUAL AI LOGO _BLACK",
+    "width": 129.0,
+    "height": 28.0,
+    "kind": "icon",
+    "description": "Equal AI full logo: dot mark + wordmark, green",
+    "usedIn": "Call Logs with Pending Actions"
+  },
+  {
+    "file": "icons/equal-logo-mark.svg",
+    "nodeId": "20365:43530",
+    "nodeIds": [
+      "20365:43530"
+    ],
+    "layerName": "Group 1410104261",
+    "width": 32.0,
+    "height": 28.0,
+    "kind": "icon",
+    "description": "Equal six-dot logo mark, green",
+    "usedIn": "Call Logs with Pending Actions"
+  },
+  {
+    "file": "icons/phone-sparkle.svg",
+    "nodeId": "20365:43561",
+    "nodeIds": [
+      "20365:43561"
+    ],
+    "layerName": "Group 2085663763",
+    "width": 17.0,
+    "height": 17.0,
+    "kind": "icon",
+    "description": "Phone handset with AI sparkle (AI call)",
+    "usedIn": "Call Logs with Pending Actions"
+  },
+  {
+    "file": "icons/stars-rating.svg",
+    "nodeId": "20365:43578",
+    "nodeIds": [
+      "20365:43578"
+    ],
+    "layerName": "hotel_class",
+    "width": 12.0,
+    "height": 12.0,
+    "kind": "icon",
+    "description": "Star cluster outline (rating / premium)",
+    "usedIn": "Call Logs with Pending Actions"
+  },
+  {
+    "file": "icons/share-nodes.svg",
+    "nodeId": "20365:43622",
+    "nodeIds": [
+      "20365:43622"
+    ],
+    "layerName": "share",
+    "width": 12.0,
+    "height": 12.0,
+    "kind": "icon",
+    "description": "Share icon, three connected nodes",
+    "usedIn": "Call Logs with Pending Actions"
+  },
+  {
+    "file": "icons/bell-off-filled.svg",
+    "nodeId": "20365:43686",
+    "nodeIds": [
+      "20365:43686"
+    ],
+    "layerName": "notifications_off",
+    "width": 15.0,
+    "height": 15.0,
+    "kind": "icon",
+    "description": "Muted bell with slash, filled",
+    "usedIn": "Call Logs with Pending Actions"
+  },
+  {
+    "file": "icons/search.svg",
+    "nodeId": "20365:44075",
+    "nodeIds": [
+      "20365:44075"
+    ],
+    "layerName": "search",
+    "width": 20.0,
+    "height": 20.0,
+    "kind": "icon",
+    "description": "Magnifying glass search (gray stroke)",
+    "usedIn": "Chats + Permission Card"
+  },
+  {
+    "file": "icons/more-horizontal.svg",
+    "nodeId": "20365:44088",
+    "nodeIds": [
+      "20365:44088"
+    ],
+    "layerName": "more_horiz",
+    "width": 26.0,
+    "height": 26.0,
+    "kind": "icon",
+    "description": "Horizontal three-dot more menu",
+    "usedIn": "Chats + Permission Card"
+  },
+  {
+    "file": "icons/avatar-placeholder.svg",
+    "nodeId": "20365:44152",
+    "nodeIds": [
+      "20365:44152"
+    ],
+    "layerName": "Frame 2147228752",
+    "width": 18.0,
+    "height": 18.0,
+    "kind": "icon",
+    "description": "Default contact avatar, person in light circle",
+    "usedIn": "Chats + Permission Card"
+  },
+  {
+    "file": "icons/chevron-right-sf.svg",
+    "nodeId": "20365:44168",
+    "nodeIds": [
+      "20365:44168"
+    ],
+    "layerName": "SF chevron.right",
+    "width": 6.0,
+    "height": 11.0,
+    "kind": "icon",
+    "description": "SF Symbol chevron right (small, dark)",
+    "usedIn": "Chats + Permission Card"
+  },
+  {
+    "file": "icons/chat-bubble-filled.svg",
+    "nodeId": "20365:44321",
+    "nodeIds": [
+      "20365:44321"
+    ],
+    "layerName": "SF bubble.left.fill",
+    "width": 23.0,
+    "height": 19.0,
+    "kind": "icon",
+    "description": "Filled green chat bubble (SF Symbol)",
+    "usedIn": "Chats + Permission Card"
+  },
+  {
+    "file": "icons/badge-scalloped-outline.svg",
+    "nodeId": "20365:44326",
+    "nodeIds": [
+      "20365:44326"
+    ],
+    "layerName": "Star 2",
+    "width": 26.0,
+    "height": 26.0,
+    "kind": "icon",
+    "description": "Scalloped badge outline, green/gold stroke",
+    "usedIn": "Chats + Permission Card"
+  },
+  {
+    "file": "icons/gold-wordmark.svg",
+    "nodeId": "20365:44363",
+    "nodeIds": [
+      "20365:44363"
+    ],
+    "layerName": "GOLD",
+    "width": 26.0,
+    "height": 7.0,
+    "kind": "icon",
+    "description": "GOLD wordmark lettering, yellow",
+    "usedIn": "Chats + Permission Card"
+  },
+  {
+    "file": "icons/send-outline.svg",
+    "nodeId": "21168:119278",
+    "nodeIds": [
+      "21168:119278"
+    ],
+    "layerName": "Button",
+    "width": 8.44,
+    "height": 8.44,
+    "kind": "icon",
+    "description": "Paper-plane send icon, outline",
+    "usedIn": "Soft paywall › Call Logs with Pending Actions"
+  },
+  {
+    "file": "icons/bubble-tail.svg",
+    "nodeId": "21168:119293",
+    "nodeIds": [
+      "21168:119293"
+    ],
+    "layerName": "Polygon 3",
+    "width": 6.0,
+    "height": 8.0,
+    "kind": "icon",
+    "description": "Chat bubble tail triangle (white)",
+    "usedIn": "Soft paywall › Call Logs with Pending Actions"
+  },
+  {
+    "file": "icons/play-small.svg",
+    "nodeId": "21168:119422",
+    "nodeIds": [
+      "21168:119422"
+    ],
+    "layerName": "Group 2085663245",
+    "width": 10.0,
+    "height": 10.0,
+    "kind": "icon",
+    "description": "Small rounded play triangle (gray)",
+    "usedIn": "Soft paywall › Call Logs with Pending Actions"
+  },
+  {
+    "file": "icons/share-ios.svg",
+    "nodeId": "21168:119434",
+    "nodeIds": [
+      "21168:119434"
+    ],
+    "layerName": "SF square.and.arrow.up",
+    "width": 5.0,
+    "height": 7.0,
+    "kind": "icon",
+    "description": "iOS share (square + up arrow), green",
+    "usedIn": "Soft paywall › Call Logs with Pending Actions"
+  },
+  {
+    "file": "icons/equal-ai-wordmark.svg",
+    "nodeId": "21168:120654",
+    "nodeIds": [
+      "21168:120654"
+    ],
+    "layerName": "Logo Graphics",
+    "width": 28.0,
+    "height": 8.0,
+    "kind": "icon",
+    "description": "Equal AI wordmark text only, green",
+    "usedIn": "Soft paywall › Call Logs with Pending Actions"
+  },
+  {
+    "file": "icons/chat-bubble-outline.svg",
+    "nodeId": "21210:121693",
+    "nodeIds": [
+      "21210:121693"
+    ],
+    "layerName": "SF bubble.left",
+    "width": 22.0,
+    "height": 19.0,
+    "kind": "icon",
+    "description": "Outline chat bubble (SF Symbol), green",
+    "usedIn": "Soft paywall › Call Logs with Pending Actions"
+  },
+  {
+    "file": "icons/checkmark-bold.svg",
+    "nodeId": "21402:47776",
+    "nodeIds": [
+      "21402:47776"
+    ],
+    "layerName": "Group 2085663951",
+    "width": 24.0,
+    "height": 18.0,
+    "kind": "icon",
+    "description": "Heavy rounded checkmark (white)",
+    "usedIn": "Soft paywall › Call Logs with Pending Actions"
+  },
+  {
+    "file": "icons/phone-outline-sf.svg",
+    "nodeId": "21402:64185",
+    "nodeIds": [
+      "21402:64185"
+    ],
+    "layerName": "SF phone",
+    "width": 15.0,
+    "height": 15.0,
+    "kind": "icon",
+    "description": "SF Symbol phone outline (white)",
+    "usedIn": "Soft paywall › Empty State"
+  },
+  {
+    "file": "icons/credit-card.svg",
+    "nodeId": "21402:67126",
+    "nodeIds": [
+      "21402:67126"
+    ],
+    "layerName": "credit_card",
+    "width": 20.0,
+    "height": 20.0,
+    "kind": "icon",
+    "description": "Credit card outline (payment)",
+    "usedIn": "Soft paywall › Call Logs with Pending Actions"
+  },
+  {
+    "file": "icons/calendar.svg",
+    "nodeId": "21402:67131",
+    "nodeIds": [
+      "21402:67131"
+    ],
+    "layerName": "calendar_month",
+    "width": 20.0,
+    "height": 20.0,
+    "kind": "icon",
+    "description": "Calendar month outline (schedule)",
+    "usedIn": "Soft paywall › Call Logs with Pending Actions"
+  },
+  {
+    "file": "icons/caret-up.svg",
+    "nodeId": "21540:88971",
+    "nodeIds": [
+      "21540:88971"
+    ],
+    "layerName": "keyboard_arrow_down",
+    "width": 24.0,
+    "height": 24.0,
+    "kind": "icon",
+    "description": "Caret / chevron up, 24px (expand/collapse)",
+    "usedIn": "Soft paywall › Call Logs with Pending Actions"
+  },
+  {
+    "file": "icons/support-agent.svg",
+    "nodeId": "21540:88988",
+    "nodeIds": [
+      "21540:88988"
+    ],
+    "layerName": "support_agent",
+    "width": 24.0,
+    "height": 24.0,
+    "kind": "icon",
+    "description": "Headset support agent (help/contact)",
+    "usedIn": "Soft paywall › Call Logs with Pending Actions"
+  },
+  {
+    "file": "icons/face-id-sf.svg",
+    "nodeId": "24117:2724",
+    "nodeIds": [
+      "24117:2724"
+    ],
+    "layerName": "SF faceid",
+    "width": 23.0,
+    "height": 23.0,
+    "kind": "icon",
+    "description": "Face ID glyph, SF Symbol (white)",
+    "usedIn": "Call Logs with Pending Actions"
+  },
+  {
+    "file": "icons/verified-seal.svg",
+    "nodeId": "24312:19378",
+    "nodeIds": [
+      "24312:19378"
+    ],
+    "layerName": "SF checkmark.seal.fill",
+    "width": 78.0,
+    "height": 78.0,
+    "kind": "icon",
+    "description": "Filled verified seal with checkmark",
+    "usedIn": "Call Logs with Pending Actions"
+  },
+  {
+    "file": "icons/close.svg",
+    "nodeId": "24539:9170",
+    "nodeIds": [
+      "24539:9170"
+    ],
+    "layerName": "system/close",
+    "width": 24.0,
+    "height": 24.0,
+    "kind": "icon",
+    "description": "Rounded X close, 24px (black)",
+    "usedIn": "Loading state education › Frame 2085664465"
+  },
+  {
+    "file": "icons/play-circle-filled.svg",
+    "nodeId": "25722:21508",
+    "nodeIds": [
+      "25722:21508"
+    ],
+    "layerName": "SF play.circle.fill",
+    "width": 12.0,
+    "height": 12.0,
+    "kind": "icon",
+    "description": "Filled play circle, gold-brown",
+    "usedIn": "Call Logs with Pending Actions"
+  },
+  {
+    "file": "icons/phone-tile-gold.svg",
+    "nodeId": "26242:23254",
+    "nodeIds": [
+      "26242:23254"
+    ],
+    "layerName": "Icon",
+    "width": 34.0,
+    "height": 34.0,
+    "kind": "icon",
+    "description": "Phone in gold-outlined rounded tile (calls handled)",
+    "usedIn": "Free trial → Gold · Default flow › 02 · Value recap · 1 slide"
+  },
+  {
+    "file": "icons/arrow-right.svg",
+    "nodeId": "26242:23302",
+    "nodeIds": [
+      "26242:23302"
+    ],
+    "layerName": "Icon",
+    "width": 22.0,
+    "height": 14.0,
+    "kind": "icon",
+    "description": "Right arrow, gold stroke (CTA)",
+    "usedIn": "Free trial → Gold · Default flow › 03 · Paywall · Hero + sticky plans"
+  },
+  {
+    "file": "icons/close-circle-light.svg",
+    "nodeId": "26242:26120",
+    "nodeIds": [
+      "26242:26120"
+    ],
+    "layerName": "Close",
+    "width": 38.0,
+    "height": 38.0,
+    "kind": "icon",
+    "description": "Close X in translucent white circle (sheet dismiss)",
+    "usedIn": "Free trial → Gold · Default flow › 03 · Paywall · Hero + sticky plans"
+  },
+  {
+    "file": "icons/radio-unselected.svg",
+    "nodeId": "26242:26130",
+    "nodeIds": [
+      "26242:26130"
+    ],
+    "layerName": "Unselected",
+    "width": 20.0,
+    "height": 20.0,
+    "kind": "icon",
+    "description": "Plan radio, unselected beige ring",
+    "usedIn": "Free trial → Gold · Default flow › 03 · Paywall · Hero + sticky plans"
+  },
+  {
+    "file": "icons/check-circle-green.svg",
+    "nodeId": "26242:26136",
+    "nodeIds": [
+      "26242:26136"
+    ],
+    "layerName": "Selected",
+    "width": 20.0,
+    "height": 20.0,
+    "kind": "icon",
+    "description": "Green filled circle with white check (selected)",
+    "usedIn": "Free trial → Gold · Default flow › 03 · Paywall · Hero + sticky plans"
+  },
+  {
+    "file": "icons/coupon-badge.svg",
+    "nodeId": "26242:26142",
+    "nodeIds": [
+      "26242:26142"
+    ],
+    "layerName": "Coupon badge",
+    "width": 26.0,
+    "height": 26.0,
+    "kind": "icon",
+    "description": "Gold starburst coupon badge",
+    "usedIn": "Free trial → Gold · Default flow › 03 · Paywall · Hero + sticky plans"
+  },
+  {
+    "file": "icons/phone-circle-gold.svg",
+    "nodeId": "26242:28989",
+    "nodeIds": [
+      "26242:28989"
+    ],
+    "layerName": "Icon",
+    "width": 30.0,
+    "height": 30.0,
+    "kind": "icon",
+    "description": "Phone outline in soft gold circle",
+    "usedIn": "Free trial → Gold · Default flow › 03 · Paywall · Hero + sticky plans"
+  },
+  {
+    "file": "icons/replay-gold.svg",
+    "nodeId": "26242:34712",
+    "nodeIds": [
+      "26242:34712"
+    ],
+    "layerName": "Replay",
+    "width": 20.0,
+    "height": 20.0,
+    "kind": "icon",
+    "description": "Play/replay triangle in soft gold circle",
+    "usedIn": "Free trial → Gold · Default flow › Paywall (behind)"
+  },
+  {
+    "file": "icons/close-circle-gray.svg",
+    "nodeId": "26242:34758",
+    "nodeIds": [
+      "26242:34758"
+    ],
+    "layerName": "Close",
+    "width": 30.0,
+    "height": 30.0,
+    "kind": "icon",
+    "description": "Gray circle close X (App Store sheet)",
+    "usedIn": "Free trial → Gold · Default flow › 04 · App Store confirmation"
+  },
+  {
+    "file": "icons/chevron-right-bold.svg",
+    "nodeId": "26242:66891",
+    "nodeIds": [
+      "26242:66891"
+    ],
+    "layerName": "Vector",
+    "width": 11.0,
+    "height": 15.0,
+    "kind": "icon",
+    "description": "Bold dark chevron right (Gold CTA)",
+    "usedIn": "Flow · Gold limit"
+  },
+  {
+    "file": "icons/offer-badge-gold.svg",
+    "nodeId": "26242:67368",
+    "nodeIds": [
+      "26242:67368"
+    ],
+    "layerName": "Icon",
+    "width": 26.0,
+    "height": 26.0,
+    "kind": "icon",
+    "description": "Gold sun-burst offer badge with inner ring",
+    "usedIn": "Flow · Gold limit › Paywall · Gold limit"
+  },
+  {
+    "file": "icons/lock.svg",
+    "nodeId": "26242:67381",
+    "nodeIds": [
+      "26242:67381"
+    ],
+    "layerName": "Icon",
+    "width": 12.0,
+    "height": 12.0,
+    "kind": "icon",
+    "description": "Padlock outline, green (secure payment)",
+    "usedIn": "Flow · Gold limit › Paywall · Gold limit"
+  },
+  {
+    "file": "icons/face-id.svg",
+    "nodeId": "26242:67879",
+    "nodeIds": [
+      "26242:67879"
+    ],
+    "layerName": "Frame",
+    "width": 32.0,
+    "height": 32.0,
+    "kind": "icon",
+    "description": "Face ID outline, blue (App Store confirm)",
+    "usedIn": "Flow · Gold limit › App Store confirmation · Gold limit"
+  },
+  {
+    "file": "icons/success-check-large.svg",
+    "nodeId": "26242:67889",
+    "nodeIds": [
+      "26242:67889"
+    ],
+    "layerName": "Check",
+    "width": 40.0,
+    "height": 40.0,
+    "kind": "icon",
+    "description": "Large green success check circle, 40px",
+    "usedIn": "Flow · Gold limit › Success · Upgraded"
+  },
+  {
+    "file": "icons/keyboard.svg",
+    "nodeId": "26242:68176",
+    "nodeIds": [
+      "26242:68176"
+    ],
+    "layerName": "keyboard",
+    "width": 22.0,
+    "height": 22.0,
+    "kind": "icon",
+    "description": "Keyboard outline (switch to typing)",
+    "usedIn": "Flow · Gold limit › Frame 2147229213"
+  },
+  {
+    "file": "icons/mic-filled.svg",
+    "nodeId": "26242:68179",
+    "nodeIds": [
+      "26242:68179"
+    ],
+    "layerName": "microphone.fill",
+    "width": 12.0,
+    "height": 18.0,
+    "kind": "icon",
+    "description": "Filled microphone, white (voice input)",
+    "usedIn": "Flow · Gold limit › Frame 2147229213"
+  },
+  {
+    "file": "icons/magic-wand.svg",
+    "nodeId": "26242:68193",
+    "nodeIds": [
+      "26242:68193"
+    ],
+    "layerName": "SF wand.and.stars",
+    "width": 33.0,
+    "height": 33.0,
+    "kind": "icon",
+    "description": "Magic wand with stars, green (AI)",
+    "usedIn": "Flow · Gold limit › Frame 2147229213"
+  },
+  {
+    "file": "icons/phone-filled-green.svg",
+    "nodeId": "26242:68196",
+    "nodeIds": [
+      "26242:68196"
+    ],
+    "layerName": "SF phone.fill",
+    "width": 28.0,
+    "height": 28.0,
+    "kind": "icon",
+    "description": "Filled phone handset, green SF Symbol",
+    "usedIn": "Flow · Gold limit › Frame 2147229213"
+  },
+  {
+    "file": "icons/equal-logo-mark-light.svg",
+    "nodeId": "26242:68202",
+    "nodeIds": [
+      "26242:68202"
+    ],
+    "layerName": "Group 55314",
+    "width": 32.0,
+    "height": 28.0,
+    "kind": "icon",
+    "description": "Equal six-dot logo mark, off-white",
+    "usedIn": "Flow · Gold limit › Frame 2147229213"
+  },
+  {
+    "file": "icons/plus.svg",
+    "nodeId": "26242:68967",
+    "nodeIds": [
+      "26242:68967"
+    ],
+    "layerName": "SF plus",
+    "width": 11.0,
+    "height": 11.0,
+    "kind": "icon",
+    "description": "Plus / add, green",
+    "usedIn": "Flow · Gold limit › Frame 2147229215"
+  },
+  {
+    "file": "icons/bubble-tail-curved.svg",
+    "nodeId": "26242:68970",
+    "nodeIds": [
+      "26242:68970"
+    ],
+    "layerName": "Vector 39",
+    "width": 18.0,
+    "height": 16.0,
+    "kind": "icon",
+    "description": "Curved chat bubble tail (white)",
+    "usedIn": "Flow · Gold limit › Frame 2147229215"
+  },
+  {
+    "file": "icons/star-outline.svg",
+    "nodeId": "26242:74674",
+    "nodeIds": [
+      "26242:74674"
+    ],
+    "layerName": "SF star",
+    "width": 15.0,
+    "height": 15.0,
+    "kind": "icon",
+    "description": "Star outline, green (rate/favourite)",
+    "usedIn": "Flow · Trial limit › Frame 2147229215"
+  },
+  {
+    "file": "icons/document.svg",
+    "nodeId": "26242:89430",
+    "nodeIds": [
+      "26242:89430"
+    ],
+    "layerName": "SF doc.plaintext",
+    "width": 17.0,
+    "height": 21.0,
+    "kind": "icon",
+    "description": "Document with text lines (transcripts/legal)",
+    "usedIn": "Settings page › Call Logs with Pending Actions"
+  },
+  {
+    "file": "icons/bell-off.svg",
+    "nodeId": "26242:89453",
+    "nodeIds": [
+      "26242:89453"
+    ],
+    "layerName": "SF bell.slash",
+    "width": 20.0,
+    "height": 21.0,
+    "kind": "icon",
+    "description": "Bell with slash outline (mute notifications)",
+    "usedIn": "Settings page › Call Logs with Pending Actions"
+  },
+  {
+    "file": "icons/mic-outline.svg",
+    "nodeId": "26242:89463",
+    "nodeIds": [
+      "26242:89463"
+    ],
+    "layerName": "SF mic",
+    "width": 14.0,
+    "height": 21.0,
+    "kind": "icon",
+    "description": "Microphone outline (voice settings)",
+    "usedIn": "Settings page › Call Logs with Pending Actions"
+  },
+  {
+    "file": "icons/status-battery.svg",
+    "nodeId": "I20365:34567;6325:1760",
+    "nodeIds": [
+      "I20365:34567;6325:1760"
+    ],
+    "layerName": "Frame",
+    "width": 22.0,
+    "height": 10.0,
+    "kind": "icon",
+    "description": "iOS status-bar battery glyph (white)",
+    "usedIn": "5/Intro_2"
+  },
+  {
+    "file": "icons/send-filled.svg",
+    "nodeId": "I21210:124274;14354:16365",
+    "nodeIds": [
+      "I21210:124274;14354:16365"
+    ],
+    "layerName": "SF paperplane.fill",
+    "width": 10.0,
+    "height": 10.0,
+    "kind": "icon",
+    "description": "Filled paper plane send, white",
+    "usedIn": "Soft paywall › Call Logs with Pending Actions"
+  },
+  {
+    "file": "icons/check-circle-soft.svg",
+    "nodeId": "I25722:21678;25727:10493",
+    "nodeIds": [
+      "I25722:21678;25727:10493"
+    ],
+    "layerName": "Compare / Check",
+    "width": 20.0,
+    "height": 20.0,
+    "kind": "icon",
+    "description": "Green check in pale-green circle (comparison table)",
+    "usedIn": "Call Logs with Pending Actions"
+  }
+]

@@ -1,0 +1,10 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="hotel_class">
+<mask id="mask0_0_4" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="12" height="12">
+<rect id="Bounding box" width="12" height="12" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_0_4)">
+<path id="hotel_class_2" d="M8.35 7.25L10.25 5.625L11.75 5.75L9.55 7.6625L10.2 10.5L8.925 9.725L8.35 7.25ZM7.175 3.6L6.65 2.375L7.225 1L8.375 3.7125L7.175 3.6ZM3.675 8.4125L5.25 7.4625L6.825 8.425L6.4125 6.625L7.8 5.425L5.975 5.2625L5.25 3.5625L4.525 5.25L2.7 5.4125L4.0875 6.625L3.675 8.4125ZM2.1625 10.5L2.975 6.9875L0.25 4.625L3.85 4.3125L5.25 1L6.65 4.3125L10.25 4.625L7.525 6.9875L8.3375 10.5L5.25 8.6375L2.1625 10.5Z" fill="white"/>
+</g>
+</g>
+</svg>
