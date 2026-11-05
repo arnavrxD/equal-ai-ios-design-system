@@ -55,7 +55,7 @@ function extractType(name) {
 }
 
 // ── Catalog registry (level, summary, usage snippet) ───────────
-const catalogText = read("Sources/EqualDesignSystem/Catalog/EqualCatalogView.swift");
+const catalogText = walk("Sources/EqualDesignSystem/Catalog").map((f) => read(f)).join("\n");
 const catalog = [];
 const itemRe = /EqualCatalogItem\("([^"]+)", \.(\w+), "((?:[^"\\]|\\.)*)"\) \{/g;
 let im;
@@ -71,9 +71,10 @@ while ((im = itemRe.exec(catalogText))) {
 
 // ── Web previews and guideline docs ────────────────────────────
 const previews = JSON.parse(read("web/previews/previews.json"));
-function guidelines(webName) {
-  const p = path.join(ROOT, "docs/components", webName + ".md");
-  if (!fs.existsSync(p)) return "";
+function guidelines(webName, swiftName) {
+  const candidates = [webName, swiftName.replace(/^Equal/, ""), swiftName].map((n) => path.join(ROOT, "docs/components", n + ".md"));
+  const p = candidates.find((c) => fs.existsSync(c));
+  if (!p) return "";
   return fs.readFileSync(p, "utf8")
     .replace(/^# .*\n+/, "")
     .split("\n")
@@ -83,10 +84,11 @@ function guidelines(webName) {
 }
 
 const snapshotsDir = path.join(ROOT, "web/snapshots");
+const blank = new Set(fs.existsSync(path.join(snapshotsDir, "blank.json")) ? JSON.parse(fs.readFileSync(path.join(snapshotsDir, "blank.json"), "utf8")) : []);
 const snap = (id, scheme) => {
   const slug = id.toLowerCase().replace(/ · /g, "-").replace(/ & /g, "-").replace(/, /g, "-").replace(/ /g, "-");
   const f = `${slug}-${scheme}.png`;
-  return fs.existsSync(path.join(snapshotsDir, f)) ? `snapshots/${f}` : null;
+  return fs.existsSync(path.join(snapshotsDir, f)) && !blank.has(f) ? `snapshots/${f}` : null;
 };
 // ImageRenderer cannot draw text fields or scroll views; these renders are left out.
 const NO_SNAPSHOT = new Set(["EqualTextField", "EqualSearchBar", "EqualComposer", "EqualChatListItem", "EqualChatList", "EqualSheet", "EqualLiveCallCard",
@@ -110,9 +112,9 @@ const components = catalog
       file: t?.file,
       source: t?.source || "",
       usage: c.usage,
-      guidelines: guidelines(web),
+      guidelines: guidelines(web, c.id),
       preview: pv ? { js: pv.js, height: pv.height } : null,
-      snapshot: NO_SNAPSHOT.has(c.id) ? null : { light: snap(c.id, "light"), dark: snap(c.id, "dark") },
+      snapshot: NO_SNAPSHOT.has(c.id) || !snap(c.id, "light") ? null : { light: snap(c.id, "light"), dark: snap(c.id, "dark") },
     };
   });
 
@@ -123,7 +125,7 @@ const components = catalog
     name: "EqualIconView", slug: "icon", level: "atoms", summary: t.summary, short: "SF Symbol glyphs for UI icons.",
     file: t.file, source: extractType("EqualIcon").source + "\n\n" + t.source,
     usage: 'HStack {\n    EqualIconView(.phone, size: 20)\n    EqualIconView(.chevronRight, size: 13, weight: .semibold)\n        .foregroundStyle(EqualColor.textSecondary)\n}',
-    guidelines: guidelines("Icon"), preview: previews.Icon ? { js: previews.Icon.js, height: previews.Icon.height } : null, snapshot: null,
+    guidelines: guidelines("Icon", "EqualIconView"), preview: previews.Icon ? { js: previews.Icon.js, height: previews.Icon.height } : null, snapshot: null,
   });
 }
 
