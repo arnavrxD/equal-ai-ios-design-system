@@ -7,11 +7,12 @@ The SwiftUI design system behind the Equal AI iOS app, built from the **EQAI-iOS
 | | |
 |---|---|
 | Colour tokens | 93 (semantic light/dark, primitives, Gold, avatar tints, iOS) |
-| Text styles | 32 (the file's 22 iOS styles in DM Sans + product accents + system chrome) |
-| Atoms | 17 |
-| Molecules | 18 |
-| Organisms | 21 |
-| Screens | 15 templates |
+| Text styles | 30 (the file's 22 iOS styles in DM Sans + product accents) |
+| Atoms | 31 |
+| Molecules | 34 |
+| Organisms | 35 |
+| Screens | 27 screen types, 112 catalogued states |
+| Swift | 151 files, 14,154 lines |
 | Platforms | iOS 17+, macOS 14+ (for previews and snapshot rendering) |
 
 ## Install
@@ -35,30 +36,21 @@ struct EqualApp: App {
 
 ### Fonts
 
-The type scale is **DM Sans** (SIL Open Font License). Add `DMSans-VariableFont_opsz,wght.ttf` and `DMSans-Italic-VariableFont_opsz,wght.ttf` from [Google Fonts](https://fonts.google.com/specimen/DM+Sans) to `Sources/EqualDesignSystem/Resources/Fonts`. Until then, text falls back to SF Pro at the same sizes, weights and tracking.
+DM Sans (variable, SIL Open Font License) is bundled in `Resources/Fonts`; call `EqualFonts.register()` at launch. All text is DM Sans; SF Pro appears only inside SF Symbols icons.
 
 ## Atomic structure
 
 ```
 Sources/EqualDesignSystem/
 ├─ Tokens/       generated from tokens/tokens.json: EqualColor, EqualTextStyle, EqualSpacing, EqualRadius, EqualShadow
-├─ Foundation/   dynamic colours, fonts, typography modifier, EqualGradient, EqualIcon (SF Symbols), EqualImage, EqualLogo, glass
-├─ Atoms/        EqualButton, EqualIconButton, EqualChip, EqualTag, EqualAvatar, EqualUnreadCount, EqualToggle,
-│                EqualPlanRadio, EqualCheckbox, EqualCompareCheck, EqualSectionLabel, EqualPageDots,
-│                EqualProgressBar, EqualTextField, EqualThinkingText, EqualCrownLoader (+ EqualIconView)
-├─ Molecules/    EqualSearchBar, EqualChatListItem, EqualChatBubble, EqualComposer, EqualQuickActionTile,
-│                EqualSettingsRow, EqualAssistantToggleCard, EqualPlanCard, EqualCouponRow, EqualFAQItem,
-│                EqualStatRow, EqualPushBanner, EqualGenderCard, EqualAvailabilityPill, EqualTrialPill,
-│                EqualSheetHeader, EqualUpiStep, EqualKeyValueRow
-├─ Organisms/    EqualAppHeader, EqualTabBar, EqualChatList, EqualSheet, EqualPermissionSheet, EqualPromoCard,
-│                EqualRecapCard, EqualMembershipCard, EqualProfileHeader, EqualComparePlansTable,
-│                EqualFeatureCard, EqualStickyPlanSheet, EqualPaywallHero, EqualValueRecapStory,
-│                EqualAppStoreSheet, EqualPaymentProcessing, EqualSuccessState, EqualEmptyState,
-│                EqualOnboardingHeader, EqualInviteCard, EqualLiveCallCard
-├─ Screens/      Splash, PhoneNumber, NameGender, Permission, Home, EqualChat, Paywall, Settings,
-│                Subscription, ValueRecap, PaymentProcessing, PurchaseSuccess, AppStoreConfirmation
-├─ Catalog/      EqualCatalogView: every foundation, component and screen, browsable in-app
-└─ Resources/    Images (3D illustrations, app icons) · Fonts
+├─ Foundation/   dynamic colours, DM Sans registration, typography, gradients, SF Symbol icons, vector logo/mark/app icon/flag,
+│                decorations (rings, scalloped star, glow), ambient glows, doodle pattern, images, animated GIF player
+├─ Atoms/        31: EqualButton, EqualIconButton, EqualChip, EqualTag, EqualAvatar, EqualUnreadCount, EqualToggle, EqualPlanRadio, EqualCheckbox, EqualCompareCheck, EqualSectionLabel, EqualPageDots, EqualProgressBar, EqualTextField, EqualThinkingText, EqualCrownLoader, EqualFieldMessage, EqualIconView, EqualMadeInIndiaPill, EqualTrialProgress, EqualDayRing, EqualStarHalo, EqualCheckBadge, EqualSideButtonHint, EqualSideButtonCue, EqualRingLoader, EqualPlanBadge, EqualGoldWordmark, EqualNotificationSkeleton, EqualBubbleTail, EqualProfileAvatarBadge
+├─ Molecules/    34: EqualSearchBar, EqualChatListItem, EqualChatBubble, EqualComposer, EqualQuickActionTile, EqualSettingsRow, EqualAssistantToggleCard, EqualPlanCard, EqualCouponRow, EqualFAQItem, EqualStatRow, EqualPushBanner, EqualGenderCard, EqualAvailabilityPill, EqualSheetHeader, EqualUpiStep, EqualKeyValueRow, EqualOTPField, EqualOnboardingHeader, EqualPhoneMockup, EqualTrialCountdownCard, EqualTrialInfoCard, EqualFeaturePill, EqualPlanDetailsCard, EqualRecapStrip, EqualSwipeToStart, EqualTrialPill, EqualPlanPicker, EqualApplePayHintCard, EqualUpiStepList, EqualLockScreenNotification, EqualSectionHeader, EqualChatWallpaper, EqualNoticingCard
+├─ Organisms/    35: EqualAppHeader, EqualTabBar, EqualChatList, EqualSheet, EqualPermissionSheet, EqualPromoCard, EqualRecapCard, EqualMembershipCard, EqualProfileHeader, EqualComparePlansTable, EqualFeatureCard, EqualStickyPlanSheet, EqualPaywallHero, EqualValueRecapStory, EqualAppStoreSheet, EqualPaymentProcessing, EqualSuccessState, EqualInviteCard, EqualLiveCallCard, EqualSocialProofCard, EqualWelcomeIntro, EqualIntroSlide, EqualTrialHero, EqualPriceDealCard, EqualStickyCTABar, EqualExpiredHeader, EqualPurchaseConfirmSheet, EqualEmptyState, EqualValueCard, EqualUpiPhoneIllustration, EqualProcessingSheet, EqualPermissionPreview, EqualConsentDialog, EqualPromoCarousel, EqualRenewSheet
+├─ Screens/      27: SplashScreen, SplashSocialProofScreen, PhoneNumberScreen, OTPScreen, NameGenderScreen, WelcomeScreen, IntroScreeningScreen, PermissionScreen, HomeScreen, EqualChatScreen, ValueRecapScreen, PaywallScreen, AppStoreConfirmationScreen, PaymentProcessingScreen, PurchaseSuccessScreen, SettingsScreen, SubscriptionScreen, GoldTrialStartScreen, SoftPaywallScreen, TrialStartedScreen, TrialHomeScreen, PlanExpiredHomeScreen, PurchaseConfirmScreen, ActivatingGoldScreen, UpiWaitScreen, ProcessingSheetScreen, LimitFlowChatScreen
+├─ Catalog/      EqualCatalogView + Entries/ per area: every foundation, component and screen state, browsable in-app
+└─ Resources/    Fonts (DM Sans, OFL) · Images (only non-codable art: 3D renders, photos, screenshots)
 ```
 
 Screens use organisms only, organisms use molecules and atoms, and everything reads tokens. Every file has a `PreviewProvider`.
@@ -78,10 +70,14 @@ Screens use organisms only, organisms use molecules and atoms, and everything re
 
 ## Workflow
 
+### Code first
+
+Everything that can be drawn is SwiftUI: the logo, mark, app icon and Indian flag are vector paths; rings, rays, badges, seals, glows, coupon shapes, the UPI phone illustration and the neural-net art are shapes. Only 3D renders, photos, screenshots and the 392-icon doodle wallpaper ship as images (`EqualImage`).
+
 ```bash
 python3 scripts/generate_tokens.py        # tokens/tokens.json → Sources/EqualDesignSystem/Tokens/*.swift
 swift build                               # compile check (works with Command Line Tools)
-swift run equal-snapshots web/snapshots   # SwiftUI renders for the site
+./scripts/render-snapshots.sh            # SwiftUI renders (WebP) + catalog manifest for the site
 node scripts/build-web.mjs                # Swift sources + docs → web/data.js
 ```
 

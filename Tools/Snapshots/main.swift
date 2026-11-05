@@ -45,6 +45,11 @@ MainActor.assumeIsolated {
         if let cg = r.cgImage, let d = NSBitmapImageRep(cgImage: cg).representation(using: .png, properties: [:]) { try? d.write(to: out.appendingPathComponent("_check.png")) }
         exit(0)
     }
+    // Catalog manifest for the docs site (every entry, including ones generated in loops).
+    let manifest = EqualCatalog.items.map { ["id": $0.id, "level": $0.level.rawValue, "summary": $0.summary] }
+    if let json = try? JSONSerialization.data(withJSONObject: manifest, options: [.prettyPrinted]) {
+        try? json.write(to: out.appendingPathComponent("catalog.json"))
+    }
     let filter = CommandLine.arguments.firstIndex(of: "--filter").map { CommandLine.arguments[$0 + 1].lowercased() }
     for item in EqualCatalog.items where filter.map({ f in f.split(separator: ",").contains { item.id.lowercased().contains($0) } }) ?? true {
         render(item, scheme: .light, to: out)

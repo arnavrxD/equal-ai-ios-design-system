@@ -27,7 +27,7 @@ public struct TrialHomeScreen: View {
 
     public var body: some View {
         VStack(spacing: 0) {
-            EqualAppHeader(plan: "Gold")
+            EqualAppHeader(badge: .goldLight)
             EqualScrollContent { page }
         }
         .overlay(alignment: .bottom) {

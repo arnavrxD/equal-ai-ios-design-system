@@ -94,9 +94,17 @@
     return `<input class="side-search" id="side-search" type="search" placeholder="Search components…" aria-label="Search components">
       <a href="#/components" class="${!active ? "on" : ""}">Overview</a>${groups}`;
   }
+  /** Screens grouped by flow: the part of the name before " · ". */
+  function screenGroups() {
+    const order = ["Splash", "Phone number", "OTP", "Name & gender", "Welcome", "Intro", "Permission", "Chats permission", "Home", "Equal chat", "Limit chat", "Gold trial start", "Trial home", "Trial started", "Soft paywall", "Plan expired", "Paywall", "Limit paywall", "Value recap", "Purchase confirm", "App Store confirmation", "Activating Gold", "UPI wait", "Payment processing", "Processing sheet", "Purchase success", "Settings", "Subscription"];
+    const groupOf = (n) => order.find((o) => n === o || n.startsWith(o + " ") || n.startsWith(o + " ·")) || n.split(" · ")[0];
+    const map = new Map();
+    for (const s of D.screens) { const g = groupOf(s.name); if (!map.has(g)) map.set(g, []); map.get(g).push(s); }
+    return [...map.entries()].sort((a, b) => (order.indexOf(a[0]) + 1 || 99) - (order.indexOf(b[0]) + 1 || 99));
+  }
   function sideScreens(active) {
-    return `<a href="#/screens" class="${!active ? "on" : ""}">Overview</a><h5>Screens</h5>` +
-      D.screens.map((s) => `<a href="#/screens/${s.slug}" class="${active === s.slug ? "on" : ""}">${esc(s.name)}</a>`).join("") +
+    return `<input class="side-search" id="side-search" type="search" placeholder="Search screens…" aria-label="Search screens"><a href="#/screens" class="${!active ? "on" : ""}">Overview</a>` +
+      screenGroups().map(([g, list]) => `<h5><span>${esc(g)}</span><span>${list.length}</span></h5>` + list.map((s) => `<a href="#/screens/${s.slug}" data-name="${esc(s.name.toLowerCase())}" class="${active === s.slug ? "on" : ""}">${esc(s.name.includes(" · ") ? s.name.split(" · ").slice(1).join(" · ") : s.name)}</a>`).join("")).join("") +
       `<h5>Flows</h5><a href="#/screens#flows">Flow boards</a>`;
   }
 
@@ -186,7 +194,7 @@
 │  ├─ Organisms/                 ${D.stats.organisms} organisms
 │  ├─ Screens/                   ${D.stats.screens} screen templates
 │  ├─ Catalog/                   EqualCatalogView: every entry, browsable in-app
-│  └─ Resources/                 Images (3D art, app icons) · Fonts (DM Sans)
+│  └─ Resources/                 Fonts (DM Sans) · Images (only non-codable 3D renders, photos, screenshots)
 ├─ Examples/EqualCatalogApp/     an @main App that shows the catalog
 ├─ Tools/Snapshots/              swift run equal-snapshots → PNG renders of every entry
 ├─ design/                       Figma exports: screens, flows, images, SVG icons
@@ -197,13 +205,13 @@
       <div class="stack"><span class="eyebrow">Docs</span><h1 class="h1">Getting started</h1>
       <p class="lead">EqualDesignSystem is a Swift Package. It needs iOS 17 or later and has no dependencies.</p></div>
       <section class="stack"><h2 class="h3">1 · Add the package</h2><p class="prose">In Xcode choose <strong>File → Add Package Dependencies…</strong> and paste <code class="inline-code">${esc(D.repo)}</code>, or add it to <code class="inline-code">Package.swift</code>:</p>${codeBlock(install, "Package.swift")}</section>
-      <section class="stack"><h2 class="h3">2 · Register the font</h2><p class="prose">The type scale is DM Sans. Put the DM Sans files (<code>DMSans-VariableFont_opsz,wght.ttf</code> and the italic, from Google Fonts, SIL OFL) in <code>Sources/EqualDesignSystem/Resources/Fonts</code> and call <code>EqualFonts.register()</code> once. Until they are added, text falls back to SF Pro at the same sizes, weights and tracking.</p>${codeBlock(app, "EqualApp.swift")}</section>
+      <section class="stack"><h2 class="h3">2 · Register the font</h2><p class="prose">DM Sans (variable, SIL OFL) ships inside the package. Call <code>EqualFonts.register()</code> once at launch. All text is DM Sans; SF Pro appears only inside SF Symbols icons.</p>${codeBlock(app, "EqualApp.swift")}</section>
       <section class="stack"><h2 class="h3">3 · Use tokens</h2><p class="prose">Colours are <code>EqualColor</code> (semantic ones switch with dark mode), text styles are <code>.equalTextStyle(_:)</code>, layout is <code>EqualSpacing</code> and <code>EqualRadius</code>, depth is <code>.equalShadow(_:)</code>, fills are <code>EqualGradient</code>.</p>${codeBlock(tokens, "Tokens")}</section>
       <section class="stack"><h2 class="h3">4 · Build from components</h2><p class="prose">Components are prefixed <code>Equal</code> so they never clash with SwiftUI. Screens are composed from <strong>organisms</strong>, organisms from <strong>molecules</strong>, molecules from <strong>atoms</strong>. Browse them on the <a href="#/components">components</a> page; every page has the usage and the full source.</p>
         <div class="grid c3">${["atoms", "molecules", "organisms"].map((lv) => `<a class="card" style="padding:18px;text-decoration:none" href="#/components"><b>${levelName[lv]}</b><p class="small" style="margin:6px 0 0">${D.components.filter((c) => c.level === lv).map((c) => c.name.replace(/^Equal/, "")).slice(0, 8).join(", ")}…</p></a>`).join("")}</div></section>
       <section class="stack"><h2 class="h3">5 · See everything in the catalog</h2><p class="prose"><code>EqualCatalogView()</code> lists every foundation, component and screen. <code>Examples/EqualCatalogApp</code> is a ready <code>@main</code> app: create an iOS App target in Xcode, add the package as a local dependency and use that file.</p>${codeBlock("WindowGroup {\n    EqualCatalogView()\n}", "Catalog")}</section>
       <section class="stack"><h2 class="h3">Repository layout</h2>${codeBlock(tree, "Tree", "plaintext")}</section>
-      <section class="stack"><h2 class="h3">Change a token</h2><p class="prose">Edit <code>tokens/tokens.json</code>, then regenerate the Swift and this site:</p>${codeBlock("python3 scripts/generate_tokens.py      # Tokens/*.swift\nswift build                              # compile check\nswift run equal-snapshots web/snapshots  # SwiftUI renders\nnode scripts/build-web.mjs               # web/data.js", "Terminal", "bash")}</section>
+      <section class="stack"><h2 class="h3">Change a token</h2><p class="prose">Edit <code>tokens/tokens.json</code>, then regenerate the Swift and this site:</p>${codeBlock("python3 scripts/generate_tokens.py      # Tokens/*.swift\nswift build                              # compile check\n./scripts/render-snapshots.sh            # SwiftUI renders + catalog manifest\nnode scripts/build-web.mjs               # web/data.js", "Terminal", "bash")}</section>
       ${footer()}
     </div>`;
   }
@@ -269,9 +277,8 @@
       ${footer()}</div>`;
   }
   function pageIllustrations() {
-    const src = (f) => (/^(app-icon|equal-gold)/.test(f) ? `assets/Logos/${f}.png` : `assets/Illustrations/${f}.png`);
-    const cells = D.images.map((i) => `<div class="card icon-cell art-cell"><img loading="lazy" src="${src(i.file)}" alt=""><span>EqualImage.${esc(i.swift)}</span></div>`).join("");
-    return `<div class="page"><div class="stack"><span class="eyebrow">Foundations</span><h1 class="h1">Illustrations & logos</h1><p class="lead">Soft 3D renders bundled in the package. Place them on a tint or glow; never recolour or crop them. The six-dot mark and the lockup are drawn in code.</p></div>
+    const cells = D.images.map((i) => `<div class="card icon-cell art-cell" title="${esc(i.doc || "")}"><img loading="lazy" src="assets/Bundle/${esc(i.file)}" alt=""><span>EqualImage.${esc(i.swift)}</span></div>`).join("");
+    return `<div class="page"><div class="stack"><span class="eyebrow">Foundations</span><h1 class="h1">Illustrations & logos</h1><p class="lead">Only art that can’t be drawn in code ships as an image: ${D.images.length} 3D renders, photos and screenshots. Everything else (the logo, mark, app icon, flag, rings, rays, badges, glows, the UPI phone) is SwiftUI code.</p></div>
       ${codeBlock("EqualIllustration(.crown, size: 90)\nEqualImage.mascotCrown.image.aspectRatio(contentMode: .fit)\n\nEqualLogo(height: 22)                 // equal ai lockup\nEqualMark(size: 26, color: .white)    // six-dot mark", "Images")}
       <section class="stack"><h2 class="h3">Logos</h2><div class="grid c2"><div class="card" style="padding:28px;background:#fff"><img src="assets/Logos/equal-ai-logo.svg" alt="equal ai logo, green" style="height:40px"></div><div class="card" style="padding:28px;background:#00b140"><img src="assets/Logos/equal-ai-logo-white.svg" alt="equal ai logo, white" style="height:40px"></div></div></section>
       <section class="stack"><h2 class="h3">Bundled images</h2><div class="icon-grid" style="grid-template-columns:repeat(auto-fill,minmax(150px,1fr))">${cells}</div></section>
@@ -354,10 +361,11 @@
 
   // Screens
   function pageScreens() {
-    const cards = D.screens.map((s) => `<a class="card screen-card" href="#/screens/${s.slug}"><div class="imgs"><div>${s.figma ? `<img loading="lazy" src="${s.figma}" alt="Figma: ${esc(s.name)}">` : "No single Figma frame"}</div><div>${s.snapshot ? `<img loading="lazy" src="${s.snapshot}" alt="SwiftUI: ${esc(s.name)}">` : "Scrolling screen: run in Xcode"}</div></div><b>${esc(s.name)}</b><span class="small">${esc(s.summary)} · <code>${esc(s.swiftName)}</code></span></a>`).join("");
+    const card = (s) => `<a class="card screen-card" href="#/screens/${s.slug}"><div class="imgs"><div>${s.figma ? `<img loading="lazy" src="${s.figma}" alt="Figma: ${esc(s.name)}">` : "State built from the flow (no single frame)"}</div><div>${s.snapshot ? `<img loading="lazy" src="${s.snapshot}" alt="SwiftUI: ${esc(s.name)}">` : "Run in Xcode"}</div></div><b>${esc(s.name)}</b><span class="small">${esc(s.summary)} · <code>${esc(s.swiftName)}</code></span></a>`;
+    const cards = screenGroups().map(([g, list]) => `<section class="stack"><h2 class="h3">${esc(g)} <span class="small">${list.length}</span></h2><div class="grid c4">${list.map(card).join("")}</div></section>`).join("");
     const flows = D.flows.map((f) => `<figure class="flow" style="margin:0"><img loading="lazy" src="assets/Flows/${esc(f)}" alt="${esc(f.replace(/[-.]/g, " "))}"><figcaption class="small" style="margin-top:6px">${esc(f.replace("flow-", "").replace(".png", "").replace(/-/g, " "))}</figcaption></figure>`).join("");
-    return `<div class="page wide"><div class="stack"><span class="eyebrow">Screens</span><h1 class="h1">Screens & flows</h1><p class="lead">${D.screens.length} screen templates composed only from organisms. Each card shows the Figma frame (left) and the SwiftUI render (right).</p></div>
-      <div class="grid c4">${cards}</div>
+    return `<div class="page wide"><div class="stack"><span class="eyebrow">Screens</span><h1 class="h1">Screens & flows</h1><p class="lead">${D.screens.length} screens and states, composed from organisms and grouped by flow. Each card shows the Figma frame (left) and the SwiftUI render (right).</p></div>
+      ${cards}
       <section class="stack" id="flows"><h2 class="h2">Flow boards</h2><p class="lead">The flows from the Figma page: free trial to Gold, the Gold limit upgrade, UPI payment, settings states and the soft paywall.</p><div class="stack">${flows}</div></section>
       ${footer()}</div>`;
   }
