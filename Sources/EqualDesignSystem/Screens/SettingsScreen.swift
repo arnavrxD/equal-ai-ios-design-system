@@ -27,7 +27,7 @@ public struct SettingsScreen: View {
     }
 
     public var body: some View {
-        ScrollView {
+        EqualScrollContent {
             SettingsPageContent(status: status, assistantOn: $assistantOn, onBack: onBack, onMembership: onMembership, onRenew: onRenew)
         }
         .ignoresSafeArea(edges: .top)
@@ -123,7 +123,7 @@ public struct SubscriptionScreen: View {
     }
 
     public var body: some View {
-        ScrollView {
+        EqualScrollContent {
             SubscriptionPageContent(status: status, scrolls: true)
         }
         .ignoresSafeArea(edges: .top)
@@ -198,7 +198,7 @@ struct SubscriptionPageContent: View {
         .padding(.horizontal, EqualSpacing.s24)
         .padding(.vertical, 4)
         if scrolls {
-            ScrollView(.horizontal, showsIndicators: false) { row }
+            EqualScrollContent(.horizontal) { row }
         } else {
             row.fixedSize().frame(width: 393, alignment: .leading).clipped()
         }

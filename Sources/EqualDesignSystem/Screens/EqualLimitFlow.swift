@@ -76,3 +76,16 @@ public enum EqualLimitFlow: String, CaseIterable, Hashable, Sendable {
     /// Second assistant bubble back in chat (step 06).
     public static let chatBackFollowUp = "Who should I call?"
 }
+
+public extension EqualLimitFlow {
+    /// The matching purchase flow, for the paywall, App Store confirmation and success screens
+    /// that follow this chat (`LimitPaywallScreen(flow: limitFlow.purchaseFlow)`).
+    var purchaseFlow: EqualPurchaseFlow {
+        switch self {
+        case .goldLimit: .goldLimit
+        case .trialLimit: .trialLimit
+        case .trialEnded: .trialEnded
+        case .planExpired: .planExpired
+        }
+    }
+}

@@ -39,7 +39,7 @@ public struct EqualTag: View {
                 .background(RoundedRectangle(cornerRadius: EqualRadius.s).fill(kind == .expired ? EqualColor.red09 : EqualColor.goldStatusBg))
                 .overlay(RoundedRectangle(cornerRadius: EqualRadius.s).stroke(kind == .expired ? EqualColor.red13 : EqualColor.goldStatusBorder, lineWidth: 0.7))
         case .bestValue:
-            pill(fg: EqualColor.goldLabel, bg: EqualColor.goldDeep, radius: 7, size: 12, height: 22)
+            pill(fg: EqualColor.goldLabel, bg: EqualColor.goldDeep, radius: 7, size: 12, height: 24)
         case .exclusive:
             pill(fg: EqualColor.goldLabel, bg: EqualColor.goldDeep, radius: EqualRadius.tag, size: 11, height: 22)
         case .bothPlans:

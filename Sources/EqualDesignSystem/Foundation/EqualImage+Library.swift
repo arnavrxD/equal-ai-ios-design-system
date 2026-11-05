@@ -109,8 +109,6 @@ public extension EqualImage {
     static let soundWavesGreen = EqualImage("sound-waves-green")
     /// 3D gold four-point sparkle (AI/premium accent).
     static let sparkleGold = EqualImage("sparkle-gold")
-    /// 4-step UPI AutoPay setup illustration, light + dark.
-    static let upiAutopaySteps = EqualImage("upi-autopay-steps")
     /// 3D yellow warning triangle (alert/spam).
     static let warningTriangle = EqualImage("warning-triangle")
     /// WhatsApp green logo (share/connect).

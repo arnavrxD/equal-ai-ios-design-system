@@ -17,7 +17,7 @@ public struct GoldTrialStartScreen: View {
     }
 
     public var body: some View {
-        ScrollView { page }
+        EqualScrollContent { page }
             .scrollIndicators(.hidden)
             .safeAreaInset(edge: .bottom, spacing: 0) { swipeBar }
             .background { pageBackground }
@@ -85,10 +85,10 @@ struct GoldTrialFeatureCarousel: View {
 
     var body: some View {
         VStack(spacing: 18) {
-            ScrollView(.horizontal) {
+            EqualScrollContent(.horizontal) {
                 HStack(spacing: 28) {
                     ForEach(Self.features, id: \.title) { f in
-                        EqualFeatureCard(title: f.title, message: f.message, isExclusive: false, art: f.art)
+                        EqualFeatureCard(title: f.title, message: f.message, isExclusive: false, art: f.art, style: .trial)
                     }
                 }
                 .padding(.horizontal, EqualSpacing.s24)

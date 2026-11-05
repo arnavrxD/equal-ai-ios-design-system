@@ -11,7 +11,7 @@ public struct SoftPaywallScreen: View {
     public init(onStart: @escaping () -> Void = {}) { self.onStart = onStart }
 
     public var body: some View {
-        ScrollView { page }
+        EqualScrollContent { page }
             .scrollIndicators(.hidden)
             .safeAreaInset(edge: .bottom, spacing: 0) {
                 EqualStickyCTABar(.gold, action: onStart).ignoresSafeArea(edges: .bottom)

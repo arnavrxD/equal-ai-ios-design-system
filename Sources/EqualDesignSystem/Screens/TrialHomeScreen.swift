@@ -28,7 +28,7 @@ public struct TrialHomeScreen: View {
     public var body: some View {
         VStack(spacing: 0) {
             EqualAppHeader(plan: "Gold")
-            ScrollView { page }.scrollIndicators(.hidden)
+            EqualScrollContent { page }
         }
         .overlay(alignment: .bottom) {
             EqualTabBar(selection: $tab, unread: chats.filter { $0.unread > 0 }.count)

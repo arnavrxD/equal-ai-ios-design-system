@@ -15,7 +15,7 @@ public struct PlanExpiredHomeScreen: View {
     }
 
     public var body: some View {
-        ScrollView { page }
+        EqualScrollContent { page }
             .scrollIndicators(.hidden)
             .safeAreaInset(edge: .bottom, spacing: 0) {
                 EqualStickyCTABar(.renew, action: onRenew).ignoresSafeArea(edges: .bottom)
@@ -40,7 +40,7 @@ public struct PlanExpiredHomeScreen: View {
             VStack(spacing: 36) {
                 VStack(spacing: EqualSpacing.s24) {
                     EqualSectionLabel("What you’re missing", style: .gold).padding(.horizontal, 8)
-                    ScrollView(.horizontal) {
+                    EqualScrollContent(.horizontal) {
                         HStack(spacing: 20) {
                             EqualFeaturePill.contacts
                             EqualFeaturePill.screening
