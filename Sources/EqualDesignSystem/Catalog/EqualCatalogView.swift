@@ -88,11 +88,13 @@ public enum EqualCatalog {
         EqualCatalogItem("Icons & illustrations", .foundations, "SF Symbols mapping and the bundled 3D art.") { IconographyView() },
 
         // Atoms
-        EqualCatalogItem("EqualButton", .atoms, "Pill actions: primary, gold, goldPill, danger, link.") {
+        EqualCatalogItem("EqualButton", .atoms, "Pill actions: primary, gold, goldPill, danger, link; paywall CTAs with the light streak.") {
             VStack(spacing: 12) {
                 EqualButton("Next", fullWidth: true)
                 EqualButton("Send OTP", fullWidth: true).disabled(true)
                 EqualButton("Get Gold Plus for ₹499/month", variant: .gold, fullWidth: true)
+                EqualButton("Upgrade to Gold Plus for ₹499", variant: .gold, fullWidth: true, showsStreak: false)
+                EqualButton("Renew – ₹249/month", size: .cta, fullWidth: true, showsStreak: true)
                 HStack { EqualButton("Subscribe", variant: .goldPill, size: .small); EqualButton("Continue anyway", variant: .link) }
             }
         },
@@ -163,10 +165,28 @@ public enum EqualCatalog {
             }
         },
         EqualCatalogItem("EqualAssistantToggleCard", .molecules, "The AI Assistant master switch.") { EqualAssistantToggleCard(isOn: .constant(true)) },
-        EqualCatalogItem("EqualPlanCard", .molecules, "Selectable plan card.") { HStack { EqualPlanCard("Gold", price: "₹249", isSelected: false); EqualPlanCard("Gold Plus", price: "₹499", isSelected: true, badge: "Best value") }.padding(.top, 12) },
-        EqualCatalogItem("EqualCouponRow", .molecules, "Coupon with APPLY.") { EqualCouponRow(isApplied: .constant(false)) },
-        EqualCatalogItem("EqualFAQItem", .molecules, "Accordion FAQ.") { EqualFAQList() },
-        EqualCatalogItem("EqualStatRow", .molecules, "Metric row on the dark recap.") { VStack(spacing: 0) { EqualStatRow("Calls handled", value: "18", icon: .phoneOutline) }.padding().background(Color.black) },
+        EqualCatalogItem("EqualPlanCard", .molecules, "Selectable plan card: sheet, inline (#C29200) and limit (81pt, Your plan tag).") {
+            VStack(spacing: 28) {
+                HStack(spacing: 13) { EqualPlanCard("Gold", price: "₹249", isSelected: false); EqualPlanCard("Gold Plus", price: "₹499", isSelected: true, badge: "Best value") }
+                HStack(spacing: 13) { EqualPlanCard("Gold", price: "₹187", isSelected: false, originalPrice: "₹249", style: .inline); EqualPlanCard("Gold Plus", price: "₹374", isSelected: true, badge: "Best value", originalPrice: "₹499", style: .inline) }
+                HStack(spacing: 14) { EqualPlanCard("Gold", price: "₹249", isSelected: false, currentPlanTag: "Your plan", style: .limit); EqualPlanCard("Gold Plus", price: "₹499", isSelected: true, badge: "Best value", style: .limit) }
+            }
+            .padding(.top, 12)
+        },
+        EqualCatalogItem("EqualCouponRow", .molecules, "Coupon: overhanging APPLY, inset, compact limit field, soft-paywall card, applied.") {
+            VStack(spacing: 14) {
+                EqualCouponRow(isApplied: .constant(false))
+                EqualCouponRow(style: .inset, isApplied: .constant(false))
+                EqualCouponRow(style: .compact, isApplied: .constant(false))
+                EqualCouponRow(style: .card, isApplied: .constant(false))
+                EqualCouponRow(isApplied: .constant(true))
+            }
+        },
+        EqualCatalogItem("EqualFAQItem", .molecules, "Accordion FAQ: light, dark and expired styles.") { VStack(spacing: 24) { EqualFAQList(); EqualFAQList(style: .dark) } },
+        EqualCatalogItem("EqualStatRow", .molecules, "Metric row on the dark recap.") {
+            VStack(spacing: 0) { EqualStatRow("Calls handled", value: "18", icon: .phoneOutline); EqualStatRow("Spam and sales stopped", value: "7", icon: .shield) }
+                .padding().background(Color(equalHex: 0x0B0B0A))
+        },
         EqualCatalogItem("EqualPushBanner", .molecules, "iOS notification banner.") { EqualPushBanner("Only 1 day left", message: "Your trial ends tomorrow.") },
         EqualCatalogItem("EqualGenderCard", .molecules, "Gender picker card.") { HStack { EqualGenderCard(.male, isSelected: true); EqualGenderCard(.female, isSelected: false) } },
         EqualCatalogItem("EqualAvailabilityPill", .molecules, "Available / Busy header pill: glass 36 / 31, plain white.") { VStack(spacing: 12) { EqualAvailabilityPill(); EqualAvailabilityPill(size: .compact); EqualAvailabilityPill(style: .plain) } },
@@ -190,17 +210,49 @@ public enum EqualCatalog {
         EqualCatalogItem("EqualSheet", .organisms, "Greeting, shortcuts, suggestions and composer.") { EqualSheet().padding(.horizontal, -24) },
         EqualCatalogItem("EqualPermissionSheet", .organisms, "System permission ask: walkthrough and home presets.") { VStack(spacing: 16) { EqualPermissionSheet(); EqualPermissionSheet(.allowAccess) }.padding(.horizontal, -24) },
         EqualCatalogItem("EqualPromoCard", .organisms, "Home banners: permissions, assistant, call preferences, invite, trial ending, plan expired.") { VStack(spacing: 16) { EqualPromoCard(.permissions); EqualPromoCard(.notificationAccess); EqualPromoCard(.contactAccess); EqualPromoCard(.meetAssistant); EqualPromoCard(.callPreferences); EqualPromoCard(.inviteFriend); EqualPromoCard(.trialEnding); EqualPromoCard(.planExpired); EqualPromoCard(.goldDays(7)) } },
-        EqualCatalogItem("EqualRecapCard", .organisms, "Free-week stats.") { EqualRecapCard() },
+        EqualCatalogItem("EqualRecapCard", .organisms, "Free-week stats with replay, rings and glow.") { EqualRecapCard() },
         EqualCatalogItem("EqualMembershipCard", .organisms, "Equal GOLD active / trial / expired, and the subscription-page price variant.") { VStack(spacing: 12) { EqualMembershipCard(status: .active); EqualMembershipCard(status: .trial); EqualMembershipCard(status: .expired); EqualMembershipCard(status: .active, detail: "Renews 16th May, 2026", price: "₹ 249/month") } },
         EqualCatalogItem("EqualProfileHeader", .organisms, "Settings profile header: gold, trial (back row) and expired (mint).") { VStack(spacing: 12) { EqualProfileHeader(); EqualProfileHeader(isExpired: true, onBack: {}) }.padding(.horizontal, -24) },
-        EqualCatalogItem("EqualComparePlansTable", .organisms, "Gold vs Gold Plus.") { EqualComparePlansTable() },
-        EqualCatalogItem("EqualFeatureCard", .organisms, "What-you-get carousel card.") { EqualFeatureCard() },
-        EqualCatalogItem("EqualStickyPlanSheet", .organisms, "Plans, coupon and the gold CTA.") { EqualStickyPlanSheet(selection: .constant(.goldPlus)) },
-        EqualCatalogItem("EqualPaywallHero", .organisms, "Crown, rays and title.") { EqualPaywallHero() },
-        EqualCatalogItem("EqualValueRecapStory", .organisms, "Dark time-saved story.") { EqualValueRecapStory().frame(height: 720) },
-        EqualCatalogItem("EqualAppStoreSheet", .organisms, "iOS purchase confirmation mock.") { EqualAppStoreSheet() },
+        EqualCatalogItem("EqualComparePlansTable", .organisms, "Gold vs Gold Plus; highlight follows the selected plan; standard and dark checks.") {
+            VStack(spacing: 16) { EqualComparePlansTable(); EqualComparePlansTable(selected: .gold, style: .dark) }
+        },
+        EqualCatalogItem("EqualFeatureCard", .organisms, "What-you-get card: exclusive, standard, trial and full-bleed hero.") {
+            VStack(alignment: .leading, spacing: 20) {
+                EqualFeatureCard()
+                EqualFeatureCard(EqualFeatureCard.Content.paywall[1]).frame(width: 303)
+                EqualFeatureCard(EqualFeatureCard.Content.paywall[3], style: .trial).frame(width: 303)
+                EqualFeatureCard(EqualFeatureCard.Content.paywall[1], style: .hero).frame(width: 345).clipped()
+            }
+        },
+        EqualCatalogItem("EqualStickyPlanSheet", .organisms, "Plans, coupon and the CTA that follows the plan: full, CTA-only and limit.") {
+            VStack(spacing: 20) {
+                EqualStickyPlanSheet(selection: .constant(.goldPlus))
+                EqualStickyPlanSheet(selection: .constant(.gold), couponApplied: .constant(false), layout: .ctaOnly)
+                EqualStickyPlanSheet(selection: .constant(.goldPlus), couponApplied: .constant(false), flow: .goldLimit)
+            }
+            .padding(.horizontal, -24)
+        },
+        EqualCatalogItem("EqualPaywallHero", .organisms, "Gold hero shapes A–E, rays, crown, top bar, limit pre-title.") {
+            VStack(spacing: 8) {
+                EqualPaywallHero()
+                EqualPaywallHero(shape: .compactArc)
+                EqualPaywallHero(shape: .shallowArc, showsTopBar: false)
+                EqualPaywallHero(shape: .roundedBottom(28))
+                EqualPaywallHero(shape: .roundedBottom(48))
+                EqualPaywallHero(title: "Now go unlimited", preTitle: "Equal made 30 calls for you", shape: .roundedBottom(48), tint: .sunrise)
+                EqualPaywallHero(title: "Make it yours", preTitle: "Trial over. Liked having an assistant?", shape: .circle, tint: .warm)
+            }
+            .padding(.horizontal, -24)
+        },
+        EqualCatalogItem("EqualValueRecapStory", .organisms, "Dark time-saved story.") { EqualValueRecapStory().frame(height: 720).padding(.horizontal, -24) },
+        EqualCatalogItem("EqualAppStoreSheet", .organisms, "iOS purchase confirmation mock in DM Sans, per flow.") {
+            VStack(spacing: 16) { EqualAppStoreSheet(); EqualAppStoreSheet(flow: .planExpired, plan: .gold) }.padding(.horizontal, -16)
+        },
         EqualCatalogItem("EqualPaymentProcessing", .organisms, "Payment wait screen body: Processing payment / Activating Equal Gold layouts.") { EqualPaymentProcessing(step: 1).frame(height: 760) },
-        EqualCatalogItem("EqualSuccessState", .organisms, "Upgrade and trial-start success.") { EqualSuccessState(.upgraded("Gold Plus")) },
+        EqualCatalogItem("EqualSuccessState", .organisms, "Upgraded, welcome back and trial started, with glow, star outline and check.") {
+            VStack(spacing: 140) { EqualSuccessState(.upgraded("Gold Plus")); EqualSuccessState(.welcomeBack()); EqualSuccessState(.trialStarted(days: 7)) }
+                .padding(.vertical, 100).frame(maxWidth: .infinity).clipped()
+        },
         EqualCatalogItem("EqualInviteCard", .organisms, "Invite a Friend.") { EqualInviteCard() },
         EqualCatalogItem("EqualLiveCallCard", .organisms, "Assistant on a live call, with Takeover.") { EqualLiveCallCard() },
         EqualCatalogItem("EqualSocialProofCard", .organisms, "Splash stats: users, rating, calls handled.") { EqualSocialProofCard().padding(.vertical, 24).frame(maxWidth: .infinity).background(EqualColor.brandGreen) },
@@ -220,7 +272,7 @@ public enum EqualCatalog {
         EqualCatalogItem("Home", .screens, "Trial ending, chat list, tab bar.") { HomeScreen() },
         EqualCatalogItem("Home · empty", .screens, "Gold days card and empty state.") { HomeScreen(plan: nil, promo: .goldDays(7), chats: []) },
         EqualCatalogItem("Equal chat · limit", .screens, "Gold limit reached in the thread.") { EqualChatScreen() },
-        EqualCatalogItem("Value recap", .screens, "Last-day story.") { ValueRecapScreen() },
+        EqualCatalogItem("Value recap", .screens, "Last-day story.") { ValueRecapScreen(startProgress: 0.45) },
         EqualCatalogItem("Paywall", .screens, "Choose your plan.") { PaywallScreen() },
         EqualCatalogItem("App Store confirmation", .screens, "Purchase sheet over the paywall.") { AppStoreConfirmationScreen() },
         EqualCatalogItem("Payment processing", .screens, "UPI autopay steps.") { PaymentProcessingScreen() },
