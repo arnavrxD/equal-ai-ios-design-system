@@ -52,10 +52,13 @@ public enum EqualGradient {
     ], center: UnitPoint(x: 0.5, y: 0.4), startRadius: 0, endRadius: 520)
     /// Fade behind the floating tab bar.
     public static let fadeBottom = LinearGradient(colors: [EqualColor.bgPrimary.opacity(0), EqualColor.bgPrimary], startPoint: .top, endPoint: .bottom)
-    /// Cream-to-gold wash of the payment processing screen.
+    /// Cream-to-gold wash of the payment processing screen. Figma: white frame under a 1115pt ellipse
+    /// (#FFFFFF → #FFFEFC → #FFC927 at 60%) and a #FDEFC6 top glow; stops sampled from the render.
     public static let processing = LinearGradient(stops: [
         .init(color: Color(equalHex: 0xFFFDF5), location: 0),
-        .init(color: Color(equalHex: 0xFFF6D8), location: 0.55),
-        .init(color: Color(equalHex: 0xFFE38A), location: 1)
+        .init(color: Color(equalHex: 0xFFFEFA), location: 0.17),
+        .init(color: Color(equalHex: 0xFFFAE9), location: 0.35),
+        .init(color: Color(equalHex: 0xFFF3CE), location: 0.55),
+        .init(color: Color(equalHex: 0xFFE28C), location: 1)
     ], startPoint: .top, endPoint: .bottom)
 }
