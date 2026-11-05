@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// Bottom input of the Equal sheet: a 52pt keyboard button (or a "Type..." field once typing)
-/// and the full-width voice button on the voice gradient. Voice is the default input.
+/// and the full-width voice button on the lime-to-green voice gradient. Voice is the default input.
 public struct EqualComposer: View {
     let voiceTitle: String
     @Binding var text: String
@@ -26,15 +26,25 @@ public struct EqualComposer: View {
                     .frame(height: 52)
                     .background(Capsule().fill(EqualColor.bgSurface).equalShadow(.composer))
             } else {
-                EqualIconButton(.keyboard, variant: .tile, label: "Type instead") { withAnimation { isTyping = true } }
+                Button { withAnimation { isTyping = true } } label: {
+                    Image(systemName: "keyboard").font(.system(size: 18, weight: .medium))
+                        .foregroundStyle(Color(equalHex: 0x6B7280))
+                        .frame(width: 52, height: 52)
+                        .background(Circle().fill(Color.white).equalShadow(.composer))
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel("Type instead")
             }
             Button(action: onVoice) {
-                Label(voiceTitle, systemImage: "mic.fill")
-                    .font(.equal(size: 16, weight: .semibold))
+                HStack(spacing: EqualSpacing.s12) {
+                    Image(systemName: "mic.fill").font(.system(size: 15, weight: .medium))
+                    Text(voiceTitle).font(.equal(size: 16, weight: .semibold)).tracking(-0.42)
+                }
                     .foregroundStyle(.white)
                     .frame(maxWidth: .infinity)
                     .frame(height: 52)
                     .background(Capsule().fill(EqualGradient.voice))
+                    .background(Capsule().fill(Color(equalHex: 0xEFFFE8, alpha: 0.72)))
                     .equalShadow(.composer)
             }
             .buttonStyle(.plain)
