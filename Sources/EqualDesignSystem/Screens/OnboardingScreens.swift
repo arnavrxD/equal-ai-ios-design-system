@@ -146,27 +146,11 @@ public struct IntroScreeningScreen: View {
     }
 }
 
-/// Permission step: the walkthrough card with the notification permission sheet over it.
+/// Permission step: the walkthrough intro with the "Notification permission required" sheet
+/// over it. `PermissionIntroScreen` has every walkthrough state.
 public struct PermissionScreen: View {
     public init() {}
-    public var body: some View {
-        ZStack(alignment: .bottom) {
-            VStack(spacing: EqualSpacing.s24) {
-                VStack(spacing: EqualSpacing.s8) {
-                    Text("Give your assistant the essentials").font(.equal(size: 24, weight: .semibold))
-                    Text("Notifications help you stay informed, while contacts help your assistant recognize who’s calling.")
-                        .font(.equal(size: 16)).foregroundStyle(EqualColor.textPrimary.opacity(0.7))
-                }
-                .multilineTextAlignment(.center)
-                EqualLiveCallCard()
-                Spacer()
-            }
-            .padding(EqualSpacing.s24)
-            EqualColor.bgOverlay.ignoresSafeArea()
-            EqualPermissionSheet()
-        }
-        .background(EqualColor.bgSurface)
-    }
+    public var body: some View { PermissionIntroScreen(state: .notificationDenied) }
 }
 
 struct OnboardingScreens_Previews: PreviewProvider {
