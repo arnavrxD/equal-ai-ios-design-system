@@ -169,7 +169,6 @@ public enum EqualCatalog {
         EqualCatalogItem("EqualPushBanner", .molecules, "iOS notification banner.") { EqualPushBanner("Only 1 day left", message: "Your trial ends tomorrow.") },
         EqualCatalogItem("EqualGenderCard", .molecules, "Gender picker card.") { HStack { EqualGenderCard(.male, isSelected: true); EqualGenderCard(.female, isSelected: false) } },
         EqualCatalogItem("EqualAvailabilityPill", .molecules, "Available / Busy header pill.") { EqualAvailabilityPill() },
-        EqualCatalogItem("EqualTrialPill", .molecules, "\"1 Day Left\" header pill.") { EqualTrialPill() },
         EqualCatalogItem("EqualSheetHeader", .molecules, "Top of the Equal action sheet.") { EqualSheetHeader() },
         EqualCatalogItem("EqualUpiStep", .molecules, "Numbered payment step, 16/21 or 18/22.") {
             VStack(spacing: 24) { EqualUpiStep(1, "Open your UPI app, via notifications or directly"); EqualUpiStep(2, "Review and approve the autopay request", size: .large) }.frame(maxWidth: .infinity)
@@ -201,7 +200,6 @@ public enum EqualCatalog {
         EqualCatalogItem("EqualAppStoreSheet", .organisms, "iOS purchase confirmation mock.") { EqualAppStoreSheet() },
         EqualCatalogItem("EqualPaymentProcessing", .organisms, "Payment wait screen body: Processing payment / Activating Equal Gold layouts.") { EqualPaymentProcessing(step: 1).frame(height: 760) },
         EqualCatalogItem("EqualSuccessState", .organisms, "Upgrade and trial-start success.") { EqualSuccessState(.upgraded("Gold Plus")) },
-        EqualCatalogItem("EqualEmptyState", .organisms, "No chats yet.") { EqualEmptyState() },
         EqualCatalogItem("EqualInviteCard", .organisms, "Invite a Friend.") { EqualInviteCard() },
         EqualCatalogItem("EqualLiveCallCard", .organisms, "Assistant on a live call, with Takeover.") { EqualLiveCallCard() },
         EqualCatalogItem("EqualSocialProofCard", .organisms, "Splash stats: users, rating, calls handled.") { EqualSocialProofCard().padding(.vertical, 24).frame(maxWidth: .infinity).background(EqualColor.brandGreen) },
