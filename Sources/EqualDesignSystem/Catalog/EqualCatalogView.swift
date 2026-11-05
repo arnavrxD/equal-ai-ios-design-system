@@ -157,8 +157,8 @@ public enum EqualCatalog {
         },
         EqualCatalogItem("EqualSettingsRow", .molecules, "Settings rows in a white group.") {
             EqualSettingsGroup {
-                EqualSettingsRow("Instructions", icon: .document, subtitle: "4 active instructions", badge: "New")
-                EqualSettingsRow("Silent Mode", icon: .bellSlash, subtitle: "Mute all promotional calls", showsDivider: false)
+                EqualSettingsRow("Instructions", icon: .document, subtitle: "4 active instructions", badge: "New!")
+                EqualSettingsRow("WhatsApp Updates", glyph: .whatsApp, subtitle: "Assistant and App Updates", showsDivider: false)
             }
         },
         EqualCatalogItem("EqualAssistantToggleCard", .molecules, "The AI Assistant master switch.") { EqualAssistantToggleCard(isOn: .constant(true)) },
@@ -190,8 +190,8 @@ public enum EqualCatalog {
         EqualCatalogItem("EqualPermissionSheet", .organisms, "System permission ask.") { EqualPermissionSheet() },
         EqualCatalogItem("EqualPromoCard", .organisms, "Trial, Gold days, permissions and assistant banners.") { VStack(spacing: 12) { EqualPromoCard(.trialEnding); EqualPromoCard(.goldDays(7)); EqualPromoCard(.permissions); EqualPromoCard(.meetAssistant) } },
         EqualCatalogItem("EqualRecapCard", .organisms, "Free-week stats.") { EqualRecapCard() },
-        EqualCatalogItem("EqualMembershipCard", .organisms, "Equal GOLD active / trial / expired.") { VStack(spacing: 12) { EqualMembershipCard(status: .active); EqualMembershipCard(status: .trial); EqualMembershipCard(status: .expired) } },
-        EqualCatalogItem("EqualProfileHeader", .organisms, "Settings profile header.") { EqualProfileHeader() },
+        EqualCatalogItem("EqualMembershipCard", .organisms, "Equal GOLD active / trial / expired, and the subscription-page price variant.") { VStack(spacing: 12) { EqualMembershipCard(status: .active); EqualMembershipCard(status: .trial); EqualMembershipCard(status: .expired); EqualMembershipCard(status: .active, detail: "Renews 16th May, 2026", price: "₹ 249/month") } },
+        EqualCatalogItem("EqualProfileHeader", .organisms, "Settings profile header: gold, trial (back row) and expired (mint).") { VStack(spacing: 12) { EqualProfileHeader(); EqualProfileHeader(isExpired: true, onBack: {}) }.padding(.horizontal, -24) },
         EqualCatalogItem("EqualComparePlansTable", .organisms, "Gold vs Gold Plus.") { EqualComparePlansTable() },
         EqualCatalogItem("EqualFeatureCard", .organisms, "What-you-get carousel card.") { EqualFeatureCard() },
         EqualCatalogItem("EqualStickyPlanSheet", .organisms, "Plans, coupon and the gold CTA.") { EqualStickyPlanSheet(selection: .constant(.goldPlus)) },
