@@ -4,16 +4,19 @@ import SwiftUI
 public struct EqualConcentricRings: View {
     let diameters: [CGFloat]
     let color: Color
+    let opacities: [Double]?
 
-    public init(diameters: [CGFloat] = [82, 111, 134, 152], color: Color = .white) {
+    /// - Parameter opacities: one opacity per ring (innermost first); defaults to 18% fading by 3.5% per ring.
+    public init(diameters: [CGFloat] = [82, 111, 134, 152], color: Color = .white, opacities: [Double]? = nil) {
         self.diameters = diameters
         self.color = color
+        self.opacities = opacities
     }
 
     public var body: some View {
         ZStack {
             ForEach(Array(diameters.enumerated()), id: \.offset) { i, d in
-                Circle().stroke(color.opacity(0.18 - Double(i) * 0.035), lineWidth: 1).frame(width: d, height: d)
+                Circle().stroke(color.opacity(opacities.map { $0[min(i, $0.count - 1)] } ?? (0.18 - Double(i) * 0.035)), lineWidth: 1).frame(width: d, height: d)
             }
         }
         .frame(width: diameters.max() ?? 0, height: diameters.max() ?? 0)

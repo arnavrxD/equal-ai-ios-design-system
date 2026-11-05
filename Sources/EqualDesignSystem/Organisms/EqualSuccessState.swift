@@ -65,13 +65,7 @@ public struct EqualSuccessState: View {
             .background {
                 ZStack {
                     if isTrial {
-                        Circle().fill(LinearGradient(stops: [
-                            .init(color: .white, location: 0), .init(color: Color(equalHex: 0xFFFEFC), location: 0.4),
-                            .init(color: Color(equalHex: 0xFFC927), location: 1)
-                        ], startPoint: .top, endPoint: .bottom))
-                        .frame(width: 280, height: 280).blur(radius: 77)
-                        EqualRoundedStar().stroke(Color.white.opacity(0.4), lineWidth: 3).frame(width: 251, height: 251)
-                        EqualRoundedStar().stroke(Color.white.opacity(0.4), lineWidth: 2).frame(width: 168, height: 168)
+                        EqualStarHalo()
                     } else {
                         Circle().fill(RadialGradient(stops: [
                             .init(color: Color(equalHex: 0xFCDE8C, alpha: 0.85), location: 0),
@@ -80,59 +74,13 @@ public struct EqualSuccessState: View {
                             .init(color: Color(equalHex: 0xFAFAFA, alpha: 0), location: 0.72)
                         ], center: .center, startRadius: 0, endRadius: 260))
                         .frame(width: 520, height: 520)
-                        EqualRoundedStar().stroke(Color.white.opacity(0.75), lineWidth: 2.4).frame(width: 228, height: 228)
-                        EqualRoundedStar().stroke(Color.white.opacity(0.45), lineWidth: 2).frame(width: 152, height: 152)
+                        TrialStarShape(points: 8, innerRatio: 0.682, cornerRadius: 16).stroke(Color.white.opacity(0.75), lineWidth: 2.4).frame(width: 228, height: 228)
+                        TrialStarShape(points: 8, innerRatio: 0.682, cornerRadius: 11).stroke(Color.white.opacity(0.45), lineWidth: 2).frame(width: 152, height: 152)
                     }
                 }
                 .allowsHitTesting(false)
                 .accessibilityHidden(true)
             }
-    }
-}
-
-/// Green verified check on the success mascot: #00B140 circle, white tick.
-struct EqualCheckBadge: View {
-    let size: CGFloat
-    var body: some View {
-        ZStack {
-            Circle().fill(Color(equalHex: 0x00B13E))
-            Path { p in
-                p.move(to: CGPoint(x: size * 0.29, y: size * 0.51))
-                p.addLine(to: CGPoint(x: size * 0.44, y: size * 0.65))
-                p.addLine(to: CGPoint(x: size * 0.71, y: size * 0.37))
-            }
-            .stroke(Color(equalHex: 0xFAFFF6), style: StrokeStyle(lineWidth: size / 10, lineCap: .round, lineJoin: .round))
-        }
-        .frame(width: size, height: size)
-        .shadow(color: .black.opacity(0.25), radius: 2.2, y: 2.2)
-        .accessibilityLabel("Purchased")
-    }
-}
-
-/// An 8-point star (inner radius 68%) with rounded corners: the halo outline behind the success mascot.
-struct EqualRoundedStar: Shape {
-    var points = 8
-    var innerRatio: CGFloat = 0.682
-    var cornerRatio: CGFloat = 18.0 / 251.0
-
-    func path(in rect: CGRect) -> Path {
-        let c = CGPoint(x: rect.midX, y: rect.midY)
-        let R = min(rect.width, rect.height) / 2, r = R * innerRatio
-        let n = points * 2
-        let verts: [CGPoint] = (0..<n).map { i in
-            let a = Double(i) / Double(n) * 2 * .pi - .pi / 2
-            let rad = i % 2 == 0 ? R : r
-            return CGPoint(x: c.x + cos(a) * rad, y: c.y + sin(a) * rad)
-        }
-        let radius = R * 2 * cornerRatio
-        var p = Path()
-        let mid = { (a: CGPoint, b: CGPoint) in CGPoint(x: (a.x + b.x) / 2, y: (a.y + b.y) / 2) }
-        p.move(to: mid(verts[n - 1], verts[0]))
-        for i in 0..<n {
-            p.addArc(tangent1End: verts[i], tangent2End: verts[(i + 1) % n], radius: radius)
-        }
-        p.closeSubpath()
-        return p
     }
 }
 

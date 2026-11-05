@@ -1,6 +1,7 @@
 import SwiftUI
 
-/// iOS-style switch, 44×24, green when on. Used for "AI Assistant is On".
+/// iOS-style switch, 44×24, #00B140 when on, with a 20pt white knob (shadow 0,1 blur 2 @4%).
+/// Used for "AI Assistant is On" (Figma 26242:89424).
 public struct EqualToggle: View {
     @Binding var isOn: Bool
     let label: String
@@ -17,7 +18,7 @@ public struct EqualToggle: View {
                 .frame(width: 44, height: 24)
                 .overlay(alignment: isOn ? .trailing : .leading) {
                     Circle().fill(.white).frame(width: 20, height: 20).padding(2)
-                        .shadow(color: .black.opacity(0.12), radius: 1.5, y: 1)
+                        .shadow(color: .black.opacity(0.04), radius: 1, y: 1)
                 }
         }
         .buttonStyle(.plain)
@@ -25,4 +26,13 @@ public struct EqualToggle: View {
         .accessibilityValue(isOn ? "On" : "Off")
         .accessibilityAddTraits(.isButton)
     }
+}
+
+struct EqualToggle_Previews: PreviewProvider {
+    struct Demo: View {
+        @State var on = true
+        @State var off = false
+        var body: some View { HStack(spacing: 16) { EqualToggle("On", isOn: $on); EqualToggle("Off", isOn: $off) }.padding(24).equalScreenBackground() }
+    }
+    static var previews: some View { Demo() }
 }

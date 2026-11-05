@@ -1,23 +1,10 @@
 import SwiftUI
 
-/// UPI autopay processing, stepping through the four instructions.
+/// UPI autopay processing. Kept for source compatibility: a thin wrapper around `UpiWaitScreen`,
+/// which owns the layout and the step animation.
 public struct PaymentProcessingScreen: View {
-    @State private var step = 1
     public init() {}
-    public var body: some View {
-        VStack {
-            Spacer()
-            EqualPaymentProcessing(step: step)
-            Spacer()
-        }
-        .background(EqualGradient.processing.ignoresSafeArea())
-        .task {
-            while step < 4 {
-                try? await Task.sleep(for: .seconds(2.5))
-                withAnimation { step += 1 }
-            }
-        }
-    }
+    public var body: some View { UpiWaitScreen() }
 }
 
 struct PurchaseFlowScreens_Previews: PreviewProvider {

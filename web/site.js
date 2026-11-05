@@ -280,13 +280,19 @@
 
   // Components
   function previewFor(c) { return c.preview ? fromJs(c.preview.js) : () => h("div", { className: "eq-stage" }, "No preview"); }
+  /** SwiftUI render used as the preview for components that exist only in Swift. */
+  function snapHtml(c, theme, cls = "snap-preview") {
+    if (!c.snapshot) return `<div class="${cls} empty">Renders in Xcode (text fields and scroll views can’t be drawn offline)</div>`;
+    const src = theme === "dark" && c.snapshot.dark ? c.snapshot.dark : c.snapshot.light;
+    return `<img class="${cls}" loading="lazy" src="${src}" alt="${esc(c.name)} rendered by SwiftUI">`;
+  }
   function pageComponents() {
     const t = siteTheme();
     const section = (lv) => {
       const items = D.components.filter((c) => c.level === lv);
       return `<section class="stack"><h2 class="h3">${levelName[lv]} <span class="small">${items.length}</span></h2><div class="grid c3">${items.map((c) => {
-        const key = registerPv("card-" + c.slug, previewFor(c));
-        return `<a class="card comp-card" href="#/components/${c.slug}"><div class="stage">${pvHtml(key, t)}</div><div class="meta"><b>${esc(c.name)}</b><span>${esc(c.short)}</span></div></a>`;
+        const stage = c.preview ? pvHtml(registerPv("card-" + c.slug, previewFor(c)), t) : snapHtml(c, t, "card-snap");
+        return `<a class="card comp-card" href="#/components/${c.slug}"><div class="stage">${stage}</div><div class="meta"><b>${esc(c.name)}</b><span>${esc(c.short)}</span></div></a>`;
       }).join("")}</div></section>`;
     };
     return `<div class="page wide"><div class="stack"><span class="eyebrow">Components</span><h1 class="h1">Components</h1><p class="lead">${D.components.length} SwiftUI components in three levels. Every card is the component live; open one for its usage, full Swift source, SwiftUI render and guidelines.</p></div>
@@ -310,7 +316,7 @@
     if (i < 0) return pageNotFound();
     const c = D.components[i];
     const t = siteTheme();
-    const key = registerPv("detail-" + c.slug, previewFor(c));
+    const key = c.preview ? registerPv("detail-" + c.slug, previewFor(c)) : null;
     const names = new Set(D.components.map((x) => x.name));
     const builtFrom = [...new Set([...c.source.matchAll(/\b(Equal[A-Z]\w+)\b/g)].map((m) => m[1]))].filter((n) => n !== c.name && names.has(n));
     const usedIn = D.components.filter((x) => x.name !== c.name && new RegExp("\\b" + c.name + "\\b").test(x.source)).map((x) => ({ name: x.name, href: "#/components/" + x.slug }))
@@ -318,20 +324,23 @@
     const uniqUsed = usedIn.filter((u, k) => usedIn.findIndex((x) => x.name === u.name) === k);
     const tok = tokensUsed(c.source);
     const prev = D.components[i - 1], next = D.components[i + 1];
-    const snapHtml = c.snapshot && c.snapshot.light ? `<div class="snap-pair"><figure><img loading="lazy" src="${c.snapshot.light}" alt="${esc(c.name)} rendered by SwiftUI, light"><figcaption>SwiftUI · light</figcaption></figure>${c.snapshot.dark ? `<figure><img loading="lazy" src="${c.snapshot.dark}" alt="${esc(c.name)} rendered by SwiftUI, dark"><figcaption>SwiftUI · dark</figcaption></figure>` : ""}</div><p class="small">Rendered from the Swift source with ImageRenderer (macOS, system-font fallback where DM Sans isn't installed).</p>` : "";
+    const renderPair = c.snapshot && c.snapshot.light ? `<div class="snap-pair"><figure><img loading="lazy" src="${c.snapshot.light}" alt="${esc(c.name)} rendered by SwiftUI, light"><figcaption>SwiftUI · light</figcaption></figure>${c.snapshot.dark ? `<figure><img loading="lazy" src="${c.snapshot.dark}" alt="${esc(c.name)} rendered by SwiftUI, dark"><figcaption>SwiftUI · dark</figcaption></figure>` : ""}</div><p class="small">Rendered from the Swift source with SwiftUI’s ImageRenderer, in DM Sans.</p>` : "";
     return `<div class="page">
       <div class="crumbs"><a href="#/components">Components</a><span>/</span><span>${levelName[c.level]}</span></div>
       <div class="title-row"><div class="stack" style="gap:10px"><h1 class="h1" style="font-size:clamp(30px,4vw,44px)">${esc(c.name)}</h1><div class="row"><span class="pill accent">${levelName[c.level].replace(/s$/, "")}</span>${c.file ? `<a class="pill" href="${ghFile(c.file)}" target="_blank" rel="noopener">${esc(c.file.replace("Sources/EqualDesignSystem/", ""))} ↗</a>` : ""}</div></div></div>
       <p class="lead">${inlineMd(c.summary)}</p>
-      <section class="card preview-panel" aria-label="Live preview">
-        <div class="preview-bar"><span class="small">Live preview</span><div class="seg" role="group" aria-label="Preview theme"><button type="button" data-pvtheme="light">Light</button><button type="button" data-pvtheme="dark">Dark</button><button type="button" data-pvtheme="both">Both</button></div></div>
+      ${key ? `<section class="card preview-panel" aria-label="Live preview">
+        <div class="preview-bar"><span class="small">Live preview (web)</span><div class="seg" role="group" aria-label="Preview theme"><button type="button" data-pvtheme="light">Light</button><button type="button" data-pvtheme="dark">Dark</button><button type="button" data-pvtheme="both">Both</button></div></div>
         <div class="preview-body" id="pv-body" data-key="${key}">${pvHtml(key, t)}</div>
-      </section>
+      </section>` : `<section class="card preview-panel" aria-label="SwiftUI render">
+        <div class="preview-bar"><span class="small">Rendered by SwiftUI</span></div>
+        <div class="snap-body">${c.snapshot ? `<figure>${snapHtml(c, "light")}<figcaption>Light</figcaption></figure>${c.snapshot.dark ? `<figure>${snapHtml(c, "dark")}<figcaption>Dark</figcaption></figure>` : ""}` : snapHtml(c, "light")}</div>
+      </section>`}
       <section class="stack">
-        <div class="tabs" role="tablist"><button type="button" role="tab" class="on" data-tab="usage">Usage</button><button type="button" role="tab" data-tab="source">Source</button>${snapHtml ? `<button type="button" role="tab" data-tab="render">SwiftUI render</button>` : ""}</div>
+        <div class="tabs" role="tablist"><button type="button" role="tab" class="on" data-tab="usage">Usage</button><button type="button" role="tab" data-tab="source">Source</button>${renderPair && key ? `<button type="button" role="tab" data-tab="render">SwiftUI render</button>` : ""}</div>
         <div data-panel="usage">${codeBlock(c.usage, "Usage")}</div>
         <div data-panel="source" hidden>${codeBlock(c.source, c.file ? c.file.split("/").pop() : "Source")}</div>
-        ${snapHtml ? `<div data-panel="render" hidden>${snapHtml}</div>` : ""}
+        ${renderPair && key ? `<div data-panel="render" hidden>${renderPair}</div>` : ""}
       </section>
       ${c.guidelines ? `<section class="stack"><h2 class="h3">Guidelines</h2><div class="prose">${md(c.guidelines)}</div></section>` : ""}
       <section class="grid c3">

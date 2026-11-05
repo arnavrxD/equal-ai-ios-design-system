@@ -50,8 +50,9 @@ public struct EqualFeatureCard: View {
     }
 
     /// Back-compatible initialiser: exclusive cards draw the crown panel, others show `art`.
-    public init(title: String = "Unlimited AI calls", message: String = "No monthly cap. Equal keeps calling for you all month, so you never wait for a reset.", isExclusive: Bool = true, art: EqualImage = .crown) {
-        self.init(Content(title, message, art: art, isExclusive: isExclusive))
+    /// Pass `style: .trial` for the plain soft-paywall card (no tag, no border).
+    public init(title: String = "Unlimited AI calls", message: String = "No monthly cap. Equal keeps calling for you all month, so you never wait for a reset.", isExclusive: Bool = true, art: EqualImage = .crown, style: Style? = nil) {
+        self.init(Content(title, message, art: art, isExclusive: isExclusive), style: style)
     }
 
     /// Card width in the carousel.
