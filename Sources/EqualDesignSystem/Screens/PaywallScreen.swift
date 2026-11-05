@@ -13,6 +13,24 @@ public struct PaywallConfig {
     /// `.inline`: plans and coupon under the hero title, sticky sheet shrinks to the CTA.
     public enum PlanPlacement: Sendable { case sheet, inline }
     public enum Section: Sendable { case compare, features, faq }
+    /// What sits at the top of the page.
+    public enum Top {
+        /// `EqualPaywallHero` (+ the summary card or inline plans).
+        case hero
+        /// Paywall v2 (25639): dome hero with pre-title, `EqualPriceDealCard` and the coupon card.
+        case deal(preTitle: String, title: String)
+        /// Post-trial paywall (25678): `EqualTrialHero(.price)` with the free-week recap strip.
+        case trialPrice(String)
+        /// Carousel-first paywall (25749): the full-bleed `.hero` feature card and dots.
+        case featureHero
+    }
+    /// What is pinned at the bottom.
+    public enum Bottom {
+        /// `EqualStickyPlanSheet` (full, or CTA-only for inline plans).
+        case planSheet
+        /// `EqualStickyCTABar` with one CTA (paywall v2 and the post-trial paywalls).
+        case ctaBar(EqualStickyCTABar.Style)
+    }
 
     public var title: String
     public var subtitle: Text
@@ -31,6 +49,10 @@ public struct PaywallConfig {
     public var selectedPlan: Plan
     public var flow: EqualPurchaseFlow
     public var features: [EqualFeatureCard.Content]
+    public var top: Top
+    public var bottom: Bottom
+    /// Card style in the carousel; `nil` = exclusive / standard per card.
+    public var featureStyle: EqualFeatureCard.Style?
 
     public init(title: String = "Choose your plan",
                 subtitle: Text = Text("1 day").bold() + Text(" left in your free trial"),
@@ -47,7 +69,10 @@ public struct PaywallConfig {
                 compareInHero: Bool = false,
                 selectedPlan: Plan = .goldPlus,
                 flow: EqualPurchaseFlow = .trialLastDay,
-                features: [EqualFeatureCard.Content] = EqualFeatureCard.Content.paywall) {
+                features: [EqualFeatureCard.Content] = EqualFeatureCard.Content.paywall,
+                top: Top = .hero,
+                bottom: Bottom = .planSheet,
+                featureStyle: EqualFeatureCard.Style? = nil) {
         self.title = title
         self.subtitle = subtitle
         self.heroShape = heroShape
@@ -64,6 +89,9 @@ public struct PaywallConfig {
         self.selectedPlan = selectedPlan
         self.flow = flow
         self.features = features
+        self.top = top
+        self.bottom = bottom
+        self.featureStyle = featureStyle
     }
 
     // MARK: The Figma variant matrix
@@ -111,6 +139,22 @@ public struct PaywallConfig {
     /// 64004 · standalone compact + value card.
     public static var standaloneValue: PaywallConfig { PaywallConfig(heroShape: .compactArc, summary: .value(.trialRunning)) }
 
+    /// 25639 · paywall v2: "Take the right call with Equal Gold", deal card, coupon card, What you get, CTA bar with terms.
+    public static var dealCard: PaywallConfig {
+        PaywallConfig(summary: .none, sections: [.features, .faq], features: Array(EqualFeatureCard.Content.paywall.dropFirst()),
+                      top: .deal(preTitle: "Take the right call with", title: "Equal Gold"), bottom: .ctaBar(.goldTerms), featureStyle: .trial)
+    }
+    /// 25678 · post-trial: "Equal Gold ₹249/month" dome with the recap strip, What you get, Compare, FAQ, "Start using Equal Gold".
+    public static var trialPrice: PaywallConfig {
+        PaywallConfig(summary: .none, sections: [.features, .compare, .faq], features: Array(EqualFeatureCard.Content.paywall.dropFirst()),
+                      top: .trialPrice("₹249/month"), bottom: .ctaBar(.gold), featureStyle: .trial)
+    }
+    /// 25749 · carousel-first: full-bleed Call Screening art, Compare, FAQ, "Start using Equal Gold".
+    public static var featureHero: PaywallConfig {
+        PaywallConfig(summary: .none, sections: [.compare, .faq], features: Array(EqualFeatureCard.Content.paywall.dropFirst()),
+                      top: .featureHero, bottom: .ctaBar(.gold))
+    }
+
     /// Every variant in the Figma matrix, with its frame id.
     public static var variants: [(name: String, nodeId: String, config: PaywallConfig)] {
         [
@@ -127,7 +171,10 @@ public struct PaywallConfig {
             ("Compare in hero", "26242:55299", .compareInHeroStats),
             ("Compare in hero, Gold", "26242:58219", .compareInHeroStatsGold),
             ("Standalone stats", "26242:61139", .standaloneStats),
-            ("Standalone value card", "26242:64004", .standaloneValue)
+            ("Standalone value card", "26242:64004", .standaloneValue),
+            ("Deal card", "25639:34479", .dealCard),
+            ("Trial price", "25678:22301", .trialPrice),
+            ("Feature hero", "25749:21774", .featureHero)
         ]
     }
 }
@@ -152,8 +199,8 @@ public struct PaywallScreen: View {
     }
 
     public var body: some View {
-        ScrollView {
-            content.padding(.bottom, (config.planPlacement == .inline ? 151 : 300) + 24)
+        EqualScrollContent {
+            content.padding(.bottom, bottomInset + 24)
         }
         .ignoresSafeArea(edges: .top)
         .overlay(alignment: .bottom) { sheet }
@@ -161,14 +208,53 @@ public struct PaywallScreen: View {
         .environment(\.colorScheme, .light)
     }
 
-    var sheet: some View {
-        EqualStickyPlanSheet(selection: $plan, couponApplied: $couponApplied, flow: config.flow,
-                             layout: config.planPlacement == .inline ? .ctaOnly : .full,
-                             couponStyle: config.couponStyle, onPurchase: onPurchase)
+    private var bottomInset: CGFloat {
+        switch config.bottom {
+        case .planSheet: return config.planPlacement == .inline ? 151 : 300
+        case .ctaBar(let style): return style == .goldTerms ? 160 : 110
+        }
+    }
+
+    @ViewBuilder var sheet: some View {
+        switch config.bottom {
+        case .planSheet:
+            EqualStickyPlanSheet(selection: $plan, couponApplied: $couponApplied, flow: config.flow,
+                                 layout: config.planPlacement == .inline ? .ctaOnly : .full,
+                                 couponStyle: config.couponStyle, onPurchase: onPurchase)
+        case .ctaBar(let style):
+            EqualStickyCTABar(style) { onPurchase(plan) }.ignoresSafeArea(edges: .bottom)
+        }
     }
 
     /// The scrolling content (hero to FAQ), without the ScrollView or the sheet.
-    var content: some View {
+    @ViewBuilder var content: some View {
+        switch config.top {
+        case .hero: heroContent
+        case .deal(let preTitle, let title):
+            ZStack(alignment: .top) {
+                EqualPaywallHero(title: title, preTitle: preTitle, shape: .dome, showsClose: false, onClose: onClose)
+                VStack(spacing: 0) {
+                    EqualPriceDealCard(comparison: nil, rollsOnAppear: !EqualSnapshotMode.isStatic).padding(.top, 284)
+                    EqualCouponRow(style: .card, isApplied: $couponApplied).padding(.top, 24).padding(.bottom, 45)
+                    mainColumn.padding(.horizontal, -EqualSpacing.s24)
+                }
+                .padding(.horizontal, EqualSpacing.s24)
+            }
+        case .trialPrice(let price):
+            VStack(spacing: 0) {
+                EqualTrialHero(background: .goldDome, variant: .price(price), progressDay: nil)
+                mainColumn.padding(.top, 36)
+            }
+        case .featureHero:
+            VStack(spacing: 0) {
+                EqualFeatureCard(config.features.first ?? EqualFeatureCard.Content.paywall[1], style: .hero)
+                EqualPageDots(count: config.features.count, active: 0).padding(.top, 14)
+                mainColumn.padding(.top, 72)
+            }
+        }
+    }
+
+    private var heroContent: some View {
         let hero = EqualPaywallHero(title: config.title, subtitle: config.subtitle, shape: config.heroShape,
                                     showsCrown: config.showsCrown, showsTopBar: config.showsTopBar, onClose: onClose)
         let m = hero.metrics
@@ -217,7 +303,7 @@ public struct PaywallScreen: View {
                 case .features:
                     VStack(spacing: 0) {
                         EqualSectionLabel(config.featuresTitle, style: .gold).padding(.bottom, EqualSpacing.s24)
-                        PaywallCarousel(cards: config.features, page: $page)
+                        PaywallCarousel(cards: config.features, style: config.featureStyle, page: $page)
                         EqualPageDots(count: config.features.count, active: page).padding(.top, 13)
                     }
                 case .faq:
@@ -236,10 +322,11 @@ public struct PaywallScreen: View {
 /// card; the page binding drives the dots. Built without a ScrollView so it renders in snapshots.
 struct PaywallCarousel: View {
     let cards: [EqualFeatureCard.Content]
+    var style: EqualFeatureCard.Style? = nil
     @Binding var page: Int
     @GestureState private var drag: CGFloat = 0
 
-    private func cardWidth(_ c: EqualFeatureCard.Content) -> CGFloat { EqualFeatureCard(c).width }
+    private func cardWidth(_ c: EqualFeatureCard.Content) -> CGFloat { EqualFeatureCard(c, style: style).width }
 
     private var offset: CGFloat {
         cards.prefix(page).reduce(0) { $0 + cardWidth($1) + 28 }
@@ -252,7 +339,7 @@ struct PaywallCarousel: View {
             .frame(height: 292)
             .overlay(alignment: .topLeading) {
                 HStack(alignment: .top, spacing: 28) {
-                    ForEach(cards) { EqualFeatureCard($0) }
+                    ForEach(cards) { EqualFeatureCard($0, style: style) }
                 }
                 .fixedSize()
                 .padding(.leading, EqualSpacing.s24)

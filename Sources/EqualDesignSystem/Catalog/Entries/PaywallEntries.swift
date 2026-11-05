@@ -33,7 +33,6 @@ extension EqualCatalog {
     + [
         EqualCatalogItem("Purchase success · welcome back", .screens, "Plan expired, Gold renewed.") { PurchaseSuccessScreen(flow: .planExpired) },
         EqualCatalogItem("Purchase success · trial started", .screens, "7 days of Equal Gold.") { PurchaseSuccessScreen(.trialStarted(days: 7)) }
-    ] + paywallTmpItems + [
     ]
 }
 

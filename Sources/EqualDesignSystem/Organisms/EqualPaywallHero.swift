@@ -13,11 +13,14 @@ import SwiftUI
 ///
 /// Limit paywalls pass `preTitle`: a SemiBold 16 line ("Equal made 30 calls for you") sits above
 /// an ExtraBold 28 title, the crown is always shown, and `.roundedBottom` / `.circle` switch to
-/// the limit geometry (248pt hero, shape overflowing to y270–279).
+/// the limit geometry (248pt hero, shape overflowing to y270–279). `.dome` is the paywall-v2 hero
+/// (pre-title, no close button: pass `showsClose: false`).
 public struct EqualPaywallHero: View {
     public enum Shape: Sendable, Equatable {
         case circle, compactArc, shallowArc
         case roundedBottom(CGFloat)
+        /// Paywall v2 dome: 547pt circle at y−173 behind "Take the right call with / Equal Gold".
+        case dome
     }
 
     /// The shape's vertical gradient.
@@ -50,6 +53,7 @@ public struct EqualPaywallHero: View {
     let tint: Tint
     let showsCrown: Bool
     let showsTopBar: Bool
+    let showsClose: Bool
     let onClose: () -> Void
     let onRestore: () -> Void
 
@@ -57,6 +61,7 @@ public struct EqualPaywallHero: View {
     ///   - preTitle: limit-paywall line above the title; switches the title to ExtraBold and hides `subtitle`.
     ///   - showsCrown: `nil` picks the shape's default (A, C, D and limit heroes have the crown and rays).
     ///   - showsTopBar: close button and "Restore purchases". Keep it on: App Review expects a visible dismiss.
+    ///   - showsClose: hides only the close button (paywall v2 keeps "Restore purchases").
     public init(title: String = "Choose your plan",
                 subtitle: Text = Text("1 day").bold() + Text(" left in your free trial"),
                 preTitle: String? = nil,
@@ -64,6 +69,7 @@ public struct EqualPaywallHero: View {
                 tint: Tint = .gold,
                 showsCrown: Bool? = nil,
                 showsTopBar: Bool = true,
+                showsClose: Bool = true,
                 onClose: @escaping () -> Void = {},
                 onRestore: @escaping () -> Void = {}) {
         self.title = title
@@ -73,6 +79,7 @@ public struct EqualPaywallHero: View {
         self.tint = tint
         self.showsCrown = showsCrown ?? Self.defaultCrown(shape, isLimit: preTitle != nil)
         self.showsTopBar = showsTopBar
+        self.showsClose = showsClose
         self.onClose = onClose
         self.onRestore = onRestore
     }
@@ -80,7 +87,7 @@ public struct EqualPaywallHero: View {
     static func defaultCrown(_ shape: Shape, isLimit: Bool) -> Bool {
         if isLimit { return true }
         switch shape {
-        case .circle, .shallowArc: return true
+        case .circle, .shallowArc, .dome: return true
         case .compactArc: return false
         case .roundedBottom(let r): return r < 40
         }
@@ -104,6 +111,9 @@ public struct EqualPaywallHero: View {
     var metrics: Metrics { Self.metrics(shape: shape, isLimit: preTitle != nil, showsCrown: showsCrown) }
 
     static func metrics(shape: Shape, isLimit: Bool, showsCrown: Bool) -> Metrics {
+        if shape == .dome {
+            return Metrics(shapeWidth: 547, shapeHeight: 547, shapeY: -173, cornerRadius: 273.5, crownY: 97, titleY: 216, height: 374, textBottom: 248)
+        }
         if isLimit {
             switch shape {
             case .roundedBottom(let r):
@@ -113,7 +123,7 @@ public struct EqualPaywallHero: View {
             }
         }
         switch shape {
-        case .circle:
+        case .circle, .dome:
             return Metrics(shapeWidth: 547, shapeHeight: 547, shapeY: -184, cornerRadius: 273.5, crownY: 101, titleY: 191, height: 363, textBottom: 249)
         case .compactArc:
             return Metrics(shapeWidth: 547, shapeHeight: 547, shapeY: -265, cornerRadius: 273.5, crownY: 20, titleY: 110, height: 282, textBottom: 168)
@@ -181,7 +191,7 @@ public struct EqualPaywallHero: View {
 
     private var topBar: some View {
         HStack {
-            EqualIconButton(.close, variant: .frost, label: "Close", action: onClose)
+            if showsClose { EqualIconButton(.close, variant: .frost, label: "Close", action: onClose) }
             Spacer()
             Button(action: onRestore) {
                 Text("Restore purchases").font(.equal(size: 13, weight: .medium)).foregroundStyle(EqualColor.grey01)

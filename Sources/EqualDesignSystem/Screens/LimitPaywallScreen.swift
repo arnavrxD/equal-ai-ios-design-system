@@ -24,7 +24,7 @@ public struct LimitPaywallScreen: View {
     }
 
     public var body: some View {
-        ScrollView {
+        EqualScrollContent {
             content.padding(.bottom, 331 + 24)
         }
         .ignoresSafeArea(edges: .top)

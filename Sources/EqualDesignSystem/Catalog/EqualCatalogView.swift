@@ -221,7 +221,7 @@ public enum EqualCatalog {
                 EqualFeatureCard()
                 EqualFeatureCard(EqualFeatureCard.Content.paywall[1]).frame(width: 303)
                 EqualFeatureCard(EqualFeatureCard.Content.paywall[3], style: .trial).frame(width: 303)
-                EqualFeatureCard(EqualFeatureCard.Content.paywall[1], style: .hero).padding(.horizontal, -24)
+                EqualFeatureCard(EqualFeatureCard.Content.paywall[1], style: .hero).frame(width: 345).clipped()
             }
         },
         EqualCatalogItem("EqualStickyPlanSheet", .organisms, "Plans, coupon and the CTA that follows the plan: full, CTA-only and limit.") {

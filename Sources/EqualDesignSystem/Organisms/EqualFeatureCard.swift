@@ -6,7 +6,8 @@ import SwiftUI
 ///   a warm glow, the crown and the "30 calls a month → Unlimited" pills, "Only in Gold Plus" tag.
 /// - `.standard` (303×292, radius 16): black 8% border, the 303×207 product art on #F7F7F7 with
 ///   a warm glow, "Both plans" tag.
-/// - `.trial` (303×292): the soft-paywall card, no border and no tag.
+/// - `.trial` (303×292, radius 16): the plain Gold-trial / soft-paywall card, no border and no
+///   tag; follows the colour scheme (dark: #222 card, #000 panel, #F7F7F7 / #BBB text).
 /// - `.hero`: the full-bleed top of the carousel-first paywall (393×319 art, centred text).
 ///
 /// Use `EqualFeatureCard.Content.paywall` for the seven Figma cards.
@@ -124,7 +125,7 @@ public struct EqualFeatureCard: View {
             text(width: 264)
         }
         .frame(width: 303, height: 292, alignment: .top)
-        .background(Color.white)
+        .background(style == .trial ? EqualColor.bgSurface : Color.white)
         .clipShape(RoundedRectangle(cornerRadius: EqualRadius.m))
         .overlay {
             if style == .standard { RoundedRectangle(cornerRadius: EqualRadius.m).strokeBorder(EqualColor.strokeMedium, lineWidth: 1) }
@@ -136,8 +137,8 @@ public struct EqualFeatureCard: View {
         VStack(spacing: 20) {
             artPanel(width: nil, height: 319, glowBlur: 81)
             VStack(spacing: 1) {
-                Text(content.title).font(.equal(size: 17, weight: .semibold)).tracking(-0.44).foregroundStyle(EqualColor.grey01)
-                Text(content.message).font(.equal(size: 12)).foregroundStyle(EqualColor.grey05).lineSpacing(0.4)
+                Text(content.title).font(.equal(size: 17, weight: .semibold)).tracking(-0.44).foregroundStyle(EqualColor.textPrimary)
+                Text(content.message).font(.equal(size: 12)).foregroundStyle(EqualColor.textSecondary).lineSpacing(0.4)
             }
             .multilineTextAlignment(.center)
             .frame(width: 264)
@@ -152,9 +153,14 @@ public struct EqualFeatureCard: View {
     /// #F7F7F7 panel with two #FFF4BB 80% glows (blur 124) under the flattened product art.
     private func artPanel(width: CGFloat?, height: CGFloat, glowBlur: CGFloat = 62) -> some View {
         ZStack {
-            Color(equalHex: 0xF7F7F7)
-            Ellipse().fill(Color(equalHex: 0xFFF4BB, alpha: 0.8)).frame(width: 323, height: 323).blur(radius: glowBlur).offset(x: -120, y: -160)
-            Ellipse().fill(Color(equalHex: 0xFFF4BB, alpha: 0.8)).frame(width: 323, height: 323).blur(radius: glowBlur).offset(x: 140, y: 170)
+            (style == .trial ? EqualColor.bgPrimary : Color(equalHex: 0xF7F7F7))
+                .overlay {
+                    // two warm glows; overlays so their 323pt frames never size the panel
+                    ZStack {
+                        Ellipse().fill(Color(equalHex: 0xFFF4BB, alpha: 0.8)).frame(width: 323, height: 323).blur(radius: glowBlur).offset(x: -120, y: -160)
+                        Ellipse().fill(Color(equalHex: 0xFFF4BB, alpha: 0.8)).frame(width: 323, height: 323).blur(radius: glowBlur).offset(x: 140, y: 170)
+                    }
+                }
             if content.art.name.hasPrefix("feature-art") {
                 content.art.image.aspectRatio(contentMode: .fill)
             } else {
@@ -169,9 +175,11 @@ public struct EqualFeatureCard: View {
 
     private func text(width: CGFloat) -> some View {
         VStack(alignment: .leading, spacing: 1) {
-            Text(content.title).font(.equal(size: 17, weight: .semibold)).tracking(-0.44).foregroundStyle(EqualColor.grey01)
+            Text(content.title).font(.equal(size: 17, weight: .semibold)).tracking(-0.44)
+                .foregroundStyle(style == .trial ? EqualColor.textPrimary : EqualColor.grey01)
                 .lineLimit(1).minimumScaleFactor(0.9)
-            Text(content.message).font(.equal(size: 12)).tracking(-0.31).lineSpacing(0.4).foregroundStyle(EqualColor.grey05)
+            Text(content.message).font(.equal(size: 12)).tracking(-0.31).lineSpacing(0.4)
+                .foregroundStyle(style == .trial ? EqualColor.textSecondary : EqualColor.grey05)
                 .fixedSize(horizontal: false, vertical: true)
         }
         .frame(width: width, alignment: .leading)
