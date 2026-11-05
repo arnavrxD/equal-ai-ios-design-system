@@ -29,7 +29,21 @@ let out = URL(fileURLWithPath: CommandLine.arguments.count > 1 ? CommandLine.arg
 try? FileManager.default.createDirectory(at: out, withIntermediateDirectories: true)
 MainActor.assumeIsolated {
     _ = NSApplication.shared
-    for item in EqualCatalog.items {
+    EqualFonts.register()
+    print("DM Sans available:", EqualFonts.isDMSansAvailable)
+    if CommandLine.arguments.contains("--check") {
+        let check = VStack(alignment: .leading, spacing: 8) {
+            EqualLogo(height: 30)
+            HStack { EqualFlagIndia(size: 56); EqualAppIcon(size: 56); EqualMark(size: 40) }
+            ForEach([Font.Weight.regular, .medium, .semibold, .bold, .heavy], id: \.self) { w in Text("Amit called to remind you ₹499").font(.equal(size: 20, weight: w)) }
+            Text("Thinking...").equalTextStyle(.typing)
+        }.padding(20).background(Color.white)
+        let r = ImageRenderer(content: check); r.scale = 2
+        if let cg = r.cgImage, let d = NSBitmapImageRep(cgImage: cg).representation(using: .png, properties: [:]) { try? d.write(to: out.appendingPathComponent("_check.png")) }
+        exit(0)
+    }
+    let filter = CommandLine.arguments.firstIndex(of: "--filter").map { CommandLine.arguments[$0 + 1].lowercased() }
+    for item in EqualCatalog.items where filter.map({ f in f.split(separator: ",").contains { item.id.lowercased().contains($0) } }) ?? true {
         render(item, scheme: .light, to: out)
         if item.level != .screens { render(item, scheme: .dark, to: out) }
     }

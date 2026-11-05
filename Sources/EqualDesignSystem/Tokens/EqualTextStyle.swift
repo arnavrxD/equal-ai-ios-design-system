@@ -65,10 +65,6 @@ public enum EqualTextStyle: String, CaseIterable, Sendable {
     case bubbleTime
     /// Assistant thinking line ('Thinking...'), italic.
     case typing
-    /// Status bar clock.
-    case statusTime
-    /// System keyboard keys (not app UI).
-    case keyboardKey
 
     /// Point size.
     public var size: CGFloat {
@@ -103,8 +99,6 @@ public enum EqualTextStyle: String, CaseIterable, Sendable {
         case .groupLabel: return 14.0
         case .bubbleTime: return 10.0
         case .typing: return 16.0
-        case .statusTime: return 17.0
-        case .keyboardKey: return 22.0
         }
     }
 
@@ -141,8 +135,6 @@ public enum EqualTextStyle: String, CaseIterable, Sendable {
         case .groupLabel: return 18.0
         case .bubbleTime: return 13.0
         case .typing: return 21.0
-        case .statusTime: return 22.0
-        case .keyboardKey: return 28.0
         }
     }
 
@@ -178,8 +170,6 @@ public enum EqualTextStyle: String, CaseIterable, Sendable {
         case .groupLabel: return .semibold
         case .bubbleTime: return .regular
         case .typing: return .regular
-        case .statusTime: return .semibold
-        case .keyboardKey: return .regular
         }
     }
 
@@ -216,19 +206,8 @@ public enum EqualTextStyle: String, CaseIterable, Sendable {
         case .groupLabel: return 0.06
         case .bubbleTime: return 0.0
         case .typing: return -0.026
-        case .statusTime: return 0.0
-        case .keyboardKey: return 0.0
         }
     }
 
     public var isItalic: Bool { self == .typing }
-
-    /// `true` for styles set in SF Pro (iOS chrome), not DM Sans.
-    public var isSystemChrome: Bool {
-        switch self {
-        case .statusTime: return true
-        case .keyboardKey: return true
-        default: return false
-        }
-    }
 }

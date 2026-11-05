@@ -9,13 +9,16 @@ public struct EqualTextField: View {
     @Binding var text: String
     let kind: Kind
     let helper: String?
+    let isError: Bool
     @FocusState private var focused: Bool
 
-    public init(_ placeholder: String, text: Binding<String>, kind: Kind = .plain, helper: String? = nil) {
+    /// - Parameter isError: red stroke on a rose fill (pair it with an `EqualFieldMessage(.error)`).
+    public init(_ placeholder: String, text: Binding<String>, kind: Kind = .plain, helper: String? = nil, isError: Bool = false) {
         self.placeholder = placeholder
         self._text = text
         self.kind = kind
         self.helper = helper
+        self.isError = isError
     }
 
     public var body: some View {
@@ -23,14 +26,14 @@ public struct EqualTextField: View {
             HStack(spacing: 13) {
                 if kind == .phone {
                     HStack(spacing: EqualSpacing.s8) {
-                        EqualImage.flagIndia.image.aspectRatio(contentMode: .fit).frame(width: 28, height: 28).clipShape(Circle())
+                        EqualFlagIndia(size: 28)
                         Text("+91").equalTextStyle(.body).foregroundStyle(EqualColor.textPrimary)
                     }
                     Rectangle().fill(Color.black.opacity(0.1)).frame(width: 1, height: 30)
                 }
                 TextField(placeholder, text: $text)
                     .focused($focused)
-                    .font(kind == .name ? .equal(size: 18, weight: .semibold) : .equal(.body))
+                    .font(kind == .name ? .equal(size: 18, weight: text.isEmpty ? .regular : .semibold) : .equal(.body))
                     .multilineTextAlignment(kind == .name ? .center : .leading)
                     .foregroundStyle(EqualColor.textPrimary)
                     #if os(iOS)
@@ -40,8 +43,8 @@ public struct EqualTextField: View {
             }
             .padding(.horizontal, EqualSpacing.s18)
             .frame(height: 52)
-            .background(RoundedRectangle(cornerRadius: EqualRadius.m).fill(EqualColor.bgSurface))
-            .overlay(RoundedRectangle(cornerRadius: EqualRadius.m).stroke(focused || !text.isEmpty ? EqualColor.green : EqualColor.strokeMedium, lineWidth: 1))
+            .background(RoundedRectangle(cornerRadius: EqualRadius.m).fill(isError ? Color(equalHex: 0xFCF3F3) : EqualColor.bgSurface))
+            .overlay(RoundedRectangle(cornerRadius: EqualRadius.m).stroke(isError ? Color(equalHex: 0xEC0033) : (focused || !text.isEmpty ? EqualColor.green : EqualColor.strokeMedium), lineWidth: 1))
 
             if let helper {
                 Text(helper).equalTextStyle(.caption1).foregroundStyle(EqualColor.textSecondary)

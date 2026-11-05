@@ -80,8 +80,8 @@ public struct IconographyView: View {
             }
             .padding()
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 96))], spacing: 16) {
-                ForEach(EqualImage.allCases, id: \.self) { img in
-                    VStack(spacing: 6) { EqualIllustration(img, size: 72); Text(img.rawValue).font(.caption2).lineLimit(1) }
+                ForEach(EqualImage.all, id: \.self) { img in
+                    VStack(spacing: 6) { EqualIllustration(img, size: 72); Text(img.name).font(.caption2).lineLimit(1) }
                 }
             }
             .padding()

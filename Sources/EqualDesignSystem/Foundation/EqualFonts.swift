@@ -42,7 +42,7 @@ public enum EqualFonts {
 }
 
 public extension Font {
-    /// DM Sans at a size and weight, falling back to the system font when DM Sans is not registered.
+    /// DM Sans at a size and weight. DM Sans sets all text; SF Pro is only for SF Symbols icons.
     static func equal(size: CGFloat, weight: Font.Weight = .regular, italic: Bool = false) -> Font {
         var font: Font = EqualFonts.isDMSansAvailable
             ? .custom(EqualFonts.family, fixedSize: size).weight(weight)
@@ -53,7 +53,6 @@ public extension Font {
 
     /// The font for an `EqualTextStyle`.
     static func equal(_ style: EqualTextStyle) -> Font {
-        if style.isSystemChrome { return .system(size: style.size, weight: style.weight) }
         return .equal(size: style.size, weight: style.weight, italic: style.isItalic)
     }
 }

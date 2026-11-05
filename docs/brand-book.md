@@ -16,7 +16,7 @@ Equal AI is a personal AI call assistant for iPhone users in India. It answers u
 - Green text on white (`text-action`) is 3.0:1. The file uses it only at 13px semibold and up (unread timestamps, links); keep it there. `text-placeholder` is for placeholders only.
 - Avatar tints (`avatar-*`) encode caller category; don't use them elsewhere.
 
-**Type.** DM Sans everywhere, with the file's 22 iOS-mapped text styles (`large-title` … `caption-2`, each with an `-em` weight) and -2.6% tracking. Most-used: `body` 17/22 for previews, `callout` 16/21 for chips, `headline-em` 18/22 for names, `title-2-em` 22/28 for screen titles. Uppercase only for small labels (`section-label`, `group-label`, `eyebrow-gold`) with positive tracking. SF Pro is used only for iOS chrome (status bar, keyboard, App Store sheet).
+**Type.** DM Sans everywhere, with the file's 22 iOS-mapped text styles (`large-title` … `caption-2`, each with an `-em` weight) and -2.6% tracking. Most-used: `body` 17/22 for previews, `callout` 16/21 for chips, `headline-em` 18/22 for names, `title-2-em` 22/28 for screen titles. Uppercase only for small labels (`section-label`, `group-label`, `eyebrow-gold`) with positive tracking. SF Pro appears only inside SF Symbols icons; every piece of text, including system-style sheets and banners, is DM Sans.
 
 **Spacing and layout.** iPhone 15 Pro frame, 393×852. Content is 345 wide with a 24px gutter (`space-24`). Lists use 12px gaps (`space-12`); chips 16px horizontal / 8px vertical padding; paywall sections 48px apart (`space-48`); settings sections 32px.
 
@@ -34,7 +34,7 @@ Equal AI is a personal AI call assistant for iPhone users in India. It answers u
 
 ## Iconography
 
-The file uses SF Symbols (chevron 􀆊, chat, phone glyphs inside text), Material icons (search, more_horiz, close, support_agent, keyboard_arrow_down) and emoji. The bundle's `Icon` component redraws the needed UI glyphs as 24px line icons on a 1.8 stroke in `currentColor`; it is a stand-in, not the original SF Symbols. The original icons, exported as SVG from the file, are in the **Icons** asset group (75 files: navigation, calls, voice and chat, notifications, selection, Gold and paywall, brand marks). Brand marks and app icons are in **Logos**, 3D illustrations in **Illustrations**, whole screens in **Screens** and **Flows**.
+The file uses SF Symbols (chevron 􀆊, chat, phone glyphs inside text), Material icons (search, more_horiz, close, support_agent, keyboard_arrow_down) and emoji. The bundle's `Icon` component redraws the needed UI glyphs as 24px line icons on a 1.8 stroke in `currentColor`; it is a stand-in, not the original SF Symbols. The original icons, exported as SVG from the file, are in the **Icons** asset group (75 files: navigation, calls, voice and chat, notifications, selection, Gold and paywall, brand marks). Brand marks are in **Logos**, 3D illustrations in **Illustrations**, whole screens in **Screens** and **Flows**.
 
 ## Using the components
 
@@ -48,4 +48,4 @@ Images come from `EqualDS.assets` (uploaded files). Token names map to CSS custo
 
 ## Not synced
 
-Font files (DM Sans loads from Google Fonts), Lottie animations, the keyboard and status-bar system components, and the dark appearance of the Gold screens (only the semantic tokens define dark values). Notes and component docs paraphrase the Figma file; component names were assigned here because most layers in the file are unnamed frames.
+Lottie animations, the keyboard and status-bar system components, and the dark appearance of the Gold screens (only the semantic tokens define dark values). Notes and component docs paraphrase the Figma file; component names were assigned here because most layers in the file are unnamed frames.

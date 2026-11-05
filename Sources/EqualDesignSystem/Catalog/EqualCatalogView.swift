@@ -74,9 +74,13 @@ private struct CatalogDetail: View {
     }
 }
 
-/// The registry behind `EqualCatalogView`.
+/// The registry behind `EqualCatalogView`. Each area adds its entries in `Catalog/Entries`.
 public enum EqualCatalog {
-    public static let items: [EqualCatalogItem] = [
+    public static var items: [EqualCatalogItem] {
+        coreItems + goldTrialItems + paywallItems + paymentItems + homeItems + settingsItems
+    }
+
+    static let coreItems: [EqualCatalogItem] = [
         // Foundations
         EqualCatalogItem("Color", .foundations, "93 tokens: semantic light/dark, primitives, Gold, avatar tints.") { ColorTokensView() },
         EqualCatalogItem("Typography", .foundations, "32 styles: the iOS scale in DM Sans plus product accents.") { TypographyTokensView() },
@@ -123,6 +127,15 @@ public enum EqualCatalog {
         EqualCatalogItem("EqualTextField", .atoms, "Phone and name inputs.") { TextFieldDemo() },
         EqualCatalogItem("EqualThinkingText", .atoms, "Assistant progress line with shimmer.") { EqualThinkingText() },
         EqualCatalogItem("EqualCrownLoader", .atoms, "Payment spinner.") { EqualCrownLoader() },
+        EqualCatalogItem("EqualFieldMessage", .atoms, "Helper, countdown, resend link and error lines under a field.") {
+            VStack(spacing: 12) {
+                EqualFieldMessage(.helper("Your AI will call you ", emphasis: "‘Keshav’"))
+                EqualFieldMessage(.countdown(seconds: 30))
+                EqualFieldMessage(.link("Resend OTP"))
+                EqualFieldMessage(.error("Incorrect OTP, try again"))
+            }
+        },
+        EqualCatalogItem("EqualMadeInIndiaPill", .atoms, "Tricolour glass pill on the splash.") { EqualMadeInIndiaPill().padding(24).background(EqualColor.brandGreen) },
 
         // Molecules
         EqualCatalogItem("EqualSearchBar", .molecules, "Search pill plus the glass ⋯ button.") { EqualSearchBar(query: .constant("")) },
@@ -146,12 +159,19 @@ public enum EqualCatalog {
         EqualCatalogItem("EqualFAQItem", .molecules, "Accordion FAQ.") { EqualFAQList() },
         EqualCatalogItem("EqualStatRow", .molecules, "Metric row on the dark recap.") { VStack(spacing: 0) { EqualStatRow("Calls handled", value: "18", icon: .phoneOutline) }.padding().background(Color.black) },
         EqualCatalogItem("EqualPushBanner", .molecules, "iOS notification banner.") { EqualPushBanner("Only 1 day left", message: "Your trial ends tomorrow.") },
-        EqualCatalogItem("EqualGenderCard", .molecules, "Gender picker card.") { HStack { EqualGenderCard("Male", image: .avatarMale, isSelected: true); EqualGenderCard("Female", image: .avatarFemale, isSelected: false) } },
+        EqualCatalogItem("EqualGenderCard", .molecules, "Gender picker card.") { HStack { EqualGenderCard(.male, isSelected: true); EqualGenderCard(.female, isSelected: false) } },
         EqualCatalogItem("EqualAvailabilityPill", .molecules, "Available / Busy header pill.") { EqualAvailabilityPill() },
         EqualCatalogItem("EqualTrialPill", .molecules, "\"1 Day Left\" header pill.") { EqualTrialPill() },
         EqualCatalogItem("EqualSheetHeader", .molecules, "Top of the Equal action sheet.") { EqualSheetHeader() },
         EqualCatalogItem("EqualUpiStep", .molecules, "Numbered payment step.") { EqualUpiStep(1, "Open your UPI app, via notifications or directly") },
         EqualCatalogItem("EqualKeyValueRow", .molecules, "App Store label–value row.") { EqualKeyValueRow("Price", "₹499.00 per month") },
+        EqualCatalogItem("EqualOTPField", .molecules, "One-time-code field: empty, filled, error.") {
+            VStack(spacing: 12) { EqualOTPField(code: .constant("")); EqualOTPField(code: .constant("194226")); EqualOTPField(code: .constant("194226"), isError: true) }
+        },
+        EqualCatalogItem("EqualOnboardingHeader", .molecules, "Signup title block, plain or with an editable number.") {
+            VStack(spacing: 24) { EqualOnboardingHeader("Enter phone number", subtitle: "Assistant will handle calls for this number"); EqualOnboardingHeader("Enter OTP sent to", editableValue: "+91-8172033604") }
+        },
+        EqualCatalogItem("EqualPhoneMockup", .molecules, "iPhone frame with the lock screen.") { EqualPhoneMockup(width: 220) },
 
         // Organisms
         EqualCatalogItem("EqualAppHeader", .organisms, "Logo, plan tag and availability / trial / avatar.") { VStack { EqualAppHeader(plan: "Gold"); EqualAppHeader(plan: "Gold", trailing: .trial("1 Day Left")) } },
@@ -172,14 +192,21 @@ public enum EqualCatalog {
         EqualCatalogItem("EqualPaymentProcessing", .organisms, "UPI autopay waiting state.") { EqualPaymentProcessing() },
         EqualCatalogItem("EqualSuccessState", .organisms, "Upgrade and trial-start success.") { EqualSuccessState(.upgraded("Gold Plus")) },
         EqualCatalogItem("EqualEmptyState", .organisms, "No chats yet.") { EqualEmptyState() },
-        EqualCatalogItem("EqualOnboardingHeader", .organisms, "Signup title block.") { EqualOnboardingHeader("Enter phone number", subtitle: "Assistant will handle calls for this number") },
         EqualCatalogItem("EqualInviteCard", .organisms, "Invite a Friend.") { EqualInviteCard() },
         EqualCatalogItem("EqualLiveCallCard", .organisms, "Assistant on a live call, with Takeover.") { EqualLiveCallCard() },
+        EqualCatalogItem("EqualSocialProofCard", .organisms, "Splash stats: users, rating, calls handled.") { EqualSocialProofCard().padding(.vertical, 24).frame(maxWidth: .infinity).background(EqualColor.brandGreen) },
+        EqualCatalogItem("EqualWelcomeIntro", .organisms, "Welcome break with the typed greeting.") { EqualWelcomeIntro().frame(height: 760) },
+        EqualCatalogItem("EqualIntroSlide", .organisms, "Walkthrough slide scaffold.") { EqualIntroSlide(isMuted: .constant(false)) { EqualLiveCallCard() }.frame(height: 800) },
 
         // Screens
         EqualCatalogItem("Splash", .screens, "Green splash.") { SplashScreen() },
+        EqualCatalogItem("Splash · social proof", .screens, "Splash keyframe with stats and Made in India.") { SplashSocialProofScreen() },
         EqualCatalogItem("Phone number", .screens, "Signup step 1.") { PhoneNumberScreen() },
+        EqualCatalogItem("OTP", .screens, "Signup step 2: code sent, countdown.") { OTPScreen() },
+        EqualCatalogItem("OTP · error", .screens, "Incorrect code.") { OTPScreen(code: "194226", phase: .error) },
         EqualCatalogItem("Name & gender", .screens, "Signup step 3.") { NameGenderScreen() },
+        EqualCatalogItem("Welcome", .screens, "Welcome break after signup.") { WelcomeScreen() },
+        EqualCatalogItem("Intro · screening", .screens, "Walkthrough: unknown callers are screened.") { IntroScreeningScreen() },
         EqualCatalogItem("Permission", .screens, "Notification permission sheet.") { PermissionScreen() },
         EqualCatalogItem("Home", .screens, "Trial ending, chat list, tab bar.") { HomeScreen() },
         EqualCatalogItem("Home · empty", .screens, "Gold days card and empty state.") { HomeScreen(plan: nil, promo: .goldDays(7), chats: []) },

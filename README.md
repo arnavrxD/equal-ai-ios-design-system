@@ -2,7 +2,7 @@
 
 The SwiftUI design system behind the Equal AI iOS app, built from the **EQAI-iOS** Figma file (page *Oboarding/Paywall Changes*). Tokens, atoms, molecules, organisms and screens, with a documentation site that shows every component live next to its Swift source.
 
-**Docs site:** https://equal-ai-ios-design-system.vercel.app
+**Docs site:** https://eq-ios-ds.vercel.app
 
 | | |
 |---|---|

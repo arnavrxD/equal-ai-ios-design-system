@@ -27,23 +27,36 @@ public struct EqualButton: View {
     let size: Size
     let icon: EqualIcon?
     let fullWidth: Bool
+    let trailingIcon: Bool
+    let isLoading: Bool
     let action: () -> Void
-    @Environment(\.isEnabled) private var isEnabled
+    @Environment(\.isEnabled) private var envEnabled
+    private var isEnabled: Bool { envEnabled && !isLoading }
 
-    public init(_ title: String, variant: Variant = .primary, size: Size = .large, icon: EqualIcon? = nil, fullWidth: Bool = false, action: @escaping () -> Void = {}) {
+    /// - Parameters:
+    ///   - trailingIcon: puts `icon` after the title ("Let’s go ›").
+    ///   - isLoading: disabled colours plus a spinner ("Verifying"); taps are ignored.
+    public init(_ title: String, variant: Variant = .primary, size: Size = .large, icon: EqualIcon? = nil, trailingIcon: Bool = false, fullWidth: Bool = false, isLoading: Bool = false, action: @escaping () -> Void = {}) {
         self.title = title
         self.variant = variant
         self.size = size
         self.icon = icon
+        self.trailingIcon = trailingIcon
         self.fullWidth = fullWidth
+        self.isLoading = isLoading
         self.action = action
     }
 
     public var body: some View {
         Button(action: action) {
             HStack(spacing: EqualSpacing.s8) {
-                if let icon { EqualIconView(icon, size: size == .large ? 18 : 12, weight: .semibold) }
+                if isLoading {
+                    ProgressView().controlSize(.small).tint(EqualColor.textOnActionDisabled)
+                } else if let icon, !trailingIcon {
+                    EqualIconView(icon, size: size == .large ? 18 : 12, weight: .semibold)
+                }
                 Text(title).font(size.font).tracking(-0.026 * 16)
+                if let icon, trailingIcon, !isLoading { EqualIconView(icon, size: size == .large ? 16 : 12, weight: .bold) }
             }
             .lineLimit(1)
             .minimumScaleFactor(0.85)
@@ -63,6 +76,7 @@ public struct EqualButton: View {
             .underline(variant == .link)
         }
         .buttonStyle(.plain)
+        .disabled(isLoading)
     }
 
     private var foreground: Color {
@@ -95,6 +109,8 @@ struct EqualButton_Previews: PreviewProvider {
             EqualButton("Next", fullWidth: true)
             EqualButton("Send OTP", fullWidth: true).disabled(true)
             EqualButton("Get Gold Plus for ₹499/month", variant: .gold, fullWidth: true)
+            EqualButton("Verifying", fullWidth: true, isLoading: true)
+            EqualButton("Let’s go", icon: .chevronRight, trailingIcon: true, fullWidth: true)
             HStack {
                 EqualButton("Subscribe", variant: .goldPill, size: .small)
                 EqualButton("Share now", size: .medium, icon: .share)

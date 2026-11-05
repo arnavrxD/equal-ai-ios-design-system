@@ -74,10 +74,7 @@ out.append("        }\n    }\n\n    /// Tracking in em (multiply by size for poi
 for g, s in styles:
     ls = s.get("letterSpacing", "0em"); v = float(ls.replace("em", "")) if ls.endswith("em") else 0.0
     out.append(f"        case .{camel(s['name'])}: return {v}\n")
-out.append("        }\n    }\n\n    public var isItalic: Bool { self == .typing }\n\n    /// `true` for styles set in SF Pro (iOS chrome), not DM Sans.\n    public var isSystemChrome: Bool {\n        switch self {\n")
-sysnames = [camel(s["name"]) for g, s in styles if g["family"] == "system"]
-out.append("".join(f"        case .{n}: return true\n" for n in sysnames))
-out.append("        default: return false\n        }\n    }\n}\n")
+out.append("        }\n    }\n\n    public var isItalic: Bool { self == .typing }\n}\n")
 open(os.path.join(OUT, "EqualTextStyle.swift"), "w").write("".join(out))
 
 # Gradients (as SwiftUI gradients; hand-mapped from CSS)

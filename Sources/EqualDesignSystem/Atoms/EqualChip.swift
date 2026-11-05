@@ -41,7 +41,7 @@ public struct EqualChip: View {
         Button(action: action) {
             HStack(spacing: EqualSpacing.s8) {
                 if let leading { leading }
-                if let emoji { Text(emoji).font(.system(size: 15)) }
+                if let emoji { Text(emoji).font(.equal(size: 15)) }
                 if let icon { EqualIconView(icon, size: 14, weight: .semibold) }
                 Text(title)
                     .font(.equal(size: leading == nil ? 16 : 14, weight: leading == nil ? .regular : .medium))

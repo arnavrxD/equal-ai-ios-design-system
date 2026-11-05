@@ -8,16 +8,22 @@ public struct EqualIconButton: View {
     let icon: EqualIcon
     let variant: Variant
     let label: String
+    let size: CGFloat?
     let action: () -> Void
 
-    public init(_ icon: EqualIcon, variant: Variant = .solid, label: String, action: @escaping () -> Void = {}) {
+    /// - Parameter size: overrides the variant's diameter (the walkthrough speaker is a 48pt glass button).
+    public init(_ icon: EqualIcon, variant: Variant = .solid, size: CGFloat? = nil, label: String, action: @escaping () -> Void = {}) {
         self.icon = icon
         self.variant = variant
+        self.size = size
         self.label = label
         self.action = action
     }
 
-    private var diameter: CGFloat { switch variant { case .solid: 48; case .glass: 42; case .frost: 38; case .tile: 52 } }
+    private var diameter: CGFloat {
+        if let size { return size }
+        switch variant { case .solid: return 48; case .glass: return 42; case .frost: return 38; case .tile: return 52 }
+    }
 
     public var body: some View {
         Button(action: action) {
