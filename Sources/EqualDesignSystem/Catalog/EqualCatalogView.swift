@@ -119,14 +119,22 @@ public enum EqualCatalog {
         EqualCatalogItem("EqualPlanRadio", .atoms, "Plan selector radio.") { HStack { EqualPlanRadio(isSelected: false); EqualPlanRadio(isSelected: true) } },
         EqualCatalogItem("EqualCheckbox", .atoms, "Square checkbox with a caption.") { CheckboxDemo() },
         EqualCatalogItem("EqualCompareCheck", .atoms, "Included mark in the compare table.") { EqualCompareCheck() },
-        EqualCatalogItem("EqualSectionLabel", .atoms, "Uppercase section headers.") {
-            VStack { EqualSectionLabel("Compare plans"); EqualSectionLabel("What you get", style: .gold); EqualSectionLabel("Your assistant", style: .group) }
+        EqualCatalogItem("EqualSectionLabel", .atoms, "Section headers: hairlines, gold, fixed gold rules, HOW TO CONFIRM, gold sentence, group.") {
+            VStack(spacing: 14) {
+                EqualSectionLabel("Compare plans")
+                EqualSectionLabel("What you get", style: .gold)
+                EqualSectionLabel("What you get", style: .goldFixed())
+                EqualSectionLabel("How to confirm", style: .howToConfirm)
+                EqualSectionLabel("Using UPI? Follow these steps:", style: .goldSentence)
+                EqualSectionLabel("Using UPI? Follow these steps:", style: .goldSentenceRules)
+                EqualSectionLabel("Your assistant", style: .group)
+            }
         },
         EqualCatalogItem("EqualPageDots", .atoms, "Carousel position.") { EqualPageDots(count: 5, active: 0) },
         EqualCatalogItem("EqualProgressBar", .atoms, "3pt progress, green or gold.") { VStack { EqualProgressBar(value: 0.4); EqualProgressBar(value: 0.45, tone: .gold).padding().background(Color.black) } },
         EqualCatalogItem("EqualTextField", .atoms, "Phone and name inputs.") { TextFieldDemo() },
         EqualCatalogItem("EqualThinkingText", .atoms, "Assistant progress line with shimmer.") { EqualThinkingText() },
-        EqualCatalogItem("EqualCrownLoader", .atoms, "Payment spinner.") { EqualCrownLoader() },
+        EqualCatalogItem("EqualCrownLoader", .atoms, "160pt payment ring loader with the 3D crown.") { EqualCrownLoader().frame(maxWidth: .infinity).equalProcessingBackground() },
         EqualCatalogItem("EqualFieldMessage", .atoms, "Helper, countdown, resend link and error lines under a field.") {
             VStack(spacing: 12) {
                 EqualFieldMessage(.helper("Your AI will call you ", emphasis: "‘Keshav’"))
@@ -163,7 +171,9 @@ public enum EqualCatalog {
         EqualCatalogItem("EqualAvailabilityPill", .molecules, "Available / Busy header pill.") { EqualAvailabilityPill() },
         EqualCatalogItem("EqualTrialPill", .molecules, "\"1 Day Left\" header pill.") { EqualTrialPill() },
         EqualCatalogItem("EqualSheetHeader", .molecules, "Top of the Equal action sheet.") { EqualSheetHeader() },
-        EqualCatalogItem("EqualUpiStep", .molecules, "Numbered payment step.") { EqualUpiStep(1, "Open your UPI app, via notifications or directly") },
+        EqualCatalogItem("EqualUpiStep", .molecules, "Numbered payment step, 16/21 or 18/22.") {
+            VStack(spacing: 24) { EqualUpiStep(1, "Open your UPI app, via notifications or directly"); EqualUpiStep(2, "Review and approve the autopay request", size: .large) }.frame(maxWidth: .infinity)
+        },
         EqualCatalogItem("EqualKeyValueRow", .molecules, "App Store label–value row.") { EqualKeyValueRow("Price", "₹499.00 per month") },
         EqualCatalogItem("EqualOTPField", .molecules, "One-time-code field: empty, filled, error.") {
             VStack(spacing: 12) { EqualOTPField(code: .constant("")); EqualOTPField(code: .constant("194226")); EqualOTPField(code: .constant("194226"), isError: true) }
@@ -189,7 +199,7 @@ public enum EqualCatalog {
         EqualCatalogItem("EqualPaywallHero", .organisms, "Crown, rays and title.") { EqualPaywallHero() },
         EqualCatalogItem("EqualValueRecapStory", .organisms, "Dark time-saved story.") { EqualValueRecapStory().frame(height: 720) },
         EqualCatalogItem("EqualAppStoreSheet", .organisms, "iOS purchase confirmation mock.") { EqualAppStoreSheet() },
-        EqualCatalogItem("EqualPaymentProcessing", .organisms, "UPI autopay waiting state.") { EqualPaymentProcessing() },
+        EqualCatalogItem("EqualPaymentProcessing", .organisms, "Payment wait screen body: Processing payment / Activating Equal Gold layouts.") { EqualPaymentProcessing(step: 1).frame(height: 760) },
         EqualCatalogItem("EqualSuccessState", .organisms, "Upgrade and trial-start success.") { EqualSuccessState(.upgraded("Gold Plus")) },
         EqualCatalogItem("EqualEmptyState", .organisms, "No chats yet.") { EqualEmptyState() },
         EqualCatalogItem("EqualInviteCard", .organisms, "Invite a Friend.") { EqualInviteCard() },
