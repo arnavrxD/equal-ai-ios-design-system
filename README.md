@@ -81,7 +81,7 @@ swift build                               # compile check (works with Command Li
 node scripts/build-web.mjs                # Swift sources + docs → web/data.js
 ```
 
-Preview the site locally with `cd web && python3 -m http.server`.
+Preview the site locally with `cd web && python3 -m http.server`. Deploy it with `scripts/deploy.sh`: it deploys a copy of `web/` from outside the git repo, because Vercel's Hobby plan blocks deploys whose commit author isn't on the account. Run `vercel link --project eq-ios-ds` once first on a fresh clone.
 
 ## Notes
 
