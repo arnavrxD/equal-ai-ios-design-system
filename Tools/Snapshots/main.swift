@@ -4,6 +4,9 @@ import SwiftUI
 import AppKit
 import EqualDesignSystem
 
+// Scroll views render as plain stacks so ImageRenderer can draw full screens.
+setenv("EQUAL_STATIC_SCROLL", "1", 1)
+
 @MainActor
 func render(_ item: EqualCatalogItem, scheme: ColorScheme, to dir: URL) {
     let isScreen = item.level == .screens

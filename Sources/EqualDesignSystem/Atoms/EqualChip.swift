@@ -52,8 +52,8 @@ public struct EqualChip: View {
             .lineLimit(1)
             .padding(.horizontal, EqualSpacing.s16)
             .frame(height: tall ? 44 : 37)
-            .background(Capsule().fill(variant == .suggested ? EqualGradient.chipSuggested : EqualGradient.chipNeutral))
-            .overlay(Capsule().stroke(variant == .suggested ? EqualColor.unreadStroke : EqualColor.strokeMedium, lineWidth: 1))
+            .background(Capsule().fill(variant == .suggested ? EqualGradient.chipSuggested : EqualGradient.chipNeutral).opacity(variant == .suggested ? 0.18 : 1))
+            .overlay(Capsule().stroke(variant == .suggested ? EqualColor.unreadStroke : EqualColor.strokeMedium, lineWidth: 1).padding(-0.5))
             .equalShadow(.chip)
         }
         .buttonStyle(.plain)
