@@ -39,6 +39,7 @@ public extension View {
     /// 40% scrim goes on top and the sheet sits 8pt in from the left, right and bottom edges.
     func equalProcessingSheet(isPresented: Bool, title: String = "Processing payment", message: String = "Please wait.\nDon’t close this page") -> some View {
         self
+            .compositingGroup()
             .blur(radius: isPresented ? 6 : 0, opaque: true)
             .overlay {
                 if isPresented {

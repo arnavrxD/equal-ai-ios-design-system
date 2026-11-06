@@ -82,12 +82,18 @@ struct GoldTrialFeatureCarousel: View {
     ]
 
     var showsDots = false
+    /// The soft paywall's phone-mockup art (Figma 21093:38189) instead of the Gold-trial mascots.
+    var usesProductArt = false
+
+    private var cards: [(title: String, message: String, art: EqualImage)] {
+        usesProductArt ? EqualFeatureCard.Content.paywall.filter { !$0.isExclusive }.map { ($0.title, $0.message, $0.art) } : Self.features
+    }
 
     var body: some View {
         VStack(spacing: 18) {
             EqualScrollContent(.horizontal) {
                 HStack(spacing: 28) {
-                    ForEach(Self.features, id: \.title) { f in
+                    ForEach(cards, id: \.title) { f in
                         EqualFeatureCard(title: f.title, message: f.message, isExclusive: false, art: f.art, style: .trial)
                     }
                 }

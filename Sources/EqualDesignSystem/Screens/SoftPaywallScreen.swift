@@ -27,7 +27,7 @@ public struct SoftPaywallScreen: View {
             EqualSectionLabel("What you get", style: .gold)
                 .padding(.horizontal, 32)
                 .padding(.top, 19)
-            GoldTrialFeatureCarousel(showsDots: true)
+            GoldTrialFeatureCarousel(showsDots: true, usesProductArt: true)
                 .padding(.top, 15)
             if !isDark {
                 EqualTrialInfoCard(.card)

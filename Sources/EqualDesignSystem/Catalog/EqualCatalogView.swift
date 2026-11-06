@@ -262,10 +262,10 @@ public enum EqualCatalog {
         // Screens
         EqualCatalogItem("Splash", .screens, "Green splash.") { SplashScreen() },
         EqualCatalogItem("Splash · social proof", .screens, "Splash keyframe with stats and Made in India.") { SplashSocialProofScreen() },
-        EqualCatalogItem("Phone number", .screens, "Signup step 1.") { PhoneNumberScreen() },
+        EqualCatalogItem("Phone number", .screens, "Signup step 1, number entered.") { PhoneNumberScreen(phone: "8172033604") },
         EqualCatalogItem("OTP", .screens, "Signup step 2: code sent, countdown.") { OTPScreen() },
         EqualCatalogItem("OTP · error", .screens, "Incorrect code.") { OTPScreen(code: "194226", phase: .error) },
-        EqualCatalogItem("Name & gender", .screens, "Signup step 3.") { NameGenderScreen() },
+        EqualCatalogItem("Name & gender", .screens, "Signup step 3, name and gender picked.") { NameGenderScreen(name: "Keshav", gender: .male) },
         EqualCatalogItem("Welcome", .screens, "Welcome break after signup.") { WelcomeScreen() },
         EqualCatalogItem("Intro · screening", .screens, "Walkthrough: unknown callers are screened.") { IntroScreeningScreen() },
         EqualCatalogItem("Permission", .screens, "Notification permission sheet.") { PermissionScreen() },

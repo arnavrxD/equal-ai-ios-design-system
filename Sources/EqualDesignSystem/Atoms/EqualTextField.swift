@@ -31,6 +31,13 @@ public struct EqualTextField: View {
                     }
                     Rectangle().fill(Color.black.opacity(0.1)).frame(width: 1, height: 30)
                 }
+                if EqualSnapshotMode.isStatic {
+                    // ImageRenderer can't draw a TextField, so snapshots show the value (or placeholder) as text.
+                    Text(text.isEmpty ? placeholder : text)
+                        .font(kind == .name ? .equal(size: 18, weight: text.isEmpty ? .regular : .semibold) : .equal(.body))
+                        .foregroundStyle(text.isEmpty ? EqualColor.textPlaceholder : EqualColor.textPrimary)
+                        .frame(maxWidth: .infinity, alignment: kind == .name ? .center : .leading)
+                } else {
                 TextField(placeholder, text: $text)
                     .focused($focused)
                     .font(kind == .name ? .equal(size: 18, weight: text.isEmpty ? .regular : .semibold) : .equal(.body))
@@ -40,6 +47,7 @@ public struct EqualTextField: View {
                     .keyboardType(kind == .phone ? .phonePad : .default)
                     .textContentType(kind == .phone ? .telephoneNumber : (kind == .name ? .givenName : nil))
                     #endif
+                }
             }
             .padding(.horizontal, EqualSpacing.s18)
             .frame(height: 52)

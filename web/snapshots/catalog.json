@@ -5,9 +5,9 @@
     "id" : "Color"
   },
   {
-    "id" : "Typography",
+    "summary" : "32 styles: the iOS scale in DM Sans plus product accents.",
     "level" : "Foundations",
-    "summary" : "32 styles: the iOS scale in DM Sans plus product accents."
+    "id" : "Typography"
   },
   {
     "summary" : "The layout scales.",
@@ -16,8 +16,8 @@
   },
   {
     "summary" : "SF Symbols mapping and the bundled 3D art.",
-    "id" : "Icons & illustrations",
-    "level" : "Foundations"
+    "level" : "Foundations",
+    "id" : "Icons & illustrations"
   },
   {
     "id" : "EqualButton",
@@ -25,9 +25,9 @@
     "summary" : "Pill actions: primary, gold, goldPill, danger, link; paywall CTAs with the light streak."
   },
   {
-    "id" : "EqualIconButton",
     "level" : "Atoms",
-    "summary" : "Circular icon buttons: solid, glass, frost, tile."
+    "summary" : "Circular icon buttons: solid, glass, frost, tile.",
+    "id" : "EqualIconButton"
   },
   {
     "level" : "Atoms",
@@ -40,34 +40,34 @@
     "id" : "EqualTag"
   },
   {
-    "id" : "EqualAvatar",
     "level" : "Atoms",
-    "summary" : "Initials, category art or the Equal mark."
+    "summary" : "Initials, category art or the Equal mark.",
+    "id" : "EqualAvatar"
   },
   {
-    "id" : "EqualUnreadCount",
     "summary" : "Green unread badge and dot.",
-    "level" : "Atoms"
+    "level" : "Atoms",
+    "id" : "EqualUnreadCount"
   },
   {
+    "level" : "Atoms",
     "summary" : "44×24 switch.",
-    "id" : "EqualToggle",
-    "level" : "Atoms"
+    "id" : "EqualToggle"
   },
   {
-    "level" : "Atoms",
     "summary" : "Plan selector radio.",
-    "id" : "EqualPlanRadio"
-  },
-  {
-    "summary" : "Square checkbox with a caption.",
-    "id" : "EqualCheckbox",
+    "id" : "EqualPlanRadio",
     "level" : "Atoms"
   },
   {
     "level" : "Atoms",
+    "summary" : "Square checkbox with a caption.",
+    "id" : "EqualCheckbox"
+  },
+  {
+    "summary" : "Included mark in the compare table.",
     "id" : "EqualCompareCheck",
-    "summary" : "Included mark in the compare table."
+    "level" : "Atoms"
   },
   {
     "summary" : "Section headers: hairlines, gold, fixed gold rules, HOW TO CONFIRM, gold sentence, group.",
@@ -75,9 +75,9 @@
     "id" : "EqualSectionLabel"
   },
   {
-    "level" : "Atoms",
+    "summary" : "Carousel position.",
     "id" : "EqualPageDots",
-    "summary" : "Carousel position."
+    "level" : "Atoms"
   },
   {
     "id" : "EqualProgressBar",
@@ -86,68 +86,68 @@
   },
   {
     "id" : "EqualTextField",
-    "summary" : "Phone and name inputs.",
-    "level" : "Atoms"
+    "level" : "Atoms",
+    "summary" : "Phone and name inputs."
   },
   {
+    "level" : "Atoms",
     "summary" : "Assistant progress line with shimmer.",
-    "id" : "EqualThinkingText",
+    "id" : "EqualThinkingText"
+  },
+  {
+    "summary" : "160pt payment ring loader with the 3D crown.",
+    "id" : "EqualCrownLoader",
     "level" : "Atoms"
   },
   {
     "level" : "Atoms",
-    "id" : "EqualCrownLoader",
-    "summary" : "160pt payment ring loader with the 3D crown."
+    "id" : "EqualFieldMessage",
+    "summary" : "Helper, countdown, resend link and error lines under a field."
   },
   {
-    "summary" : "Helper, countdown, resend link and error lines under a field.",
+    "id" : "EqualMadeInIndiaPill",
     "level" : "Atoms",
-    "id" : "EqualFieldMessage"
+    "summary" : "Tricolour glass pill on the splash."
   },
   {
-    "summary" : "Tricolour glass pill on the splash.",
-    "level" : "Atoms",
-    "id" : "EqualMadeInIndiaPill"
-  },
-  {
-    "id" : "EqualSearchBar",
+    "level" : "Molecules",
     "summary" : "Search pill plus the glass ⋯ button.",
-    "level" : "Molecules"
-  },
-  {
-    "id" : "EqualChatListItem",
-    "level" : "Molecules",
-    "summary" : "Avatar, name, summary, time, unread, action chips; compact legacy row."
+    "id" : "EqualSearchBar"
   },
   {
     "level" : "Molecules",
-    "summary" : "User and assistant messages.",
-    "id" : "EqualChatBubble"
+    "summary" : "Avatar, name, summary, time, unread, action chips; compact legacy row.",
+    "id" : "EqualChatListItem"
   },
   {
+    "id" : "EqualChatBubble",
+    "level" : "Molecules",
+    "summary" : "User and assistant messages."
+  },
+  {
+    "level" : "Molecules",
     "id" : "EqualComposer",
-    "summary" : "Keyboard button and voice button.",
-    "level" : "Molecules"
+    "summary" : "Keyboard button and voice button."
   },
   {
-    "id" : "EqualQuickActionTile",
     "level" : "Molecules",
+    "id" : "EqualQuickActionTile",
     "summary" : "Round and square shortcut tiles."
   },
   {
     "summary" : "Settings rows in a white group.",
-    "id" : "EqualSettingsRow",
+    "level" : "Molecules",
+    "id" : "EqualSettingsRow"
+  },
+  {
+    "id" : "EqualAssistantToggleCard",
+    "summary" : "The AI Assistant master switch.",
     "level" : "Molecules"
   },
   {
-    "summary" : "The AI Assistant master switch.",
+    "id" : "EqualPlanCard",
     "level" : "Molecules",
-    "id" : "EqualAssistantToggleCard"
-  },
-  {
-    "summary" : "Selectable plan card: sheet, inline (#C29200) and limit (81pt, Your plan tag).",
-    "level" : "Molecules",
-    "id" : "EqualPlanCard"
+    "summary" : "Selectable plan card: sheet, inline (#C29200) and limit (81pt, Your plan tag)."
   },
   {
     "summary" : "Coupon: overhanging APPLY, inset, compact limit field, soft-paywall card, applied.",
@@ -155,9 +155,9 @@
     "id" : "EqualCouponRow"
   },
   {
-    "id" : "EqualFAQItem",
+    "summary" : "Accordion FAQ: light, dark and expired styles.",
     "level" : "Molecules",
-    "summary" : "Accordion FAQ: light, dark and expired styles."
+    "id" : "EqualFAQItem"
   },
   {
     "level" : "Molecules",
@@ -165,39 +165,39 @@
     "id" : "EqualStatRow"
   },
   {
-    "id" : "EqualPushBanner",
     "summary" : "iOS notification banner.",
+    "id" : "EqualPushBanner",
     "level" : "Molecules"
   },
   {
-    "id" : "EqualGenderCard",
     "summary" : "Gender picker card.",
+    "id" : "EqualGenderCard",
     "level" : "Molecules"
   },
   {
-    "id" : "EqualAvailabilityPill",
     "level" : "Molecules",
-    "summary" : "Available \/ Busy header pill: glass 36 \/ 31, plain white."
+    "summary" : "Available \/ Busy header pill: glass 36 \/ 31, plain white.",
+    "id" : "EqualAvailabilityPill"
   },
   {
-    "summary" : "Top of the Equal action sheet.",
     "level" : "Molecules",
+    "summary" : "Top of the Equal action sheet.",
     "id" : "EqualSheetHeader"
   },
   {
-    "id" : "EqualUpiStep",
     "level" : "Molecules",
-    "summary" : "Numbered payment step, 16\/21 or 18\/22."
+    "summary" : "Numbered payment step, 16\/21 or 18\/22.",
+    "id" : "EqualUpiStep"
   },
   {
+    "summary" : "App Store label–value row.",
     "id" : "EqualKeyValueRow",
-    "level" : "Molecules",
-    "summary" : "App Store label–value row."
+    "level" : "Molecules"
   },
   {
-    "summary" : "One-time-code field: empty, filled, error.",
     "level" : "Molecules",
-    "id" : "EqualOTPField"
+    "id" : "EqualOTPField",
+    "summary" : "One-time-code field: empty, filled, error."
   },
   {
     "id" : "EqualOnboardingHeader",
@@ -205,54 +205,54 @@
     "summary" : "Signup title block, plain or with an editable number."
   },
   {
-    "id" : "EqualPhoneMockup",
     "level" : "Molecules",
-    "summary" : "iPhone frame with the lock screen."
+    "summary" : "iPhone frame with the lock screen.",
+    "id" : "EqualPhoneMockup"
   },
   {
-    "summary" : "Logo, plan badge and availability \/ trial \/ avatar.",
     "level" : "Organisms",
+    "summary" : "Logo, plan badge and availability \/ trial \/ avatar.",
     "id" : "EqualAppHeader"
   },
   {
-    "summary" : "Chats \/ You capsule and the Equal FAB.",
     "level" : "Organisms",
-    "id" : "EqualTabBar"
+    "id" : "EqualTabBar",
+    "summary" : "Chats \/ You capsule and the Equal FAB."
   },
   {
-    "id" : "EqualChatList",
     "level" : "Organisms",
+    "id" : "EqualChatList",
     "summary" : "The home conversation list."
   },
   {
-    "id" : "EqualSheet",
     "summary" : "Greeting, shortcuts, suggestions and composer.",
-    "level" : "Organisms"
+    "level" : "Organisms",
+    "id" : "EqualSheet"
   },
   {
-    "level" : "Organisms",
     "summary" : "System permission ask: walkthrough and home presets.",
-    "id" : "EqualPermissionSheet"
-  },
-  {
-    "summary" : "Home banners: permissions, assistant, call preferences, invite, trial ending, plan expired.",
-    "id" : "EqualPromoCard",
+    "id" : "EqualPermissionSheet",
     "level" : "Organisms"
   },
   {
-    "id" : "EqualRecapCard",
     "level" : "Organisms",
-    "summary" : "Free-week stats with replay, rings and glow."
+    "id" : "EqualPromoCard",
+    "summary" : "Home banners: permissions, assistant, call preferences, invite, trial ending, plan expired."
   },
   {
     "level" : "Organisms",
+    "summary" : "Free-week stats with replay, rings and glow.",
+    "id" : "EqualRecapCard"
+  },
+  {
+    "summary" : "Equal GOLD active \/ trial \/ expired, and the subscription-page price variant.",
     "id" : "EqualMembershipCard",
-    "summary" : "Equal GOLD active \/ trial \/ expired, and the subscription-page price variant."
+    "level" : "Organisms"
   },
   {
     "level" : "Organisms",
-    "id" : "EqualProfileHeader",
-    "summary" : "Settings profile header: gold, trial (back row) and expired (mint)."
+    "summary" : "Settings profile header: gold, trial (back row) and expired (mint).",
+    "id" : "EqualProfileHeader"
   },
   {
     "id" : "EqualComparePlansTable",
@@ -261,23 +261,23 @@
   },
   {
     "level" : "Organisms",
-    "summary" : "What-you-get card: exclusive, standard, trial and full-bleed hero.",
-    "id" : "EqualFeatureCard"
+    "id" : "EqualFeatureCard",
+    "summary" : "What-you-get card: exclusive, standard, trial and full-bleed hero."
   },
   {
-    "level" : "Organisms",
     "summary" : "Plans, coupon and the CTA that follows the plan: full, CTA-only and limit.",
+    "level" : "Organisms",
     "id" : "EqualStickyPlanSheet"
   },
   {
+    "summary" : "Gold hero shapes A–E, rays, crown, top bar, limit pre-title.",
     "id" : "EqualPaywallHero",
-    "level" : "Organisms",
-    "summary" : "Gold hero shapes A–E, rays, crown, top bar, limit pre-title."
+    "level" : "Organisms"
   },
   {
+    "summary" : "Dark time-saved story.",
     "level" : "Organisms",
-    "id" : "EqualValueRecapStory",
-    "summary" : "Dark time-saved story."
+    "id" : "EqualValueRecapStory"
   },
   {
     "id" : "EqualAppStoreSheet",
@@ -285,74 +285,74 @@
     "summary" : "iOS purchase confirmation mock in DM Sans, per flow."
   },
   {
+    "id" : "EqualPaymentProcessing",
     "level" : "Organisms",
-    "summary" : "Payment wait screen body: Processing payment \/ Activating Equal Gold layouts.",
-    "id" : "EqualPaymentProcessing"
+    "summary" : "Payment wait screen body: Processing payment \/ Activating Equal Gold layouts."
   },
   {
     "level" : "Organisms",
-    "summary" : "Upgraded, welcome back and trial started, with glow, star outline and check.",
-    "id" : "EqualSuccessState"
+    "id" : "EqualSuccessState",
+    "summary" : "Upgraded, welcome back and trial started, with glow, star outline and check."
   },
   {
-    "id" : "EqualInviteCard",
+    "level" : "Organisms",
     "summary" : "Invite a Friend.",
-    "level" : "Organisms"
+    "id" : "EqualInviteCard"
   },
   {
-    "level" : "Organisms",
     "summary" : "Assistant on a live call, with Takeover.",
-    "id" : "EqualLiveCallCard"
-  },
-  {
-    "id" : "EqualSocialProofCard",
-    "level" : "Organisms",
-    "summary" : "Splash stats: users, rating, calls handled."
-  },
-  {
-    "id" : "EqualWelcomeIntro",
-    "level" : "Organisms",
-    "summary" : "Welcome break with the typed greeting."
-  },
-  {
-    "id" : "EqualIntroSlide",
-    "summary" : "Walkthrough slide scaffold.",
+    "id" : "EqualLiveCallCard",
     "level" : "Organisms"
   },
   {
-    "summary" : "Green splash.",
-    "level" : "Screens",
-    "id" : "Splash"
+    "summary" : "Splash stats: users, rating, calls handled.",
+    "id" : "EqualSocialProofCard",
+    "level" : "Organisms"
   },
   {
+    "level" : "Organisms",
+    "summary" : "Welcome break with the typed greeting.",
+    "id" : "EqualWelcomeIntro"
+  },
+  {
+    "level" : "Organisms",
+    "summary" : "Walkthrough slide scaffold.",
+    "id" : "EqualIntroSlide"
+  },
+  {
+    "level" : "Screens",
+    "id" : "Splash",
+    "summary" : "Green splash."
+  },
+  {
+    "level" : "Screens",
     "id" : "Splash · social proof",
-    "summary" : "Splash keyframe with stats and Made in India.",
-    "level" : "Screens"
+    "summary" : "Splash keyframe with stats and Made in India."
   },
   {
     "level" : "Screens",
-    "summary" : "Signup step 1.",
+    "summary" : "Signup step 1, number entered.",
     "id" : "Phone number"
   },
   {
     "level" : "Screens",
-    "id" : "OTP",
-    "summary" : "Signup step 2: code sent, countdown."
+    "summary" : "Signup step 2: code sent, countdown.",
+    "id" : "OTP"
   },
   {
-    "summary" : "Incorrect code.",
     "id" : "OTP · error",
-    "level" : "Screens"
+    "level" : "Screens",
+    "summary" : "Incorrect code."
+  },
+  {
+    "id" : "Name & gender",
+    "level" : "Screens",
+    "summary" : "Signup step 3, name and gender picked."
   },
   {
     "level" : "Screens",
-    "summary" : "Signup step 3.",
-    "id" : "Name & gender"
-  },
-  {
-    "summary" : "Welcome break after signup.",
-    "level" : "Screens",
-    "id" : "Welcome"
+    "id" : "Welcome",
+    "summary" : "Welcome break after signup."
   },
   {
     "summary" : "Walkthrough: unknown callers are screened.",
@@ -360,8 +360,8 @@
     "level" : "Screens"
   },
   {
-    "id" : "Permission",
     "level" : "Screens",
+    "id" : "Permission",
     "summary" : "Notification permission sheet."
   },
   {
@@ -375,34 +375,34 @@
     "summary" : "Gold days card and empty state."
   },
   {
+    "level" : "Screens",
     "id" : "Equal chat · limit",
-    "summary" : "Gold limit reached in the thread.",
-    "level" : "Screens"
+    "summary" : "Gold limit reached in the thread."
   },
   {
-    "level" : "Screens",
+    "summary" : "Last-day story.",
     "id" : "Value recap",
-    "summary" : "Last-day story."
-  },
-  {
-    "summary" : "Choose your plan.",
-    "id" : "Paywall",
     "level" : "Screens"
   },
   {
-    "id" : "App Store confirmation",
     "level" : "Screens",
+    "id" : "Paywall",
+    "summary" : "Choose your plan."
+  },
+  {
+    "level" : "Screens",
+    "id" : "App Store confirmation",
     "summary" : "Purchase sheet over the paywall."
   },
   {
-    "id" : "Payment processing",
+    "summary" : "UPI autopay steps.",
     "level" : "Screens",
-    "summary" : "UPI autopay steps."
+    "id" : "Payment processing"
   },
   {
-    "summary" : "You’re on Gold Plus.",
+    "id" : "Purchase success",
     "level" : "Screens",
-    "id" : "Purchase success"
+    "summary" : "You’re on Gold Plus."
   },
   {
     "level" : "Screens",
@@ -410,9 +410,9 @@
     "id" : "Settings"
   },
   {
+    "id" : "Settings · expired",
     "summary" : "Plan expired with Renew.",
-    "level" : "Screens",
-    "id" : "Settings · expired"
+    "level" : "Screens"
   },
   {
     "id" : "Subscription",
@@ -426,18 +426,18 @@
   },
   {
     "level" : "Atoms",
-    "id" : "EqualDayRing",
-    "summary" : "Trial day counter: toned ring with a days\/7 arc."
+    "summary" : "Trial day counter: toned ring with a days\/7 arc.",
+    "id" : "EqualDayRing"
   },
   {
-    "id" : "EqualStarHalo",
     "summary" : "Gold glow with two rounded 8-point star outlines.",
+    "id" : "EqualStarHalo",
     "level" : "Atoms"
   },
   {
-    "id" : "EqualCheckBadge",
+    "level" : "Atoms",
     "summary" : "Green verified disc for the trial-started mascot.",
-    "level" : "Atoms"
+    "id" : "EqualCheckBadge"
   },
   {
     "id" : "EqualSideButtonHint",
@@ -456,8 +456,8 @@
   },
   {
     "level" : "Molecules",
-    "summary" : "Glassy gold feature pill with 3D icon.",
-    "id" : "EqualFeaturePill"
+    "id" : "EqualFeaturePill",
+    "summary" : "Glassy gold feature pill with 3D icon."
   },
   {
     "level" : "Molecules",
@@ -465,29 +465,29 @@
     "summary" : "Plan, price, expiry and Cancellation Policy."
   },
   {
-    "id" : "EqualRecapStrip",
     "summary" : "Light free-week recap for the price hero.",
+    "id" : "EqualRecapStrip",
     "level" : "Molecules"
   },
   {
-    "id" : "EqualSwipeToStart",
     "summary" : "Swipe-to-start capsule, green \/ lime in dark.",
-    "level" : "Molecules"
+    "level" : "Molecules",
+    "id" : "EqualSwipeToStart"
   },
   {
-    "summary" : "\"1 Day Left\" header pill with gold wash and gradient hairline.",
     "id" : "EqualTrialPill",
-    "level" : "Molecules"
+    "level" : "Molecules",
+    "summary" : "\"1 Day Left\" header pill with gold wash and gradient hairline."
   },
   {
-    "level" : "Organisms",
     "id" : "EqualTrialHero",
-    "summary" : "Equal Gold \/ Free for a week! on gold dome, gold glow, lime disc or dark."
+    "summary" : "Equal Gold \/ Free for a week! on gold dome, gold glow, lime disc or dark.",
+    "level" : "Organisms"
   },
   {
     "level" : "Organisms",
-    "id" : "EqualPriceDealCard",
-    "summary" : "₹499 struck, rolling ₹249, coffee line, limited-time tag."
+    "summary" : "₹499 struck, rolling ₹249, coffee line, limited-time tag.",
+    "id" : "EqualPriceDealCard"
   },
   {
     "id" : "EqualStickyCTABar",
@@ -501,18 +501,18 @@
   },
   {
     "id" : "EqualPurchaseConfirmSheet",
-    "summary" : "Equal purchase sheet: trial, price, terms, side-button cue.",
-    "level" : "Organisms"
-  },
-  {
-    "id" : "EqualEmptyState",
     "level" : "Organisms",
-    "summary" : "No chats yet, with the optional Meet Your Assistant call."
+    "summary" : "Equal purchase sheet: trial, price, terms, side-button cue."
   },
   {
-    "summary" : "Free week offer: gold glow, continuous progress, swipe to start.",
+    "level" : "Organisms",
+    "summary" : "No chats yet, with the optional Meet Your Assistant call.",
+    "id" : "EqualEmptyState"
+  },
+  {
+    "id" : "Gold trial start",
     "level" : "Screens",
-    "id" : "Gold trial start"
+    "summary" : "Free week offer: gold glow, continuous progress, swipe to start."
   },
   {
     "level" : "Screens",
@@ -521,18 +521,18 @@
   },
   {
     "level" : "Screens",
-    "summary" : "Lime disc with the crowned mascot.",
-    "id" : "Gold trial start · lime"
+    "id" : "Gold trial start · lime",
+    "summary" : "Lime disc with the crowned mascot."
   },
   {
-    "id" : "Soft paywall",
     "level" : "Screens",
+    "id" : "Soft paywall",
     "summary" : "Gold dome, timeline, features, terms card, FAQ, sticky CTA."
   },
   {
-    "id" : "Soft paywall · dark",
     "level" : "Screens",
-    "summary" : "Dark dome; terms block below the FAQ."
+    "summary" : "Dark dome; terms block below the FAQ.",
+    "id" : "Soft paywall · dark"
   },
   {
     "id" : "Trial started",
@@ -540,14 +540,14 @@
     "summary" : "7 days of Equal Gold, Starts Today!"
   },
   {
-    "summary" : "Countdown day 7, empty state with Meet Your Assistant.",
     "id" : "Trial home · day 7",
-    "level" : "Screens"
+    "level" : "Screens",
+    "summary" : "Countdown day 7, empty state with Meet Your Assistant."
   },
   {
+    "level" : "Screens",
     "summary" : "Day 7 with the Enable Permissions card.",
-    "id" : "Trial home · day 7 permissions",
-    "level" : "Screens"
+    "id" : "Trial home · day 7 permissions"
   },
   {
     "id" : "Trial home · day 6",
@@ -555,24 +555,24 @@
     "summary" : "Countdown day 6, green."
   },
   {
+    "level" : "Screens",
     "summary" : "Countdown day 5 with chats.",
-    "id" : "Trial home · day 5",
-    "level" : "Screens"
+    "id" : "Trial home · day 5"
   },
   {
-    "id" : "Trial home · day 4",
     "summary" : "Countdown day 4.",
-    "level" : "Screens"
+    "level" : "Screens",
+    "id" : "Trial home · day 4"
   },
   {
-    "summary" : "Countdown day 3.",
     "id" : "Trial home · day 3",
-    "level" : "Screens"
+    "level" : "Screens",
+    "summary" : "Countdown day 3."
   },
   {
-    "id" : "Trial home · day 2",
+    "level" : "Screens",
     "summary" : "Amber with Keep Gold.",
-    "level" : "Screens"
+    "id" : "Trial home · day 2"
   },
   {
     "summary" : "Red with Keep Gold.",
@@ -580,14 +580,14 @@
     "level" : "Screens"
   },
   {
-    "level" : "Screens",
     "summary" : "Subscription Expired page with Renew.",
-    "id" : "Plan expired"
+    "id" : "Plan expired",
+    "level" : "Screens"
   },
   {
+    "id" : "Purchase confirm",
     "level" : "Screens",
-    "summary" : "Equal purchase sheet with the side-button hint.",
-    "id" : "Purchase confirm"
+    "summary" : "Equal purchase sheet with the side-button hint."
   },
   {
     "level" : "Atoms",
@@ -595,39 +595,39 @@
     "id" : "EqualSideButtonCue"
   },
   {
-    "summary" : "Gold \/ Gold Plus cards with the coupon; prices follow the coupon.",
+    "level" : "Molecules",
     "id" : "EqualPlanPicker",
-    "level" : "Molecules"
+    "summary" : "Gold \/ Gold Plus cards with the coupon; prices follow the coupon."
   },
   {
-    "summary" : "Dark gold value card: in-paywall and standalone, trial running \/ ended.",
     "level" : "Organisms",
-    "id" : "EqualValueCard"
+    "id" : "EqualValueCard",
+    "summary" : "Dark gold value card: in-paywall and standalone, trial running \/ ended."
   },
   {
-    "level" : "Screens",
     "id" : "Paywall · value card",
-    "summary" : "Figma 26242:26157."
-  },
-  {
-    "level" : "Screens",
-    "summary" : "Figma 26242:29050.",
-    "id" : "Paywall · compact, features first"
-  },
-  {
-    "level" : "Screens",
-    "id" : "Paywall · shallow arc",
-    "summary" : "Figma 26242:35117."
-  },
-  {
-    "level" : "Screens",
-    "summary" : "Figma 26242:37941.",
-    "id" : "Paywall · rounded with crown"
-  },
-  {
-    "id" : "Paywall · rounded compact",
-    "summary" : "Figma 26242:40788.",
+    "summary" : "Figma 26242:26157.",
     "level" : "Screens"
+  },
+  {
+    "summary" : "Figma 26242:29050.",
+    "id" : "Paywall · compact, features first",
+    "level" : "Screens"
+  },
+  {
+    "summary" : "Figma 26242:35117.",
+    "id" : "Paywall · shallow arc",
+    "level" : "Screens"
+  },
+  {
+    "id" : "Paywall · rounded with crown",
+    "level" : "Screens",
+    "summary" : "Figma 26242:37941."
+  },
+  {
+    "level" : "Screens",
+    "summary" : "Figma 26242:40788.",
+    "id" : "Paywall · rounded compact"
   },
   {
     "id" : "Paywall · inline plans",
@@ -636,8 +636,8 @@
   },
   {
     "level" : "Screens",
-    "id" : "Paywall · inline plans, gold",
-    "summary" : "Figma 26242:46558."
+    "summary" : "Figma 26242:46558.",
+    "id" : "Paywall · inline plans, gold"
   },
   {
     "summary" : "Figma 26242:49459.",
@@ -645,9 +645,9 @@
     "id" : "Paywall · keep equal answering"
   },
   {
-    "id" : "Paywall · keep equal answering, gold",
     "summary" : "Figma 26242:52379.",
-    "level" : "Screens"
+    "level" : "Screens",
+    "id" : "Paywall · keep equal answering, gold"
   },
   {
     "level" : "Screens",
@@ -655,73 +655,73 @@
     "id" : "Paywall · compare in hero"
   },
   {
-    "id" : "Paywall · compare in hero, gold",
     "level" : "Screens",
+    "id" : "Paywall · compare in hero, gold",
     "summary" : "Figma 26242:58219."
   },
   {
+    "level" : "Screens",
     "id" : "Paywall · standalone stats",
-    "summary" : "Figma 26242:61139.",
-    "level" : "Screens"
+    "summary" : "Figma 26242:61139."
   },
   {
-    "summary" : "Figma 26242:64004.",
     "id" : "Paywall · standalone value card",
+    "level" : "Screens",
+    "summary" : "Figma 26242:64004."
+  },
+  {
+    "summary" : "Figma 25639:34479.",
+    "id" : "Paywall · deal card",
     "level" : "Screens"
   },
   {
-    "id" : "Paywall · deal card",
     "level" : "Screens",
-    "summary" : "Figma 25639:34479."
+    "summary" : "Figma 25678:22301.",
+    "id" : "Paywall · trial price"
   },
   {
-    "level" : "Screens",
-    "id" : "Paywall · trial price",
-    "summary" : "Figma 25678:22301."
-  },
-  {
-    "level" : "Screens",
     "id" : "Paywall · feature hero",
+    "level" : "Screens",
     "summary" : "Figma 25749:21774."
   },
   {
-    "level" : "Screens",
     "summary" : "Equal made 30 calls for you \/ Now go unlimited",
+    "level" : "Screens",
     "id" : "Limit paywall · gold limit"
   },
   {
     "level" : "Screens",
-    "id" : "Limit paywall · trial limit",
-    "summary" : "Equal handled all 20 trial calls \/ Don’t stop now"
+    "summary" : "Equal handled all 20 trial calls \/ Don’t stop now",
+    "id" : "Limit paywall · trial limit"
   },
   {
+    "id" : "Limit paywall · trial ended",
     "level" : "Screens",
-    "summary" : "Trial over. Liked having an assistant? \/ Make it yours",
-    "id" : "Limit paywall · trial ended"
+    "summary" : "Trial over. Liked having an assistant? \/ Make it yours"
   },
   {
-    "id" : "Limit paywall · plan expired",
     "summary" : "Your plan expired. Your setup didn’t. \/ Switch Equal back on",
+    "id" : "Limit paywall · plan expired",
     "level" : "Screens"
   },
   {
+    "summary" : "Purchase sheet over the Gold limit paywall.",
     "level" : "Screens",
-    "id" : "App Store confirmation · gold limit",
-    "summary" : "Purchase sheet over the Gold limit paywall."
+    "id" : "App Store confirmation · gold limit"
   },
   {
+    "id" : "App Store confirmation · trial limit",
     "summary" : "Purchase sheet over the Trial limit paywall.",
-    "level" : "Screens",
-    "id" : "App Store confirmation · trial limit"
-  },
-  {
-    "summary" : "Purchase sheet over the Trial ended paywall.",
-    "id" : "App Store confirmation · trial ended",
     "level" : "Screens"
   },
   {
+    "id" : "App Store confirmation · trial ended",
     "level" : "Screens",
+    "summary" : "Purchase sheet over the Trial ended paywall."
+  },
+  {
     "id" : "App Store confirmation · plan expired",
+    "level" : "Screens",
     "summary" : "Purchase sheet over the Plan expired paywall."
   },
   {
@@ -730,48 +730,48 @@
     "level" : "Screens"
   },
   {
+    "level" : "Screens",
     "summary" : "7 days of Equal Gold.",
-    "id" : "Purchase success · trial started",
-    "level" : "Screens"
+    "id" : "Purchase success · trial started"
   },
   {
+    "id" : "EqualRingLoader",
     "level" : "Atoms",
-    "summary" : "Ring spinner: 29pt sheet spinner and the 160pt payment ring, with a centre slot.",
-    "id" : "EqualRingLoader"
+    "summary" : "Ring spinner: 29pt sheet spinner and the 160pt payment ring, with a centre slot."
   },
   {
-    "level" : "Molecules",
+    "id" : "EqualApplePayHintCard",
     "summary" : "Apple Pay confirm hint: plain, raised, translucent.",
-    "id" : "EqualApplePayHintCard"
-  },
-  {
-    "id" : "EqualUpiStepList",
-    "summary" : "Four UPI steps; upcoming rows dimmed to 18%.",
     "level" : "Molecules"
   },
   {
-    "summary" : "Coded UPI phone: four steps, wireframe or UPI-app styled, floating or in the gold panel.",
-    "id" : "EqualUpiPhoneIllustration",
-    "level" : "Organisms"
+    "id" : "EqualUpiStepList",
+    "level" : "Molecules",
+    "summary" : "Four UPI steps; upcoming rows dimmed to 18%."
   },
   {
     "level" : "Organisms",
-    "summary" : "Grey \"Processing payment\" wait sheet with the small spinner.",
-    "id" : "EqualProcessingSheet"
+    "summary" : "Coded UPI phone: four steps, wireframe or UPI-app styled, floating or in the gold panel.",
+    "id" : "EqualUpiPhoneIllustration"
   },
   {
-    "level" : "Screens",
+    "level" : "Organisms",
+    "id" : "EqualProcessingSheet",
+    "summary" : "Grey \"Processing payment\" wait sheet with the small spinner."
+  },
+  {
     "id" : "Activating Gold",
-    "summary" : "Wait screen, family B: Apple Pay hint, one UPI step, floating phone."
-  },
-  {
-    "summary" : "Family B at step 3 (UPI PIN).",
-    "id" : "Activating Gold · step 3",
+    "summary" : "Wait screen, family B: Apple Pay hint, one UPI step, floating phone.",
     "level" : "Screens"
   },
   {
-    "summary" : "Family A: small phone beside the step list.",
     "level" : "Screens",
+    "id" : "Activating Gold · step 3",
+    "summary" : "Family B at step 3 (UPI PIN)."
+  },
+  {
+    "level" : "Screens",
+    "summary" : "Family A: small phone beside the step list.",
     "id" : "Activating Gold · list"
   },
   {
@@ -780,14 +780,14 @@
     "summary" : "Family B′: translucent Apple Pay card."
   },
   {
-    "level" : "Screens",
     "summary" : "Family C: phone in the dark gold panel.",
-    "id" : "Activating Gold · backdrop"
+    "id" : "Activating Gold · backdrop",
+    "level" : "Screens"
   },
   {
-    "level" : "Screens",
+    "id" : "Activating Gold · UPI only",
     "summary" : "Family E: no Apple Pay, floating phone.",
-    "id" : "Activating Gold · UPI only"
+    "level" : "Screens"
   },
   {
     "id" : "Activating Gold · UPI only backdrop",
@@ -796,33 +796,33 @@
   },
   {
     "level" : "Screens",
-    "id" : "UPI wait",
-    "summary" : "\"Processing payment\" with auto-advancing UPI steps."
+    "summary" : "\"Processing payment\" with auto-advancing UPI steps.",
+    "id" : "UPI wait"
   },
   {
+    "id" : "UPI wait · dark",
     "level" : "Screens",
-    "summary" : "Dark variant with the UPI-app styled phone.",
-    "id" : "UPI wait · dark"
+    "summary" : "Dark variant with the UPI-app styled phone."
   },
   {
     "id" : "Processing sheet",
-    "summary" : "Gateway wait sheet over the blurred wait screen.",
-    "level" : "Screens"
+    "level" : "Screens",
+    "summary" : "Gateway wait sheet over the blurred wait screen."
   },
   {
-    "summary" : "Header plan badge: GOLD, light GOLD, GOLD PLUS, TRIAL, TRIAL ENDED, EXPIRED.",
     "id" : "EqualPlanBadge",
-    "level" : "Atoms"
+    "level" : "Atoms",
+    "summary" : "Header plan badge: GOLD, light GOLD, GOLD PLUS, TRIAL, TRIAL ENDED, EXPIRED."
   },
   {
-    "id" : "EqualGoldWordmark",
     "level" : "Atoms",
+    "id" : "EqualGoldWordmark",
     "summary" : "Vector GOLD wordmark for plan badges."
   },
   {
-    "id" : "EqualNotificationSkeleton",
     "level" : "Atoms",
-    "summary" : "Placeholder lock-screen notification, primary and faded."
+    "summary" : "Placeholder lock-screen notification, primary and faded.",
+    "id" : "EqualNotificationSkeleton"
   },
   {
     "id" : "EqualBubbleTail",
@@ -830,39 +830,39 @@
     "level" : "Atoms"
   },
   {
-    "level" : "Molecules",
     "summary" : "Light frosted lock-screen notification, large and small.",
-    "id" : "EqualLockScreenNotification"
-  },
-  {
-    "id" : "EqualSectionHeader",
-    "level" : "Molecules",
-    "summary" : "CONVERSATIONS header with the glass ⋯ button."
+    "id" : "EqualLockScreenNotification",
+    "level" : "Molecules"
   },
   {
     "level" : "Molecules",
+    "summary" : "CONVERSATIONS header with the glass ⋯ button.",
+    "id" : "EqualSectionHeader"
+  },
+  {
     "summary" : "Doodle wallpaper behind the chat sheet, full and strip.",
-    "id" : "EqualChatWallpaper"
+    "id" : "EqualChatWallpaper",
+    "level" : "Molecules"
   },
   {
-    "id" : "EqualPermissionPreview",
     "level" : "Organisms",
+    "id" : "EqualPermissionPreview",
     "summary" : "Phone with the lock screen and an Equal notification."
   },
   {
+    "id" : "EqualConsentDialog",
     "level" : "Organisms",
-    "summary" : "Allow Equal to process your call data?",
-    "id" : "EqualConsentDialog"
+    "summary" : "Allow Equal to process your call data?"
   },
   {
     "id" : "EqualPromoCarousel",
-    "summary" : "Paging promo cards with the next one peeking and page dots.",
-    "level" : "Organisms"
+    "level" : "Organisms",
+    "summary" : "Paging promo cards with the next one peeking and page dots."
   },
   {
-    "level" : "Screens",
+    "summary" : "Permission carousel, GOLD header, chat list.",
     "id" : "Home · first",
-    "summary" : "Permission carousel, GOLD header, chat list."
+    "level" : "Screens"
   },
   {
     "id" : "Home · permissions granted",
@@ -870,79 +870,79 @@
     "level" : "Screens"
   },
   {
-    "id" : "Home · plan expired",
     "level" : "Screens",
+    "id" : "Home · plan expired",
     "summary" : "EXPIRED badge and the Renew Gold card."
   },
   {
-    "summary" : "Meet Your Assistant and the empty state.",
     "id" : "Home · no chats",
+    "summary" : "Meet Your Assistant and the empty state.",
     "level" : "Screens"
   },
   {
-    "id" : "Permission intro",
     "level" : "Screens",
+    "id" : "Permission intro",
     "summary" : "Let us notify you on who’s calling and why."
   },
   {
     "level" : "Screens",
-    "id" : "Permission · consent",
-    "summary" : "In-app call-data consent dialog."
+    "summary" : "In-app call-data consent dialog.",
+    "id" : "Permission · consent"
   },
   {
-    "id" : "Permission · notification alert",
     "level" : "Screens",
+    "id" : "Permission · notification alert",
     "summary" : "iOS notification alert over the intro."
   },
   {
-    "level" : "Screens",
+    "summary" : "Notification permission required.",
     "id" : "Permission · notification denied",
-    "summary" : "Notification permission required."
+    "level" : "Screens"
   },
   {
-    "level" : "Screens",
     "id" : "Permission · both denied",
+    "level" : "Screens",
     "summary" : "Enable Permissions sheet."
   },
   {
     "summary" : "iOS Contacts alert.",
-    "level" : "Screens",
-    "id" : "Permission · contacts alert"
+    "id" : "Permission · contacts alert",
+    "level" : "Screens"
   },
   {
     "summary" : "iOS limited-access contact picker.",
-    "id" : "Permission · share picker",
-    "level" : "Screens"
+    "level" : "Screens",
+    "id" : "Permission · share picker"
   },
   {
-    "summary" : "Contact permission required.",
     "id" : "Permission · contact denied",
-    "level" : "Screens"
+    "level" : "Screens",
+    "summary" : "Contact permission required."
   },
   {
+    "level" : "Screens",
     "summary" : "Limited contact access enabled.",
-    "id" : "Permission · limited contacts",
+    "id" : "Permission · limited contacts"
+  },
+  {
+    "id" : "Permission · what you’re losing",
+    "summary" : "Without contacts, callers look unknown.",
     "level" : "Screens"
   },
   {
-    "summary" : "Without contacts, callers look unknown.",
     "level" : "Screens",
-    "id" : "Permission · what you’re losing"
+    "summary" : "iOS App Tracking Transparency alert.",
+    "id" : "Permission · tracking alert"
   },
   {
-    "level" : "Screens",
-    "id" : "Permission · tracking alert",
-    "summary" : "iOS App Tracking Transparency alert."
-  },
-  {
-    "level" : "Screens",
+    "summary" : "Hard gate: Allow access to continue.",
     "id" : "Permission · allow access",
-    "summary" : "Hard gate: Allow access to continue."
+    "level" : "Screens"
   },
   {
-    "id" : "Chats permission · both",
     "level" : "Screens",
-    "summary" : "Enable Permissions card first in the carousel."
+    "summary" : "Enable Permissions card first in the carousel.",
+    "id" : "Chats permission · both"
   },
   {
     "id" : "Chats permission · notifications",
@@ -950,44 +950,44 @@
     "summary" : "Notification access card."
   },
   {
+    "id" : "Chats permission · contacts",
     "level" : "Screens",
-    "summary" : "Contact access card.",
-    "id" : "Chats permission · contacts"
+    "summary" : "Contact access card."
   },
   {
+    "id" : "Chats permission · sheet",
     "level" : "Screens",
-    "summary" : "Enable Permissions sheet over the home.",
-    "id" : "Chats permission · sheet"
+    "summary" : "Enable Permissions sheet over the home."
   },
   {
-    "level" : "Screens",
     "summary" : "Legacy home under the notification sheet.",
-    "id" : "Chats permission · legacy notification"
+    "id" : "Chats permission · legacy notification",
+    "level" : "Screens"
   },
   {
-    "summary" : "Legacy home under the contact sheet.",
     "id" : "Chats permission · legacy contact",
+    "summary" : "Legacy home under the contact sheet.",
     "level" : "Screens"
   },
   {
-    "summary" : "Gold limit flow, Equal sheet.",
+    "id" : "Limit chat · Gold limit · Equal sheet",
     "level" : "Screens",
-    "id" : "Limit chat · Gold limit · Equal sheet"
+    "summary" : "Gold limit flow, Equal sheet."
   },
   {
-    "summary" : "Gold limit flow, limit message.",
     "id" : "Limit chat · Gold limit · limit message",
-    "level" : "Screens"
+    "level" : "Screens",
+    "summary" : "Gold limit flow, limit message."
   },
   {
-    "summary" : "Gold limit flow, back in chat.",
+    "id" : "Limit chat · Gold limit · back in chat",
     "level" : "Screens",
-    "id" : "Limit chat · Gold limit · back in chat"
+    "summary" : "Gold limit flow, back in chat."
   },
   {
-    "summary" : "Gold limit flow, full thread.",
+    "id" : "Limit chat · Gold limit · full thread",
     "level" : "Screens",
-    "id" : "Limit chat · Gold limit · full thread"
+    "summary" : "Gold limit flow, full thread."
   },
   {
     "level" : "Screens",
@@ -995,29 +995,29 @@
     "id" : "Limit chat · Trial limit · Equal sheet"
   },
   {
-    "summary" : "Trial limit flow, limit message.",
     "id" : "Limit chat · Trial limit · limit message",
-    "level" : "Screens"
-  },
-  {
-    "summary" : "Trial limit flow, back in chat.",
-    "id" : "Limit chat · Trial limit · back in chat",
-    "level" : "Screens"
-  },
-  {
-    "summary" : "Trial limit flow, full thread.",
-    "id" : "Limit chat · Trial limit · full thread",
-    "level" : "Screens"
+    "level" : "Screens",
+    "summary" : "Trial limit flow, limit message."
   },
   {
     "level" : "Screens",
-    "summary" : "Trial ended flow, Equal sheet.",
-    "id" : "Limit chat · Trial ended · Equal sheet"
+    "id" : "Limit chat · Trial limit · back in chat",
+    "summary" : "Trial limit flow, back in chat."
   },
   {
-    "summary" : "Trial ended flow, limit message.",
+    "level" : "Screens",
+    "summary" : "Trial limit flow, full thread.",
+    "id" : "Limit chat · Trial limit · full thread"
+  },
+  {
+    "level" : "Screens",
+    "id" : "Limit chat · Trial ended · Equal sheet",
+    "summary" : "Trial ended flow, Equal sheet."
+  },
+  {
     "id" : "Limit chat · Trial ended · limit message",
-    "level" : "Screens"
+    "level" : "Screens",
+    "summary" : "Trial ended flow, limit message."
   },
   {
     "summary" : "Trial ended flow, back in chat.",
@@ -1030,18 +1030,18 @@
     "summary" : "Trial ended flow, full thread."
   },
   {
-    "id" : "Limit chat · Plan expired · Equal sheet",
     "summary" : "Plan expired flow, Equal sheet.",
+    "id" : "Limit chat · Plan expired · Equal sheet",
     "level" : "Screens"
   },
   {
     "id" : "Limit chat · Plan expired · limit message",
-    "level" : "Screens",
-    "summary" : "Plan expired flow, limit message."
+    "summary" : "Plan expired flow, limit message.",
+    "level" : "Screens"
   },
   {
-    "level" : "Screens",
     "summary" : "Plan expired flow, back in chat.",
+    "level" : "Screens",
     "id" : "Limit chat · Plan expired · back in chat"
   },
   {
@@ -1050,9 +1050,9 @@
     "id" : "Limit chat · Plan expired · full thread"
   },
   {
-    "id" : "EqualProfileAvatarBadge",
     "level" : "Atoms",
-    "summary" : "Settings avatar: gold scalloped star (active, trial) or green circle (expired)."
+    "summary" : "Settings avatar: gold scalloped star (active, trial) or green circle (expired).",
+    "id" : "EqualProfileAvatarBadge"
   },
   {
     "level" : "Molecules",
@@ -1060,14 +1060,14 @@
     "id" : "EqualNoticingCard"
   },
   {
+    "summary" : "Expired subscription bottom sheet: Renew Plan and Explore other plans.",
     "id" : "EqualRenewSheet",
-    "level" : "Organisms",
-    "summary" : "Expired subscription bottom sheet: Renew Plan and Explore other plans."
+    "level" : "Organisms"
   },
   {
+    "summary" : "Free trial: back row, Free Trial tag.",
     "id" : "Settings · trial",
-    "level" : "Screens",
-    "summary" : "Free trial: back row, Free Trial tag."
+    "level" : "Screens"
   },
   {
     "id" : "Subscription · expired",

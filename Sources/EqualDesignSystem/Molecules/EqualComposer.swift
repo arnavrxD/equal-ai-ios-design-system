@@ -19,7 +19,14 @@ public struct EqualComposer: View {
     public var body: some View {
         HStack(spacing: EqualSpacing.s12) {
             if isTyping {
-                TextField("Type...", text: $text)
+                Group {
+                    if EqualSnapshotMode.isStatic {
+                        Text(text.isEmpty ? "Type..." : text).foregroundStyle(text.isEmpty ? EqualColor.textPlaceholder : EqualColor.textPrimary)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                    } else {
+                        TextField("Type...", text: $text)
+                    }
+                }
                     .font(.equal(size: 16))
                     .onSubmit { onSubmit(text) }
                     .padding(.horizontal, EqualSpacing.s18)

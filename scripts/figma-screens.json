@@ -7,7 +7,7 @@
  "Welcome": "20365:35018",
  "Intro · screening": "20365:34543",
  "Permission": "20365:41848",
- "Home · first": "20365:43521",
+ "Home · first": "20365:44071",
  "Value recap": "26242:23243",
  "Paywall": "26242:23278",
  "App Store confirmation": "26242:31917",
@@ -75,5 +75,7 @@
  "Paywall · standalone value card": "26242:64004",
  "Paywall · deal card": "25639:34479",
  "Paywall · trial price": "25678:22301",
- "Paywall · feature hero": "25749:21774"
+ "Paywall · feature hero": "25749:21774",
+ "Chats permission · legacy notification": "20365:43521",
+ "Chats permission · legacy contact": "20365:43796"
 }
